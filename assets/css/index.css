@@ -1,0 +1,64 @@
+/* Base Variables and Tokens */
+:root {
+    --primary-color: #005bb5; /* İsveç mavisi esintisi */
+    --secondary-color: #ffc200; /* İsveç sarısı esintisi */
+    --text-color: #333333;
+    --text-light: #666666;
+    --bg-color: #f8f9fa;
+    --white: #ffffff;
+    --border-color: #eaeaea;
+    --font-family: 'Inter', sans-serif;
+    --container-width: 1200px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #003f82;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Page Layout Defaults */
+.page-content {
+    padding: 60px 0;
+    min-height: calc(100vh - 160px); /* Header + Footer yaklaşımı */
+}
