@@ -51,6 +51,7 @@
     transform: translateY(-2px);
     box-shadow: var(--shadow-premium);
     background: #000;
+    color: var(--white) !important;
 }
 
 .logo-img {
@@ -169,6 +170,7 @@
 .social-links a:hover {
     background-color: var(--primary);
     transform: translateY(-3px);
+    color: var(--white) !important;
 }
 
 .social-links svg {
@@ -225,6 +227,7 @@
     background-color: var(--primary-dark);
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
+    color: var(--white) !important;
 }
 
 /* Slider Section */
