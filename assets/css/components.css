@@ -688,18 +688,20 @@
 
 .stat:first-child {
     grid-column: 1 / -1;
-    background: var(--secondary-color);
+    background: var(--primary-color); /* Use primary for better contrast if needed, or keep secondary and fix text */
+    color: var(--white);
     transform: scale(1.05);
 }
 
-.stat h3 {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 5px;
+.stat:first-child h3, 
+.stat:first-child span {
+    color: var(--white) !important;
 }
 
-.stat:first-child h3 {
-    color: #111;
+.stat h3 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
 }
 
 .stat span {
