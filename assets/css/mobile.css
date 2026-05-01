@@ -202,13 +202,19 @@
     }
 
     .slide-content h1, .slide-content h2 {
-        font-size: 1.8rem !important;
+        font-size: 18px !important;
         margin-bottom: 10px !important;
+        text-align: center !important;
     }
 
     .slide-content p {
-        font-size: 0.9rem !important;
+        font-size: 14px !important; /* Slightly smaller than title for hierarchy */
         margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+
+    .slider-indicators {
+        bottom: 15px !important;
     }
     .services-grid {
         display: flex !important;
