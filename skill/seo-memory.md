@@ -3,6 +3,7 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
+- **İsveç Aile Birleşimi** (URL: `blog/isvecte-aile-birlesimi/`, Konu: 2026 güncel geçim ve konut şartları, 10.314 SEK eş sınırı - 1 Mayıs 2026 - **SEO #1 Hedeflendi**)
 - **İsveç Çalışma İzni** (URL: `blog/isvecte-calisma-izni/`, Konu: 1 Haziran 2026 yeni maaş sınırı 33.390 SEK, başvuru süreci - 1 Mayıs 2026 - **SEO #1 Hedeflendi**)
 - **İsveç'te Şirket Kurmak** (URL: `blog/isvecte-sirket-kurmak/`, Konu: AB ve Enskild Firma farkları, 25.000 SEK sermaye, Skatteverket kaydı - 1 Mayıs 2026 - **SEO #1 Hedeflendi**)
 - **İsveç Start-up ve Yatırımcı Vizesi** (URL: `blog/isvecte-startup-ve-yatirimci-vizesi/`, Konu: Girişimci oturum izni ve 200.000 SEK teminat şartı - 1 Mayıs 2026)
@@ -18,6 +19,7 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç Sosyal Güvenlik Sistemi (Försäkringskassan) ve Haklar
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
+- *1 Mayıs 2026 SEO Hamlesi 3:* "İsveç Aile Birleşimi" konusu 2026 güncel verileriyle işlendi. FAQ ve BlogPosting şemaları eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
 - *1 Mayıs 2026 SEO Hamlesi 2:* "İsveç Çalışma İzni" için 2026 güncel verileriyle (33.390 SEK maaş sınırı) yeni blog sayfası oluşturuldu. FAQ ve BlogPosting şemalarıyla donatıldı. Blog ve Ana sayfada ilk sıraya yerleştirildi.
 - *1 Mayıs 2026 SEO Hamlesi:* "İsveç'te Şirket Kurmak" kelimesi için tam sayfa optimizasyonu yapıldı. FAQ Schema ve BlogPosting şemaları eklendi. Ana sayfadan "İsveç'te Şirket Kurma Rehberi" metniyle doğrudan link verildi. Sitemap önceliği artırıldı.
 - *1 Mayıs 2026 Öğrenimi 4:* Girişimci vizelerinde iş planı (business plan) çok kritik bir bariyer. Bir sonraki aşamada "Sektör Bazlı İş Planı Örnekleri" veya "İsveç'te Şirket Türleri (AB vs. Enskild Firma)" gibi teknik detaylara girmek yüksek kaliteli lead getirebilir.
