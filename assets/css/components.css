@@ -293,10 +293,16 @@
 }
 
 .slide-content p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 30px;
-    opacity: 0.95;
-    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    opacity: 0.9;
+    color: var(--white) !important;
+}
+
+.about-hero-overlay p {
+    font-size: 1.3rem;
+    color: var(--white) !important;
+    opacity: 0.9;
 }
 
 .slider-btn {
