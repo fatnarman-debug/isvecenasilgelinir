@@ -125,7 +125,7 @@
     bottom: 0;
     width: 40px;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary);
     border-radius: 2px;
 }
 
@@ -167,7 +167,7 @@
 }
 
 .social-links a:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     transform: translateY(-3px);
 }
 
@@ -387,7 +387,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--primary);
 }
 
 .form-control {
@@ -433,7 +433,7 @@
 }
 
 .post-meta {
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 30px;
 }
@@ -455,12 +455,12 @@
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--primary);
     margin-bottom: 10px;
 }
 
 .section-header p {
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 1.1rem;
 }
 
@@ -484,7 +484,7 @@
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    border-color: var(--primary-color);
+    border-color: var(--primary);
 }
 
 .service-icon {
@@ -496,12 +496,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-color);
+    color: var(--primary);
     transition: all 0.3s ease;
 }
 
 .service-card:hover .service-icon {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: var(--white);
 }
 
@@ -517,7 +517,7 @@
 }
 
 .service-card p {
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
     flex-grow: 1;
@@ -596,11 +596,11 @@
 }
 
 .news-content h3 a:hover {
-    color: var(--primary-color);
+    color: var(--primary);
 }
 
 .news-content p {
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.95rem;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -658,11 +658,11 @@
     padding: 15px 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    border-left: 4px solid var(--secondary-color);
+    border-left: 4px solid var(--secondary);
 }
 
 .why-list strong {
-    color: var(--secondary-color);
+    color: var(--secondary);
 }
 
 .why-image {
@@ -688,7 +688,7 @@
 
 .stat:first-child {
     grid-column: 1 / -1;
-    background: var(--primary-color); /* Use primary for better contrast if needed, or keep secondary and fix text */
+    background: var(--primary); /* Use primary for better contrast if needed, or keep secondary and fix text */
     color: var(--white);
     transform: scale(1.05);
 }
@@ -701,12 +701,13 @@
 .stat h3 {
     font-size: 2.2rem;
     margin-bottom: 5px;
-    color: var(--primary-color);
+    color: var(--primary) !important;
 }
 
 .stat span {
     font-weight: 600;
     font-size: 1.1rem;
+    color: var(--text-main) !important;
 }
 
 @media (max-width: 900px) {
@@ -779,7 +780,7 @@
 .info-icon svg {
     width: 24px;
     height: 24px;
-    color: var(--secondary-color);
+    color: var(--secondary);
 }
 
 .info-item strong {
@@ -824,7 +825,7 @@
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--primary);
     box-shadow: 0 0 0 4px rgba(0, 91, 181, 0.1);
     background-color: var(--white);
 }
@@ -888,7 +889,7 @@
 .card-action-btn {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--primary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: transform 0.3s, color 0.3s;
@@ -955,7 +956,7 @@
 
 .about-text-block h2 {
     font-size: 2.2rem;
-    color: var(--primary-color);
+    color: var(--primary);
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
@@ -968,7 +969,7 @@
     bottom: 0;
     width: 60px;
     height: 4px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary);
     border-radius: 2px;
 }
 
@@ -992,7 +993,7 @@
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--secondary-color);
+    border-top: 4px solid var(--secondary);
     transition: transform 0.3s;
 }
 
@@ -1004,7 +1005,7 @@
     width: 60px;
     height: 60px;
     background: rgba(0, 91, 181, 0.1);
-    color: var(--primary-color);
+    color: var(--primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
