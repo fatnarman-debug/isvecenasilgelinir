@@ -652,8 +652,8 @@
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--sp-4);
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
 }
 
 .news-card {
@@ -674,7 +674,7 @@
 }
 
 .news-img-wrapper {
-    height: 180px; /* Reduced from 200px */
+    height: 160px; /* Reduced from 180px for a tighter look */
     overflow: hidden;
 }
 
@@ -690,7 +690,7 @@
 }
 
 .news-content {
-    padding: var(--sp-3); /* Reduced padding */
+    padding: 12px 15px; /* Minimal padding for a tight fit */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
