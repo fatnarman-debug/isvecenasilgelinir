@@ -33,9 +33,9 @@
     
     /* Typography System (Modular Scale: 1.25 Major Third) */
     --font-main: 'Inter', system-ui, -apple-system, sans-serif;
-    --h1: clamp(2.5rem, 5vw, 3.5rem);
-    --h2: clamp(2rem, 4vw, 2.5rem);
-    --h3: clamp(1.5rem, 3vw, 1.75rem);
+    --h1: clamp(1.85rem, 8vw, 3.5rem);
+    --h2: clamp(1.5rem, 6vw, 2.5rem);
+    --h3: clamp(1.25rem, 4vw, 1.75rem);
     --body-base: 1rem;
     
     --container-width: 1200px;
@@ -110,4 +110,16 @@ p {
 .page-content {
     padding: var(--sp-8) 0;
     min-height: calc(100vh - 160px);
+}
+/* Mobile Utilities */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--sp-3);
+    }
+    
+    .page-content {
+        padding: var(--sp-5) 0;
+    }
+
+    h1 { margin-bottom: var(--sp-3); }
 }

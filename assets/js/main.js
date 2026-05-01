@@ -6,15 +6,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("İsveç'e Nasıl Gelinir? sitesi başlatıldı.");
 
-    // İletişim formu için basit submit yakalayıcı (şimdilik preventDefault yapıyor)
-    const contactForms = document.querySelectorAll('.contact-form, .home-contact-form');
-    contactForms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Mesajınız başarıyla alınmıştır. En kısa sürede size dönüş yapacağız!');
-            form.reset();
+    // Formspree is used for native form submission. No preventDefault needed.
+    
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
-    });
+    }
+
 
     // Slider Logic
     const slides = document.querySelectorAll('.slide');
