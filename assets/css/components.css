@@ -17,6 +17,12 @@
     height: 80px;
 }
 
+.main-nav {
+    margin-left: auto;
+    margin-right: var(--sp-4);
+}
+
+
 /* Menu Toggle Button */
 .menu-toggle {
     display: none;
@@ -37,6 +43,7 @@
 @media (max-width: 992px) {
     .menu-toggle {
         display: block;
+        order: 3; /* Always on the right on mobile */
     }
 
     .main-nav {
@@ -54,6 +61,7 @@
         transition: var(--transition-base);
         padding: 100px var(--sp-5) var(--sp-5);
     }
+
 
     .main-nav.active {
         right: 0;
@@ -110,6 +118,13 @@
     box-shadow: var(--shadow-md);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+@media (max-width: 992px) {
+    .header-legal-btn {
+        display: none !important;
+    }
+}
+
 
 .header-legal-btn svg {
     color: #eab308;
