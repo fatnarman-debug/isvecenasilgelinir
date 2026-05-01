@@ -1,0 +1,182 @@
+/* 
+ * Mobile Exclusive Styles
+ * App-Like Experience for isvecenasilgelinir.com 
+ */
+
+@media (max-width: 768px) {
+    /* Reset & Base */
+    body {
+        /* Add padding to bottom to account for Bottom Nav Bar */
+        padding-bottom: 70px !important;
+        background-color: #f8f9fa; /* Softer background for app feel */
+        overflow-x: hidden;
+    }
+
+    /* 1. Header Simplification */
+    .site-header {
+        padding: 10px 15px;
+        box-shadow: none;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 900;
+    }
+
+    .logo-img {
+        max-height: 35px; /* Smaller logo */
+    }
+
+    /* Hide Desktop/Hamburger Menu Elements entirely on mobile */
+    .menu-toggle, 
+    .main-nav {
+        display: none !important;
+    }
+
+    /* 2. Bottom Navigation Bar */
+    .bottom-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        z-index: 1000;
+        justify-content: space-around;
+        padding: 10px 0;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom)); /* iOS safe area */
+        border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: var(--text-muted, #6c757d);
+        font-size: 0.65rem;
+        font-weight: 600;
+        gap: 4px;
+        transition: color 0.2s;
+        flex: 1;
+    }
+
+    .nav-item svg {
+        width: 24px;
+        height: 24px;
+        stroke-width: 1.5;
+    }
+
+    .nav-item.active {
+        color: var(--primary, #005bb5);
+    }
+
+    .nav-item.active svg {
+        stroke-width: 2.5;
+    }
+
+    /* 3. Edge-to-Edge Cards & Horizontal Scroll (Carousel) */
+    .latest-blog-section .container {
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+    }
+
+    .latest-blog-section .section-header {
+        padding: 0 20px;
+        text-align: left; /* Modern apps align left */
+    }
+
+    .latest-blog-section .section-header h2 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+
+    .latest-blog-section .news-grid {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 10px 20px 20px 20px;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    /* Hide scrollbar for clean look */
+    .latest-blog-section .news-grid::-webkit-scrollbar {
+        display: none;
+    }
+    .latest-blog-section .news-grid {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .latest-blog-section .news-card {
+        flex: 0 0 85%; /* Cards take up 85% of screen width */
+        scroll-snap-align: center;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        border: none;
+        border-radius: 16px;
+    }
+
+    .news-img-wrapper {
+        height: 200px; /* Taller images for mobile */
+        border-radius: 16px 16px 0 0;
+    }
+
+    /* Edge-to-edge for regular blog page */
+    .blog-page .container {
+        padding: 0 10px;
+    }
+
+    .blog-page .news-grid {
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .blog-page .news-card {
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        border: none;
+    }
+
+    /* 4. Contact Form Adjustments */
+    .contact-wrapper {
+        flex-direction: column;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .contact-info {
+        padding: 30px 20px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .contact-form-container {
+        padding: 30px 20px;
+        background: white;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Floating Action Button Style for forms */
+    .btn-block {
+        border-radius: 30px;
+        padding: 15px;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(0, 91, 181, 0.3);
+    }
+}
