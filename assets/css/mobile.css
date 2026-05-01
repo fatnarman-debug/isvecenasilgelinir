@@ -24,8 +24,15 @@
         z-index: 900;
     }
 
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .logo-img {
-        max-height: 35px; /* Smaller logo */
+        max-height: 50px; /* Larger logo */
     }
 
     /* Hide Desktop/Hamburger Menu Elements entirely on mobile */
@@ -150,7 +157,8 @@
 
     /* 4. Contact Form Adjustments */
     .contact-wrapper {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column-reverse; /* Put form above info */
         border-radius: 0;
         box-shadow: none;
         background: transparent;
@@ -158,13 +166,13 @@
 
     .contact-info {
         padding: 30px 20px;
-        border-radius: 16px 16px 0 0;
+        border-radius: 0 0 16px 16px; /* Now at bottom */
     }
 
     .contact-form-container {
         padding: 30px 20px;
         background: white;
-        border-radius: 0 0 16px 16px;
+        border-radius: 16px 16px 0 0; /* Now at top */
     }
 
     .form-row {
@@ -178,5 +186,46 @@
         padding: 15px;
         font-size: 1.1rem;
         box-shadow: 0 4px 15px rgba(0, 91, 181, 0.3);
+    }
+
+    /* 5. Feedback Tweaks: Slider, Services */
+    .hero-slider, .slide {
+        height: 50vh !important; /* Reduce height by half */
+        min-height: 350px;
+    }
+
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        display: flex !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Mobile Contact Action Button Above Blog Grid */
+    .mobile-contact-action {
+        display: block !important;
+        padding: 0 20px 20px 20px;
+    }
+    
+    .mobile-contact-action .btn {
+        width: 100%;
+        text-align: center;
+        border-radius: 30px;
+        font-weight: 700;
+        box-shadow: 0 4px 10px rgba(0, 91, 181, 0.2);
+    }
+    
+    /* Blog Page Interspersed Contact Buttons */
+    .blog-mobile-contact-btn {
+        display: block !important;
+        margin: 15px 0;
+        text-align: center;
+        border-radius: 30px;
+        font-weight: 700;
+        box-shadow: 0 4px 10px rgba(0, 91, 181, 0.2);
+        padding: 15px;
     }
 }

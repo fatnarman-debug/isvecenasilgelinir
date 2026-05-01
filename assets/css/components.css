@@ -1382,3 +1382,9 @@
         height: 200px;
     }
 }
+
+/* Hide mobile-only contact buttons on desktop */
+.mobile-contact-action,
+.blog-mobile-contact-btn {
+    display: none;
+}
