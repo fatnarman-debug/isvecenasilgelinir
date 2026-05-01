@@ -3,7 +3,9 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
-- **İsveç Start-up ve Yatırımcı Vizesi** (URL: `blog/isvecte-startup-ve-yatirimci-vizesi.html`, Konu: Girişimci oturum izni ve 200.000 SEK teminat şartı - 1 Mayıs 2026)
+- **İsveç Çalışma İzni** (URL: `blog/isvecte-calisma-izni/`, Konu: 1 Haziran 2026 yeni maaş sınırı 33.390 SEK, başvuru süreci - 1 Mayıs 2026 - **SEO #1 Hedeflendi**)
+- **İsveç'te Şirket Kurmak** (URL: `blog/isvecte-sirket-kurmak/`, Konu: AB ve Enskild Firma farkları, 25.000 SEK sermaye, Skatteverket kaydı - 1 Mayıs 2026 - **SEO #1 Hedeflendi**)
+- **İsveç Start-up ve Yatırımcı Vizesi** (URL: `blog/isvecte-startup-ve-yatirimci-vizesi/`, Konu: Girişimci oturum izni ve 200.000 SEK teminat şartı - 1 Mayıs 2026)
 - **İsveç Öğrenci Vizesi ve Burslar (CSN)** (URL: `blog/isvecte-ogrenci-vizesi-ve-burslar.html`, Konu: Öğrenci oturum izni ve uluslararası SI bursları - 30 Nisan 2026)
 - **İsveççe Dil Okulları ve C1 Seviyesi** (URL: `blog/isvecte-dil-okullari-saglik-personeli.html`, Konu: SFI, Folkuniversitetet, CSN Destekleri - 30 Nisan 2026)
 - **İsveç'te Sağlık Çalışanları Denklik Süreci** (URL: `blog/isvecte-doktor-hemsire-denklik-sureci.html`, Konu: Socialstyrelsen başvuru ve lisans süreci - 30 Nisan 2026)
@@ -16,6 +18,8 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç Sosyal Güvenlik Sistemi (Försäkringskassan) ve Haklar
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
+- *1 Mayıs 2026 SEO Hamlesi 2:* "İsveç Çalışma İzni" için 2026 güncel verileriyle (33.390 SEK maaş sınırı) yeni blog sayfası oluşturuldu. FAQ ve BlogPosting şemalarıyla donatıldı. Blog ve Ana sayfada ilk sıraya yerleştirildi.
+- *1 Mayıs 2026 SEO Hamlesi:* "İsveç'te Şirket Kurmak" kelimesi için tam sayfa optimizasyonu yapıldı. FAQ Schema ve BlogPosting şemaları eklendi. Ana sayfadan "İsveç'te Şirket Kurma Rehberi" metniyle doğrudan link verildi. Sitemap önceliği artırıldı.
 - *1 Mayıs 2026 Öğrenimi 4:* Girişimci vizelerinde iş planı (business plan) çok kritik bir bariyer. Bir sonraki aşamada "Sektör Bazlı İş Planı Örnekleri" veya "İsveç'te Şirket Türleri (AB vs. Enskild Firma)" gibi teknik detaylara girmek yüksek kaliteli lead getirebilir.
 - *30 Nisan 2026 Öğrenimi 3:* Öğrenci vizesi makalesini yazarken yeni çalışma saati kısıtlamaları yasalarının gündemde olduğunu gördüm. Bir sonraki aşamada yatırımcı ve girişimcilere yönelik "İsveç Start-up Ekosistemi" makalesine odaklanmak, iş kurmak isteyen kitle için yüksek dönüşüm getirecektir.
 - *30 Nisan 2026 Öğrenimi 2:* İsveççe dil kurslarında CSN (Öğrenci Kredisi) çok aranan bir konu. İleride doğrudan "İsveç Öğrenci Vizesi ve CSN Bursları" hakkında detaylı bir eğitim makalesi hazırlamak genç kitleyi çekmek için ideal olacaktır.

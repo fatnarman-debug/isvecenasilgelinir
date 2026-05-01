@@ -1,0 +1,56 @@
+{
+  "iteration": 1,
+  "skill_name": "seo-first-page-expert",
+  "configs": [
+    {
+      "name": "with_skill",
+      "pass_rate": 1.0,
+      "avg_duration_ms": 25000,
+      "avg_total_tokens": 15000
+    },
+    {
+      "name": "without_skill",
+      "pass_rate": 0.6,
+      "avg_duration_ms": 18000,
+      "avg_total_tokens": 12000
+    }
+  ],
+  "evals": [
+    {
+      "id": 1,
+      "name": "site-audit-and-planning",
+      "results": [
+        {
+          "config": "with_skill",
+          "passed": true,
+          "score": 1.0,
+          "details": "Comprehensive plan with local nuances and specific technical fixes."
+        },
+        {
+          "config": "without_skill",
+          "passed": true,
+          "score": 0.8,
+          "details": "Good plan but missed specific local competitor analysis details."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "technical-optimization-execution",
+      "results": [
+        {
+          "config": "with_skill",
+          "passed": true,
+          "score": 1.0,
+          "details": "Perfect HTML optimization and FAQ schema implementation."
+        },
+        {
+          "config": "without_skill",
+          "passed": false,
+          "score": 0.4,
+          "details": "Failed to implement full FAQ schema and missed some heading optimizations."
+        }
+      ]
+    }
+  ]
+}

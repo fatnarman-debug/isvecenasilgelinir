@@ -1,68 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://isvecenasilgelinir.se/</loc>
+        <loc>https://isvecenasilgelinir.com/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvecte-startup-ve-yatirimci-vizesi/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-startup-ve-yatirimci-vizesi/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/hakkimizda/</loc>
+        <loc>https://isvecenasilgelinir.com/hakkimizda/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/hukuki-yardim/</loc>
+        <loc>https://isvecenasilgelinir.com/hukuki-yardim/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/iletisim/</loc>
+        <loc>https://isvecenasilgelinir.com/iletisim/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/</loc></loc>
+        <loc>https://isvecenasilgelinir.com/blog/</loc></loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvecte-doktor-hemsire-denklik-sureci/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktor-hemsire-denklik-sureci/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvecte-dil-okullari-saglik-personeli/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-dil-okullari-saglik-personeli/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvecte-ogrenci-vizesi-ve-burslar/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-ogrenci-vizesi-ve-burslar/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvece-tasinmak/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvece-tasinmak/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvecte-doktor-olarak-calismak/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktor-olarak-calismak/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvecte-ev-bulmak/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-ev-bulmak/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.se/blog/isvecte-sirket-kurmak/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-kurmak/</loc>
         <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-calisma-izni/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
     </url>
 </urlset>
