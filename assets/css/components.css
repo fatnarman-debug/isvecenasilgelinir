@@ -1,17 +1,20 @@
-/* Header */
+/* Header - Premium Glassmorphism */
 .site-header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    background-color: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--border-soft);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    transition: var(--transition-base);
 }
 
 .site-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 90px;
 }
 
 .logo {
@@ -22,80 +25,84 @@
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: var(--sp-4);
 }
 
 .header-legal-btn {
-    background: linear-gradient(135deg, #1e293b, #0f172a); /* Premium koyu lacivert */
-    color: #f8fafc;
-    padding: 10px 20px;
-    border-radius: 30px; /* Daha modern yuvarlak hat */
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 100px;
     font-size: 0.95rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
     display: flex;
     align-items: center;
-    gap: 10px; /* İkon ve yazı arası boşluk */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: var(--sp-2);
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-md);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.2);
 }
 
 .header-legal-btn svg {
-    color: #eab308; /* Premium altın sarısı terazi rengi */
+    color: #eab308;
 }
 
 .header-legal-btn:hover {
-    background: linear-gradient(135deg, #0f172a, #000000);
-    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.3);
-    border-color: rgba(234, 179, 8, 0.3); /* Hoverda hafif altın parlaması */
+    box-shadow: var(--shadow-premium);
+    background: #000;
 }
 
 .logo-img {
-    height: 75px; /* Logo biraz büyütüldü */
+    height: 60px;
     width: auto;
     object-fit: contain;
 }
 
 .main-nav ul {
     display: flex;
-    gap: 2rem;
+    gap: var(--sp-6);
 }
 
 .main-nav a {
-    color: var(--text-color);
+    color: var(--text-main);
     font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
 }
 
-.main-nav a:hover, .main-nav a.active {
-    color: var(--primary-color);
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: var(--transition-base);
+}
+
+.main-nav a:hover::after, .main-nav a.active::after {
+    width: 100%;
 }
 
 /* Footer */
 .site-footer {
-    background-color: #0b1120;
-    color: #e2e8f0;
-    padding: 70px 0 20px;
-    margin-top: 60px;
+    background-color: #0f172a;
+    color: var(--white);
+    padding: var(--sp-8) 0 var(--sp-4);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
-    margin-bottom: 50px;
+    gap: var(--sp-8);
+    margin-bottom: var(--sp-6);
 }
 
 .footer-col .footer-logo {
     height: 60px;
     margin-bottom: 20px;
-    filter: brightness(0) invert(1); /* Makes the logo white if it is transparent, or just leave it normal if it has colors */
-}
-
-/* Because the logo has brand colors, we won't invert it entirely but let's give it a nice background if needed, actually let's just use it as is */
-.footer-col .footer-logo {
     filter: none;
 }
 
@@ -107,10 +114,8 @@
 
 .footer-col h3 {
     color: var(--white);
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    position: relative;
-    padding-bottom: 10px;
+    font-size: 1.1rem;
+    margin-bottom: var(--sp-5);
 }
 
 .footer-col h3::after {
@@ -130,17 +135,17 @@
 }
 
 .footer-col ul li {
-    margin-bottom: 15px;
+    margin-bottom: var(--sp-3);
 }
 
 .footer-col ul li a {
-    color: #94a3b8;
+    color: var(--text-muted);
     transition: color 0.3s;
 }
 
 .footer-col ul li a:hover {
-    color: var(--secondary-color);
-    padding-left: 5px;
+    color: var(--secondary);
+    padding-left: var(--sp-1);
 }
 
 .social-links {
@@ -191,25 +196,34 @@
     }
 }
 
-/* Buttons */
+/* Buttons - Physical Feedback */
 .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all var(--transition-fast);
     border: none;
+    font-size: 1rem;
+    gap: var(--sp-2);
+}
+
+.btn:active {
+    transform: scale(0.96);
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: var(--white);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
-    background-color: #00458a;
-    color: var(--white);
+    background-color: var(--primary-dark);
+    box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
@@ -254,7 +268,7 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
-    filter: brightness(0.6); /* Metin okunabilirliği için */
+    filter: brightness(0.6);
 }
 
 .slide-content {
@@ -370,6 +384,22 @@
     border-color: var(--primary-color);
 }
 
+.form-control {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-main);
+    transition: var(--transition-fast);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    background-color: var(--white);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 91, 181, 0.1);
+}
+
 /* Blog Components */
 .blog-grid {
     display: grid;
@@ -441,6 +471,8 @@
     text-align: center;
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
@@ -482,6 +514,7 @@
     color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.6;
+    flex-grow: 1;
 }
 
 /* Latest Blog Section (News Layout) */
@@ -498,48 +531,52 @@
 
 .news-card {
     background: var(--white);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-    transition: all 0.4s ease;
-    border: none;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+    border: 1px solid var(--border-soft);
 }
 
 .news-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-premium);
+    border-color: var(--primary-light);
 }
 
 .news-card:hover .news-img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .news-img-wrapper {
     overflow: hidden;
-    width: 100%;
-    height: 220px;
+    aspect-ratio: 16 / 10;
 }
 
 .news-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .news-content {
-    padding: 25px;
+    padding: var(--sp-5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .news-category {
     display: inline-block;
-    padding: 5px 10px;
-    background-color: rgba(0, 91, 181, 0.1);
-    color: var(--primary-color);
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: var(--sp-3);
 }
 
 .news-content h3 {
@@ -561,6 +598,7 @@
     font-size: 0.95rem;
     margin-bottom: 20px;
     line-height: 1.5;
+    flex-grow: 1;
 }
 
 .news-date {
@@ -570,9 +608,14 @@
 
 /* Why Sweden Section */
 .why-sweden-section {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #005bb5 0%, #003f82 100%);
+    padding: var(--sp-8) 0;
+    background: radial-gradient(circle at top left, #005bb5, #002b5e);
     color: var(--white);
+}
+
+.why-sweden-section p {
+    color: var(--white);
+    opacity: 0.9;
 }
 
 .why-sweden-content {
@@ -631,11 +674,10 @@
 
 .stat {
     background: var(--white);
-    color: var(--text-color);
-    padding: 30px 20px;
-    border-radius: 12px;
+    padding: var(--sp-6) var(--sp-4);
+    border-radius: var(--radius-lg);
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-lg);
 }
 
 .stat:first-child {
@@ -697,6 +739,7 @@
 }
 
 .contact-info p {
+    color: var(--white);
     font-size: 1.1rem;
     opacity: 0.9;
     margin-bottom: 40px;
@@ -799,7 +842,6 @@
 }
 
 /* Card Action Buttons (Bottom Right) */
-.service-card {
     display: flex;
     flex-direction: column;
 }
@@ -995,9 +1037,10 @@
 }
 
 .page-header p {
+    color: var(--white);
     font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
+    opacity: 0.85;
+    max-width: 700px;
     margin: 0 auto;
 }
 
@@ -1015,3 +1058,98 @@
 .map-container iframe {
     display: block;
 }
+
+/* Featured Post */
+.featured-post {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+    height: 450px;
+    overflow: hidden;
+}
+
+.featured-post > div {
+    min-width: 0;
+    min-height: 0;
+}
+
+.featured-post .news-img-wrapper {
+    height: 100%;
+}
+
+.featured-post .news-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Featured Post Specifics */
+.featured-post {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Image takes slightly more space */
+    gap: 0;
+    align-items: stretch;
+    height: 520px; /* Slightly taller for more breathing room */
+}
+
+.featured-post .news-img-wrapper {
+    height: 100%;
+    aspect-ratio: auto;
+}
+
+.featured-post .news-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-post .news-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--sp-8);
+    height: 100%;
+    justify-content: center; /* Center content vertically */
+}
+
+.featured-post .news-category {
+    align-self: flex-start;
+}
+
+.featured-post h3 {
+    font-size: 2.2rem !important;
+    margin-bottom: var(--sp-4) !important;
+    line-height: 1.2 !important;
+}
+
+.featured-post p {
+    font-size: 1.15rem !important;
+    color: var(--text-muted) !important;
+    margin-bottom: var(--sp-6) !important;
+    flex-grow: 0 !important; /* Don't grow in featured view */
+}
+
+.featured-post .news-meta-footer {
+    margin-top: auto; /* Push to bottom */
+    padding-top: var(--sp-4);
+    border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 1024px) {
+    .featured-post {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    
+    .featured-post .news-img-wrapper {
+        aspect-ratio: 16 / 9;
+        height: 300px;
+    }
+    
+    .featured-post .news-content {
+        padding: var(--sp-6);
+    }
+}
+

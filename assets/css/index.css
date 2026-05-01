@@ -1,14 +1,50 @@
-/* Base Variables and Tokens */
+/* Base Variables and Tokens - Optimized via Frontend Design System */
 :root {
-    --primary-color: #005bb5; /* İsveç mavisi esintisi */
-    --secondary-color: #ffc200; /* İsveç sarısı esintisi */
-    --text-color: #333333;
-    --text-light: #666666;
-    --bg-color: #f8f9fa;
+    /* Brand Colors (60-30-10 Rule) */
+    --primary: #005bb5;     /* Swedish Blue Base */
+    --primary-dark: #003f82;
+    --primary-light: #e6f0f9;
+    --secondary: #ffc200;   /* Swedish Gold Accent */
+    --accent: #ff4d4d;      /* CTA / Urgent Accent */
+    
+    /* Neutrals */
     --white: #ffffff;
-    --border-color: #eaeaea;
-    --font-family: 'Inter', sans-serif;
+    --bg-main: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-soft: #e2e8f0;
+    
+    /* Spacing (8-Point Grid) */
+    --sp-1: 4px;
+    --sp-2: 8px;
+    --sp-3: 16px;
+    --sp-4: 24px;
+    --sp-5: 32px;
+    --sp-6: 48px;
+    --sp-8: 64px;
+    
+    /* Shadows & Effects (Premium Feel) */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-premium: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-blur: blur(12px);
+    
+    /* Typography System (Modular Scale: 1.25 Major Third) */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --h1: clamp(2.5rem, 5vw, 3.5rem);
+    --h2: clamp(2rem, 4vw, 2.5rem);
+    --h3: clamp(1.5rem, 3vw, 1.75rem);
+    --body-base: 1rem;
+    
     --container-width: 1200px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset and Base Styles */
@@ -16,27 +52,39 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-main);
+    background-color: var(--bg-main);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
-    transition: color 0.3s ease;
+    color: var(--primary);
+    transition: var(--transition-fast);
 }
 
 a:hover {
-    color: #003f82;
+    color: var(--primary-dark);
 }
 
 ul {
     list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Container */
@@ -44,21 +92,22 @@ ul {
     width: 100%;
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--sp-4);
 }
 
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
-    color: #111;
-}
+/* Typography Hierarchy */
+h1 { font-size: var(--h1); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: var(--sp-4); }
+h2 { font-size: var(--h2); font-weight: 700; letter-spacing: -0.01em; margin-bottom: var(--sp-4); }
+h3 { font-size: var(--h3); font-weight: 700; margin-bottom: var(--sp-3); }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: var(--sp-4);
+    color: var(--text-main);
+    font-size: var(--body-base);
 }
 
 /* Page Layout Defaults */
 .page-content {
-    padding: 60px 0;
-    min-height: calc(100vh - 160px); /* Header + Footer yaklaşımı */
+    padding: var(--sp-8) 0;
+    min-height: calc(100vh - 160px);
 }
