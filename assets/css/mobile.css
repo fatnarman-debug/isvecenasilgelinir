@@ -190,8 +190,8 @@
 
     /* 5. Feedback Tweaks: Slider, Services */
     .hero-slider, .slide {
-        height: 50vh !important; /* Reduce height by half */
-        min-height: 350px;
+        height: 300px !important; /* Fixed height for mobile */
+        min-height: 300px;
     }
 
     .slide-content h1 {
