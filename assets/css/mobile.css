@@ -189,15 +189,27 @@
     }
 
     /* 5. Feedback Tweaks: Slider, Services */
-    .hero-slider, .slide {
+    .slider-section, .slider-container, .slide {
         height: 300px !important; /* Fixed height for mobile */
-        min-height: 300px;
+        min-height: 300px !important;
+        background-color: #000;
     }
 
-    .slide-content h1 {
-        font-size: 2rem;
+    .slide-content {
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        padding: 20px !important;
     }
 
+    .slide-content h1, .slide-content h2 {
+        font-size: 1.8rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .slide-content p {
+        font-size: 0.9rem !important;
+        margin-bottom: 20px !important;
+    }
     .services-grid {
         display: flex !important;
         flex-direction: column;
