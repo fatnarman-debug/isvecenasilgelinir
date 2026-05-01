@@ -652,9 +652,16 @@
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--sp-3);
 }
+
+@media (min-width: 1200px) {
+    .latest-blog-section .news-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 
 .news-card {
     background: var(--white);
@@ -674,7 +681,7 @@
 }
 
 .news-img-wrapper {
-    height: 160px; /* Reduced from 180px for a tighter look */
+    height: 180px; /* Reduced from 200px */
     overflow: hidden;
 }
 
@@ -690,7 +697,7 @@
 }
 
 .news-content {
-    padding: 12px 15px; /* Minimal padding for a tight fit */
+    padding: 12px 16px; /* Further reduced padding to remove extra white space */
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -729,6 +736,18 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+.btn-read-more {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: var(--sp-2);
+    align-self: flex-start;
+}
+
 
 .news-meta-footer {
     margin-top: auto;
@@ -773,29 +792,15 @@
 }
 
 /* Card Action Links */
-.btn-read-more {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--primary);
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-}
-
 .card-contact-link {
-    position: absolute;
-    bottom: var(--sp-2);
-    right: var(--sp-3);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--text-muted);
     font-weight: 500;
-    opacity: 0.7;
     transition: var(--transition-fast);
 }
 
 .card-contact-link:hover {
     color: var(--primary);
-    opacity: 1;
 }
 
 
