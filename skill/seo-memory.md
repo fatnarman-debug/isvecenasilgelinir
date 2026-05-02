@@ -14,16 +14,20 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - **İsveç Öğrenci Vizesi ve Burslar (CSN)** (URL: `blog/isvecte-ogrenci-vizesi-ve-burslar.html`, Konu: Öğrenci oturum izni ve uluslararası SI bursları - 30 Nisan 2026)
 - **İsveççe Dil Okulları ve C1 Seviyesi** (URL: `blog/isvecte-dil-okullari-saglik-personeli.html`, Konu: SFI, Folkuniversitetet, CSN Destekleri - 30 Nisan 2026)
 - **İsveç'te Sağlık Çalışanları Denklik Süreci** (URL: `blog/isvecte-doktor-hemsire-denklik-sureci.html`, Konu: Socialstyrelsen başvuru ve lisans süreci - 30 Nisan 2026)
+- **İsveç'te Boşanma ve Aile Hukuku Rehberi** (URL: `blog/isvecte-bosanma-ve-aile-hukuku-rehberi/`, Konu: Velayet (vårdnad), mal paylaşımı (bodelning), adli yardım (rättshjälp) - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
+- **İsveç Türkçe Konuşan Avukat & Hukuki Yardım (UPGRADED)** (URL: `hukuki-yardim/`, Konu: Rättshjälp, Rättsskydd ve 2026 güncel mahkeme süreçleri eklendi - 3 Mayıs 2026)
 *(Ajan buraya yazdığı HTML dosyalarının adını, URL'sini ve konusunu listelemelidir)*
 
 ## Hedeflenecek Konu Fikirleri (Backlog)
+- İsveç'te Malpraktis (Tıbbi Hata) ve Tazminat Hakları
+- İsveç'te Ev Alırken Hukuki Danışmanlık ve "Dolda Fel" Riski
+- İsveç'te İşçi Hakları ve LAS (Lagen om anställningsskydd) Rehberi
 - İsveç'te En Çok Kazandıran Meslekler (Güncel Liste)
 - İsveç Eğitim Sistemi: Uluslararası Öğrenciler İçin Şartlar
-- İsveç'te Yazılımcı Olarak Çalışmak ve Mavi Kart (Blue Card)
-- İsveç Sosyal Güvenlik Sistemi (Försäkringskassan) ve Haklar
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
-- *2 Mayıs 2026 SEO Hamlesi 6:* "İsveç Ehliyet Sistemi 2026" rehberi oluşturuldu. 1 Ağustos'ta kalkacak olan Handledare kursu ve yeni EES değişim kuralları gibi rakiplerde olmayan güncel bilgiler eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
+- *3 Mayıs 2026 SEO Hamlesi 7:* "Hukuki SEO Dominasyonu" planı kapsamında rakip (enklajuridik.se) analizi yapıldı. Rakiplerin sadece basit metinler sunduğu görüldü. Biz ise "Rättshjälp" (Adli Yardım) ve "Rättsskydd" (Sigorta Desteği) gibi kullanıcıların para tasarrufu yapmasını sağlayacak teknik detaylara girerek 10x fark yarattık.
+- *2 Mayıs 2026 SEO Hamlesi 6:* "İsveç Ehliyet Sistemi 2026" rehberi oluşturuldu.
 - *1 Mayıs 2026 SEO Hamlesi 5:* "İsveç Sevgili Vizesi (Sambo)" rehberi oluşturuldu. Vizem.net gibi rakiplerden 10 kat daha detaylı; mülakat soruları ve kanıt listeleri eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
 - *1 Mayıs 2026 SEO Hamlesi 4:* "İsveç'te Üniversite Eğitimi" rehberi oluşturuldu. SI bursları ve yeni banka teminat tutarları (10.656 SEK) eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
 - *1 Mayıs 2026 SEO Hamlesi 3:* "İsveç Aile Birleşimi" konusu 2026 güncel verileriyle işlendi. FAQ ve BlogPosting şemaları eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
