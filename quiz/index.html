@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta name="google-site-verification" content="mN0zbmNqq5_q8n_6Ocyv5pBUPfu4ZsOTy26HznbW0N0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İsveç'e Taşınmaya Ne Kadar Hazırsınız? | İnteraktif Quiz</title>
+    <meta name="description" content="İsveç'e taşınma, oturum ve çalışma izni süreçlerine ne kadar hazırsınız? 2 dakikalık testimizi çözün, durumunuzu öğrenin.">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/marketing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #f8fafc; }
+        .quiz-header { text-align: center; margin: 40px 0; }
+        .quiz-opt { width: 100%; border: 2px solid #e2e8f0; padding: 20px; border-radius: 15px; background: white; cursor: pointer; transition: all 0.2s; font-weight: 600; text-align: left; }
+        .quiz-opt:hover { border-color: var(--primary); background: #f1f5f9; }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo" class="logo-img">
+            </a>
+            <a href="../hukuki-yardim/" class="header-legal-btn">Hukuki Yardım</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="quiz-header">
+            <h1>İsveç Hazırlık Testi 🇸🇪</h1>
+            <p>Durumunuzu analiz edelim ve size en uygun yolu gösterelim.</p>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-progress">
+                <div class="quiz-progress-bar"></div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="quiz-step active">
+                <h2>1. İsveç'e taşınma amacınız nedir?</h2>
+                <div class="quiz-options">
+                    <button class="quiz-opt">Çalışmak & Kariyer</button>
+                    <button class="quiz-opt">Eğitim (Üniversite/Master)</button>
+                    <button class="quiz-opt">Aile Birleşimi / Partner</button>
+                    <button class="quiz-opt">Yatırım & Şirket Kurma</button>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="quiz-step">
+                <h2>2. İngilizce veya İsveççe dil seviyeniz nedir?</h2>
+                <div class="quiz-options">
+                    <button class="quiz-opt">İleri Seviye (C1/C2)</button>
+                    <button class="quiz-opt">Orta Seviye (B1/B2)</button>
+                    <button class="quiz-opt">Başlangıç Seviyesi</button>
+                    <button class="quiz-opt">Henüz Başlamadım</button>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="quiz-step">
+                <h2>3. Maddi hazırlığınız (Savings) ne durumda?</h2>
+                <div class="quiz-options">
+                    <button class="quiz-opt">Yeterli birikimim var</button>
+                    <button class="quiz-opt">İş bularak gelmek istiyorum</button>
+                    <button class="quiz-opt">Burs imkanlarını araştırıyorum</button>
+                    <button class="quiz-opt">Bilgi almak istiyorum</button>
+                </div>
+            </div>
+
+            <!-- Step 4 (Final) -->
+            <div class="quiz-step">
+                <div style="text-align:center;">
+                    <span style="font-size: 4rem;">🎉</span>
+                    <h2>Analiz Tamamlandı!</h2>
+                    <p>Profiliniz İsveç'e taşınma süreci için <strong>%85 uyumlu</strong> görünüyor.</p>
+                    <div style="background: #f1f5f9; padding: 30px; border-radius: 20px; margin-top: 20px;">
+                        <h3>Size Özel İsveç Yol Haritası</h3>
+                        <p>Hangi vize türüne başvurmanız gerektiğini ve hazırlamanız gereken evrak listesini e-postanıza gönderiyoruz.</p>
+                        <form action="https://formspree.io/f/xvovbkgz" method="POST" style="margin-top:20px;">
+                            <input type="text" name="name" class="form-control" placeholder="Adınız" required style="margin-bottom:10px;">
+                            <input type="email" name="email" class="form-control" placeholder="E-posta Adresiniz" required style="margin-bottom:10px;">
+                            <button type="submit" class="btn btn-primary btn-block">Yol Haritasını Alın</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" style="margin-top: 100px;">
+        <div class="container text-center">
+            <p>&copy; 2026 İsveç'e Nasıl Gelinir? Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/marketing.js"></script>
+</body>
+</html>
