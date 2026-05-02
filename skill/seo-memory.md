@@ -14,16 +14,17 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - **İsveç Öğrenci Vizesi ve Burslar (CSN)** (URL: `blog/isvecte-ogrenci-vizesi-ve-burslar.html`, Konu: Öğrenci oturum izni ve uluslararası SI bursları - 30 Nisan 2026)
 - **İsveççe Dil Okulları ve C1 Seviyesi** (URL: `blog/isvecte-dil-okullari-saglik-personeli.html`, Konu: SFI, Folkuniversitetet, CSN Destekleri - 30 Nisan 2026)
 - **İsveç'te Sağlık Çalışanları Denklik Süreci** (URL: `blog/isvecte-doktor-hemsire-denklik-sureci.html`, Konu: Socialstyrelsen başvuru ve lisans süreci - 30 Nisan 2026)
+- **İsveç Oturum İzni Reddine İtiraz Rehberi** (URL: `blog/isvec-oturum-izni-reddi-itiraz-rehberi/`, Konu: Migrationsverket itirazı, Göç Mahkemesi süreci, 21 günlük yasal süre - 4 Mayıs 2026 - **High-Intent Lead Magnet**)
+- **İsveç'te Şirket Kurulumu ve Ticaret Hukuku** (URL: `blog/isvecte-sirket-kurulumu-hukuk-rehberi/`, Konu: Aktiebolag (AB) kurulumu, Bolagsverket, hissedar sözleşmeleri - 4 Mayıs 2026 - **Business Lead Magnet**)
+- **İsveç ve Türkiye Arasında Miras Hukuku** (URL: `blog/isvec-miras-hukuku-rehberi/`, Konu: Veraset ilamı, Bouppteckning, miras vergisi (%0), Testamente - 4 Mayıs 2026 - **Niche Authority Content**)
 - **İsveç'te Boşanma ve Aile Hukuku Rehberi** (URL: `blog/isvecte-bosanma-ve-aile-hukuku-rehberi/`, Konu: Velayet (vårdnad), mal paylaşımı (bodelning), adli yardım (rättshjälp) - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç Türkçe Konuşan Avukat & Hukuki Yardım (UPGRADED)** (URL: `hukuki-yardim/`, Konu: Rättshjälp, Rättsskydd ve 2026 güncel mahkeme süreçleri eklendi - 3 Mayıs 2026)
 *(Ajan buraya yazdığı HTML dosyalarının adını, URL'sini ve konusunu listelemelidir)*
 
 ## Hedeflenecek Konu Fikirleri (Backlog)
+- İsveç'te Vergi Sistemi ve Kişisel Gelir Vergisi (2026)
 - İsveç'te Malpraktis (Tıbbi Hata) ve Tazminat Hakları
 - İsveç'te Ev Alırken Hukuki Danışmanlık ve "Dolda Fel" Riski
-- İsveç'te İşçi Hakları ve LAS (Lagen om anställningsskydd) Rehberi
-- İsveç'te En Çok Kazandıran Meslekler (Güncel Liste)
-- İsveç Eğitim Sistemi: Uluslararası Öğrenciler İçin Şartlar
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
 - *3 Mayıs 2026 SEO Hamlesi 7:* "Hukuki SEO Dominasyonu" planı kapsamında rakip (enklajuridik.se) analizi yapıldı. Rakiplerin sadece basit metinler sunduğu görüldü. Biz ise "Rättshjälp" (Adli Yardım) ve "Rättsskydd" (Sigorta Desteği) gibi kullanıcıların para tasarrufu yapmasını sağlayacak teknik detaylara girerek 10x fark yarattık.
