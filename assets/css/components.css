@@ -656,7 +656,7 @@
     gap: var(--sp-3);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .latest-blog-section .news-grid {
         grid-template-columns: repeat(4, 1fr);
     }
