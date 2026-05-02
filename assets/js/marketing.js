@@ -132,7 +132,7 @@ function initLeadPopup() {
             <div class="popup-body">
                 <h2>Ücretsiz İsveç Rehberini İndirin!</h2>
                 <p>2026 İsveç Göçmenlik, Oturum ve Hukuk kurallarını içeren 40 sayfalık özel rehberimizi hemen e-postanıza gönderelim.</p>
-                <form action="https://formspree.io/f/xvovbkgz" method="POST" style="margin-top:20px;">
+                <form action="https://formspree.io/f/mykoyajl" method="POST" style="margin-top:20px;">
                     <input type="text" name="name" class="form-control" placeholder="Adınız Soyadınız" required style="margin-bottom:10px;">
                     <input type="email" name="email" class="form-control" placeholder="E-posta Adresiniz" required style="margin-bottom:10px;">
                     <input type="tel" name="phone" class="form-control" placeholder="Telefon Numaranız" required style="margin-bottom:10px;">
