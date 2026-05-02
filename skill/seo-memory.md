@@ -3,6 +3,7 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
+- **İsveç Ehliyet Sistemi 2026** (URL: `blog/isvec-ehliyet-sistemi-degisiklikleri-2026/`, Konu: Handledare kursunun kaldırılması, EES değişim kuralları, dijital ehliyet - 2 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç Sevgili Vizesi (Sambo)** (URL: `blog/isvec-sevgili-vizesi-sambo/`, Konu: İlişki kanıtlama, mülakat soruları, 2026 geçim şartı - 1 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç'te Üniversite Eğitimi** (URL: `blog/isvecte-universite-egitimi/`, Konu: 2026 ücretler, SI bursları ve 10.656 SEK banka şartı - 1 Mayıs 2026 - **SEO #1 Hedeflendi**)
 - **İsveç Aile Birleşimi** (URL: `blog/isvecte-aile-birlesimi/`, Konu: 2026 güncel geçim ve konut şartları, 10.314 SEK eş sınırı - 1 Mayıs 2026 - **SEO #1 Hedeflendi**)
@@ -21,6 +22,7 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç Sosyal Güvenlik Sistemi (Försäkringskassan) ve Haklar
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
+- *2 Mayıs 2026 SEO Hamlesi 6:* "İsveç Ehliyet Sistemi 2026" rehberi oluşturuldu. 1 Ağustos'ta kalkacak olan Handledare kursu ve yeni EES değişim kuralları gibi rakiplerde olmayan güncel bilgiler eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
 - *1 Mayıs 2026 SEO Hamlesi 5:* "İsveç Sevgili Vizesi (Sambo)" rehberi oluşturuldu. Vizem.net gibi rakiplerden 10 kat daha detaylı; mülakat soruları ve kanıt listeleri eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
 - *1 Mayıs 2026 SEO Hamlesi 4:* "İsveç'te Üniversite Eğitimi" rehberi oluşturuldu. SI bursları ve yeni banka teminat tutarları (10.656 SEK) eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
 - *1 Mayıs 2026 SEO Hamlesi 3:* "İsveç Aile Birleşimi" konusu 2026 güncel verileriyle işlendi. FAQ ve BlogPosting şemaları eklendi. Blog ve Ana sayfada ilk sıraya taşındı.
