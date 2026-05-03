@@ -226,8 +226,15 @@
 
 .corporate-article-header {
     border-bottom: 2px solid #f1f5f9;
+    padding-top: 40px; /* Rule: 40px gap below Header */
     padding-bottom: 40px;
     margin-bottom: 50px;
+}
+
+.blog-post-container {
+    max-width: 900px; /* Rule: 800px-1000px range */
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .corporate-article-header h1 {
@@ -236,6 +243,18 @@
     color: #1e293b;
     letter-spacing: -1px;
     margin-bottom: 15px;
+}
+
+.post-content {
+    color: #2D2D2D; /* Rule: Corporate Dark Gray */
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.post-content h2 {
+    color: #1e293b;
+    margin-top: 45px;
+    margin-bottom: 20px;
 }
 
 .data-table-clean {
