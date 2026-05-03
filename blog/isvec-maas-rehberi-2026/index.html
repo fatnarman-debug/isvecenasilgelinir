@@ -10,14 +10,6 @@
     <link rel="stylesheet" href="../../assets/css/components.css">
     <link rel="stylesheet" href="../../assets/css/marketing.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        .salary-table-wrapper { overflow-x: auto; margin: 30px 0; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .salary-table { width: 100%; border-collapse: collapse; min-width: 600px; background: white; }
-        .salary-table th { background: var(--primary-color); color: white; padding: 15px; text-align: left; }
-        .salary-table td { padding: 15px; border-bottom: 1px solid #eee; }
-        .salary-table tr:hover { background-color: #f9f9f9; }
-        .salary-badge { background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-weight: 600; font-size: 0.9em; }
-    </style>
 </head>
 <body>
     <header class="site-header">
@@ -37,117 +29,103 @@
         </div>
     </header>
 
+    <div class="salary-hero">
+        <div class="container">
+            <span class="category-tag">Ekonomi & Kariyer 2026</span>
+            <h1 style="font-size: 3rem; margin: 20px 0;">İsveç Maaş Rehberi</h1>
+            <p style="font-size: 1.2rem; color: #64748b; max-width: 700px; margin: 0 auto;">Meslek bazlı güncel kazanç verileri, vergi analizi ve kariyer planlama stratejileri.</p>
+        </div>
+    </div>
+
     <article class="blog-post-container container">
-        <header class="post-header">
-            <span class="category">Ekonomi & Kariyer</span>
-            <h1>İsveç Maaş Rehberi 2026: Meslek Bazlı Güncel Kazançlar</h1>
-            <div class="post-meta">Son Güncelleme: Mayıs 2026 | Okuma Süresi: 10 Dakika</div>
-        </header>
-
         <div class="post-content">
-            <p>İsveç'e taşınma kararındaki en belirleyici faktörlerden biri şüphesiz ekonomik refah ve maaş seviyeleridir. 2026 yılı itibarıyla İsveç ekonomisi, özellikle teknoloji ve sağlık sektörlerindeki iş gücü açığı nedeniyle maaşlarda enflasyon üstü artışlara sahne oluyor. Bu rehberde, farklı sektörlerdeki brüt ve net kazançları detaylandıracağız.</p>
+            <p>İsveç'e taşınma kararındaki en belirleyici faktörlerden biri şüphesiz ekonomik refah ve maaş seviyeleridir. 2026 yılı itibarıyla İsveç ekonomisi, özellikle teknoloji ve sağlık sektörlerindeki iş gücü açığı nedeniyle maaşlarda enflasyon üstü artışlara sahne oluyor.</p>
 
-            <div class="cta-box" style="background: linear-gradient(135deg, #005bb5, #003d7a); color: white; border: none;">
-                <h4 style="color: white;">İsveç'te İş Teklifi mi Aldınız?</h4>
-                <p>Maaşınızın vergi sonrası net tutarını, yan haklarınızı ve iş sözleşmenizin yasal uygunluğunu sizin için analiz edelim.</p>
-                <a href="../../iletisim/" class="btn" style="background: white; color: #005bb5;">Sözleşme Analizi İsteyin</a>
+            <div class="glass-card">
+                <h3 style="margin-top: 0;">2026 Meslek Maaşları Veri Tabanı</h3>
+                <p style="margin-bottom: 30px; color: #64748b;">Aşağıdaki veriler brüt aylık kazançları ve vergi sonrası tahmini net tutarları temsil etmektedir.</p>
+                
+                <div class="salary-table-wrapper">
+                    <table class="salary-table-v2">
+                        <thead>
+                            <tr>
+                                <th>Meslek</th>
+                                <th>Deneyim</th>
+                                <th>Brüt Maaş</th>
+                                <th>Net (Tahmini)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Uzman Doktor</td>
+                                <td>10+ Yıl</td>
+                                <td>88.000 SEK</td>
+                                <td><span class="salary-badge">59.000 SEK</span></td>
+                            </tr>
+                            <tr>
+                                <td>Yazılım Mimarı</td>
+                                <td>8+ Yıl</td>
+                                <td>82.000 SEK</td>
+                                <td><span class="salary-badge">55.500 SEK</span></td>
+                            </tr>
+                            <tr>
+                                <td>Kıdemli Yazılımcı</td>
+                                <td>5+ Yıl</td>
+                                <td>72.000 SEK</td>
+                                <td><span class="salary-badge">49.000 SEK</span></td>
+                            </tr>
+                            <tr>
+                                <td>İnşaat Mühendisi</td>
+                                <td>5+ Yıl</td>
+                                <td>54.000 SEK</td>
+                                <td><span class="salary-badge">38.500 SEK</span></td>
+                            </tr>
+                            <tr>
+                                <td>Hemşire (Uzman)</td>
+                                <td>5+ Yıl</td>
+                                <td>46.000 SEK</td>
+                                <td><span class="salary-badge">33.800 SEK</span></td>
+                            </tr>
+                            <tr>
+                                <td>İlkokul Öğretmeni</td>
+                                <td>Genel</td>
+                                <td>41.000 SEK</td>
+                                <td><span class="salary-badge">30.500 SEK</span></td>
+                            </tr>
+                            <tr>
+                                <td>Elektrik Teknisyeni</td>
+                                <td>Genel</td>
+                                <td>38.500 SEK</td>
+                                <td><span class="salary-badge">29.000 SEK</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-            <h2>Mesleklere Göre Brüt Aylık Maaşlar (2026 Ortalama)</h2>
-            <p>Aşağıdaki rakamlar, İsveç İstatistik Kurumu (SCB) ve sektörel sendika verilerine göre 2026 yılı için tahmin edilen ortalama brüt (vergi öncesi) aylık maaşlardır.</p>
+            <h2>Brüt ve Net Maaş Arasındaki Fark</h2>
+            <p>İsveç'te maaşlar her zaman brüt olarak konuşulur. Ortalama vergi oranı %30-32 civarındadır. Ancak yıllık geliriniz 600.000 SEK limitini aşarsa, aşan tutar üzerinden ek olarak %20 devlet vergisi (statlig skatt) ödenir. Bu, yüksek gelirli gruplar için kritik bir vergi planlaması gerektirir.</p>
 
-            <div class="salary-table-wrapper">
-                <table class="salary-table">
-                    <thead>
-                        <tr>
-                            <th>Meslek Grubu</th>
-                            <th>Deneyim Seviyesi</th>
-                            <th>Ort. Maaş (Brüt)</th>
-                            <th>Net Tahmini</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Yazılım Geliştirici (Senior)</td>
-                            <td>8+ Yıl</td>
-                            <td>75.000 SEK</td>
-                            <td><span class="salary-badge">51.500 SEK</span></td>
-                        </tr>
-                        <tr>
-                            <td>Yazılım Geliştirici (Junior)</td>
-                            <td>0-2 Yıl</td>
-                            <td>42.000 SEK</td>
-                            <td><span class="salary-badge">31.000 SEK</span></td>
-                        </tr>
-                        <tr>
-                            <td>Uzman Doktor</td>
-                            <td>10+ Yıl</td>
-                            <td>88.000 SEK</td>
-                            <td><span class="salary-badge">59.000 SEK</span></td>
-                        </tr>
-                        <tr>
-                            <td>Hemşire</td>
-                            <td>5+ Yıl</td>
-                            <td>44.000 SEK</td>
-                            <td><span class="salary-badge">32.500 SEK</span></td>
-                        </tr>
-                        <tr>
-                            <td>İnşaat Mühendisi</td>
-                            <td>5+ Yıl</td>
-                            <td>52.000 SEK</td>
-                            <td><span class="salary-badge">37.500 SEK</span></td>
-                        </tr>
-                        <tr>
-                            <td>Makine Operatörü</td>
-                            <td>Genel</td>
-                            <td>34.000 SEK</td>
-                            <td><span class="salary-badge">26.000 SEK</span></td>
-                        </tr>
-                        <tr>
-                            <td>İlkokul Öğretmeni</td>
-                            <td>Genel</td>
-                            <td>39.500 SEK</td>
-                            <td><span class="salary-badge">29.500 SEK</span></td>
-                        </tr>
-                        <tr>
-                            <td>Kurye / Şoför</td>
-                            <td>Genel</td>
-                            <td>31.000 SEK</td>
-                            <td><span class="salary-badge">24.000 SEK</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="premium-cta-box">
+                <h2 style="color: white; margin-top: 0;">Sözleşmenizi Profesyonellerle İnceleyin</h2>
+                <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px;">İsveç'te bir iş teklifi aldıysanız, maaşınızın piyasa değerini ve sözleşme maddelerinizin yasal güvenliğini sizin için kontrol edelim.</p>
+                <a href="../../iletisim/" class="btn-premium">Uzman Danışmanlık Alın</a>
             </div>
 
-            <h2>1. Brüt Maaş vs. Net Maaş: Cebinize Ne Kalacak?</h2>
-            <p>İsveç'te iş görüşmelerinde maaşlar her zaman <strong>brüt (Före skatt)</strong> olarak konuşulur. Ödeyeceğiniz vergi miktarı, yaşadığınız belediyeye (Kommun) göre değişmekle birlikte ortalama %30 civarındadır. Eğer yıllık brüt kazancınız yaklaşık 600.000 SEK (2026 sınırı) üzerindeyse, aşan kısım için ek olarak %20 devlet vergisi (Statlig skatt) ödersiniz.</p>
+            <h2>Yan Haklar (Förmåner)</h2>
+            <p>İsveç'te nakit maaşın ötesinde çok güçlü yan haklar mevcuttur. İşveren katkılı emeklilik (Tjänstepension), spor yardımı (Friskvård) ve 25 gün yasal ücretli tatil hakkı bunlardan sadece birkaçıdır.</p>
 
-            <h2>2. Yan Haklar ve Sosyal Güvenlik</h2>
-            <p>Maaş sadece aldığınız nakit para değildir. İsveç'te iş paketinizin içinde şunlar da bulunur:</p>
-            <ul>
-                <li><strong>Tjänstepension:</strong> İşvereniniz maaşınızın %4.5 - %30'u kadar ek emeklilik primi yatırır.</li>
-                <li><strong>Friskvårdsbidrag:</strong> Yıllık ortalama 5.000 SEK spor/sağlık yardımı.</li>
-                <li><strong>Örtid:</strong> Fazla mesai ücretleri normal saatin %50 - %100 fazlasıdır.</li>
-            </ul>
-
-            <h2>3. İsveç'te Asgari Ücret Var mı?</h2>
-            <p>Resmi bir "devlet asgari ücreti" yoktur. Bunun yerine sendikalar (Fackförbund) ve işverenler arasındaki toplu sözleşmeler (Kollektivavtal) sektör bazlı taban maaşları belirler. Örneğin, bir restoran çalışanı için taban maaş yaklaşık 24.000 SEK seviyesindedir.</p>
-
-            <div class="summary-card" style="background: #fff3e0; border-left: 5px solid #ff9800;">
-                <h3 style="color: #e65100;">Unutmamanız Gerekenler:</h3>
-                <ol>
-                    <li>Maaşınızı mutlaka "Kollektivavtal" olan bir şirketle müzakere edin.</li>
-                    <li>Stockholm'deki 40.000 SEK ile küçük bir şehirdeki 40.000 SEK yaşam standardı olarak çok farklıdır.</li>
-                    <li>Tatil ücreti (Semesterersättning) maaşınıza dahil mi yoksa ek mi, mutlaka sorun.</li>
-                </ol>
-            </div>
-
-            <div class="cta-banner">
-                <h3>Kariyerinizi İsveç'te İnşa Edin</h3>
-                <p>Maaş pazarlığı, vergi planlaması ve iş hukuku konularında size özel stratejiler geliştiriyoruz. Profesyonel danışmanlık ile haklarınızı koruyun.</p>
-                <a href="../../iletisim/" class="btn btn-primary btn-lg">Ücretsiz Ön Bilgi Alın</a>
+            <div class="glass-card" style="background: #fff; border-left: 6px solid var(--primary-color);">
+                <h3 style="margin-top: 0;">Kritik Tavsiyeler:</h3>
+                <ul>
+                    <li>Maaş pazarlığı yaparken mutlaka brüt rakam üzerinden konuşun.</li>
+                    <li>Şirketin "Kollektivavtal" (Toplu Sözleşme) kapsamında olup olmadığını sorun.</li>
+                    <li>Tatil ücretinin (semesterersättning) maaşın içinde mi yoksa ek mi olduğunu netleştirin.</li>
+                </ul>
             </div>
         </div>
+
+        <div class="section-spacer"></div>
     </article>
 
     <footer class="site-footer">
