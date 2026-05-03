@@ -200,7 +200,30 @@
     .assistant-panel { width: calc(100% - 40px); right: 20px; left: 20px; bottom: 90px; }
 }
 
-/* 4. Elite Corporate & Salary Guide UI */
+/* Breadcrumb Navigation */
+.breadcrumb {
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumb a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: #2563eb;
+}
+
+.breadcrumb .separator {
+    color: #cbd5e1;
+}
+
 .corporate-article-header {
     border-bottom: 2px solid #f1f5f9;
     padding-bottom: 40px;
