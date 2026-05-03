@@ -73,6 +73,7 @@ function initAssistant() {
             <div class="assistant-msg">Merhaba! İsveç yolculuğunuzda size nasıl yardımcı olabilirim? Aşağıdaki seçeneklerden birini seçebilirsiniz.</div>
             <div class="assistant-options">
                 <button class="option-btn" data-next="oturum">Oturum & Çalışma İzni</button>
+                <button class="option-btn" data-next="sirket">Şirket Açmak & İş Kurma</button>
                 <button class="option-btn" data-next="hukuki">Hukuki Yardım & Avukat</button>
                 <button class="option-btn" data-next="egitim">Eğitim & Üniversite</button>
                 <button class="option-btn" data-next="diger">Diğer Konular</button>
@@ -102,6 +103,10 @@ function handleAssistantStep(step) {
         case 'oturum':
             html = `<div class="assistant-msg">İsveç'te oturum ve çalışma izni süreçleri hakkında uzmanlarımız size yardımcı olabilir.</div>
                     <a href="/iletisim/" class="btn btn-primary btn-block">İletişime Geç</a>`;
+            break;
+        case 'sirket':
+            html = `<div class="assistant-msg">İsveç'te şirket açma, iş planı hazırlama ve vergi dairesi kayıtları konusunda profesyonel danışmanlık sağlıyoruz.</div>
+                    <a href="/iletisim/" class="btn btn-primary btn-block">Danışmanlık Alın</a>`;
             break;
         case 'hukuki':
             html = `<div class="assistant-msg">Türkçe konuşan avukatlarımızla yasal süreçlerinizi yönetiyoruz. Ücretsiz ön görüşme alabilirsiniz.</div>
