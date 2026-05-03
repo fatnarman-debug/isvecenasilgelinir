@@ -591,6 +591,12 @@
     gap: 30px;
 }
 
+@media (min-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .service-card {
     background: var(--bg-color);
     border-radius: 12px;
