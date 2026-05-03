@@ -3,6 +3,7 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
+- **İsveç'te Şirket Açmak 2026** (URL: `blog/isvecte-sirket-acmak-rehberi-2026/`, Konu: AB kurulumu, 25k SEK sermaye, Bolagsverket, Banka süreçleri ve D-Vizesi - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content + Consultancy Bot Integration**)
 - **İsveç Türkçe Konuşan Avukat & Hukuki Yardım** (URL: `hukuki-yardim/`, Konu: Göçmenlik, aile, şirket ve miras hukuku - 2 Mayıs 2026 - **Lead Generation & SEO #1 Hedeflendi**) - *Site-wide Header Visible*
 - **İsveç Ehliyet Sistemi 2026** (URL: `blog/isvec-ehliyet-sistemi-degisiklikleri-2026/`, Konu: Handledare kursunun kaldırılması, EES değişim kuralları, dijital ehliyet - 2 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç Sevgili Vizesi (Sambo)** (URL: `blog/isvec-sevgili-vizesi-sambo/`, Konu: İlişki kanıtlama, mülakat soruları, 2026 geçim şartı - 1 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
