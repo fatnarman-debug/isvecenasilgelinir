@@ -3,6 +3,8 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
+- **İsveç'te Vergi Sistemi ve Maaş Rehberi (2026)** (URL: `blog/isvecte-vergi-sistemi-2026/`, Konu: Belediye vergisi (%32.38), Devlet vergisi eşiği (660.400 SEK), Grundavdrag ve Jobbskatteavdrag - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
+- **İsveç'te Türkçe Konuşan Muhasebeci & Mali Müşavir** (URL: `blog/isvecte-turkce-konusan-muhasebeci/`, Konu: Skatteverket uyumu, Fortnox/Visma, vergi optimizasyonu, Stockholm/Göteborg/Malmö yerel hedefleme - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Master Guide + FAQ Schema**)
 - **İsveç'te Şirket Açmak 2026** (URL: `blog/isvecte-sirket-acmak-rehberi-2026/`, Konu: AB kurulumu, 25k SEK sermaye, Bolagsverket, Banka süreçleri ve D-Vizesi - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content + Consultancy Bot Integration**)
 - **İsveç Türkçe Konuşan Avukat & Hukuki Yardım** (URL: `hukuki-yardim/`, Konu: Göçmenlik, aile, şirket ve miras hukuku - 2 Mayıs 2026 - **Lead Generation & SEO #1 Hedeflendi**) - *Site-wide Header Visible*
 - **İsveç Ehliyet Sistemi 2026** (URL: `blog/isvec-ehliyet-sistemi-degisiklikleri-2026/`, Konu: Handledare kursunun kaldırılması, EES değişim kuralları, dijital ehliyet - 2 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
@@ -28,6 +30,9 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç'te Ev Alırken Hukuki Danışmanlık ve "Dolda Fel" Riski
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
+- *5 Mayıs 2026 SEO Hamlesi 10:* **AIO & GEO (AI Optimization)** süreci başlatıldı. Sitenin tüm yapay zeka botlarına (GPTBot, Perplexity vb.) kapıları açıldı (robots.txt). Ana sayfaya Advanced Knowledge Graph (Organization & FAQ Schema) eklenerek markanın yapay zeka araçları tarafından bir "otorite entity" olarak algılanması hedeflendi. LLM-Optimization metadata bloğu eklendi.
+- *5 Mayıs 2026 SEO Hamlesi 9:* "İsveç'te Vergi Sistemi 2026" rehberi oluşturuldu. Brytpunkt (660.400 SEK) gibi teknik veriler ve net maaş tablosu eklenerek rakiplerden (örn: Skatteverket'in karmaşık sitesi) daha okunabilir bir 10x içerik sunuldu.
+- *5 Mayıs 2026 SEO Hamlesi 8:* "İsveç'te Türkçe Konuşan Muhasebeci" kelimesi için 10x Master Guide stratejisi uygulandı. İki ayrı makale birleştirildi (Cannibalization önlendi), FAQ Schema eklendi ve Stockholm/Göteborg/Malmö gibi şehir bazlı alt başlıklar eklenerek yerel SEO güçlendirildi.
 - *3 Mayıs 2026 SEO Hamlesi 7:* "Hukuki SEO Dominasyonu" planı kapsamında rakip (enklajuridik.se) analizi yapıldı. Rakiplerin sadece basit metinler sunduğu görüldü. Biz ise "Rättshjälp" (Adli Yardım) ve "Rättsskydd" (Sigorta Desteği) gibi kullanıcıların para tasarrufu yapmasını sağlayacak teknik detaylara girerek 10x fark yarattık.
 - *2 Mayıs 2026 SEO Hamlesi 6:* "İsveç Ehliyet Sistemi 2026" rehberi oluşturuldu.
 - *1 Mayıs 2026 SEO Hamlesi 5:* "İsveç Sevgili Vizesi (Sambo)" rehberi oluşturuldu. Vizem.net gibi rakiplerden 10 kat daha detaylı; mülakat soruları ve kanıt listeleri eklendi. Blog ve Ana sayfada ilk sıraya taşındı.

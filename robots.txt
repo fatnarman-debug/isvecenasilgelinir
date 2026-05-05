@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers - Highly Recommended Access
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://isvecenasilgelinir.com/sitemap.xml
