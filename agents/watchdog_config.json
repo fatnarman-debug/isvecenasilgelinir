@@ -1,0 +1,47 @@
+{
+  "system_name": "Sweden Autonomous Content Engine",
+  "version": "1.0.0",
+  "institutions": [
+    {
+      "name": "Migrationsverket",
+      "url": "https://www.migrationsverket.se/Om-Migrationsverket/Nyhetsarkiv.html",
+      "priority": "Critical",
+      "focus": ["Work Permits", "Residence", "Sambo", "Citizenship"],
+      "selectors": {
+        "news_item": "h3",
+        "date": "span.date"
+      }
+    },
+    {
+      "name": "Skatteverket",
+      "url": "https://www.skatteverket.se/omoss/press/pressmeddelanden.html",
+      "priority": "High",
+      "focus": ["Taxes", "Personnummer", "Company Formation", "Moms"],
+      "selectors": {
+        "news_item": "a.sv-press-link",
+        "date": "span.sv-press-date"
+      }
+    },
+    {
+      "name": "Arbetsförmedlingen",
+      "url": "https://arbetsformedlingen.se/om-oss/press/pressmeddelanden",
+      "priority": "Medium",
+      "focus": ["Job Market", "A-kassa", "Startup Grants"]
+    },
+    {
+      "name": "Försäkringskassan",
+      "url": "https://www.forsakringskassan.se/om-forsakringskassan/press/pressmeddelanden",
+      "priority": "High",
+      "focus": ["Parental Leave", "Sick Leave", "Child Allowance"]
+    },
+    {
+      "name": "Pensionsmyndigheten",
+      "url": "https://www.pensionsmyndigheten.se/nyheter-och-press/pressrum",
+      "priority": "Medium",
+      "focus": ["Pension Schemes", "Retirement Age"]
+    }
+  ],
+  "output_directory": "blog/auto-drafts/",
+  "scan_interval_hours": 12,
+  "notification_email": "admin@isvecenasilgelinir.com"
+}
