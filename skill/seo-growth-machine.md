@@ -33,7 +33,7 @@ Bu yeteneği (skill) tetiklediğinde her zaman aşağıdaki sıralı adımları 
 ### Adım 4: Siteyi Güncelleme
 - Yarattığın yeni HTML sayfasının, sitedeki blog listelerinde görünmesini sağla:
   - `blog/index.html` sayfasını güncelle (yeni haberi ilk sıraya ekle).
-  - `index.html` sayfasındaki son yazılar (.news-grid) alanını güncelle.
+  - `index.html` sayfasındaki son yazılar (.news-grid) alanını güncelle (**Her zaman en güncel son 4 yazının görünmesini sağla, 4'ten fazlasını kaldır**).
 
 ### Adım 5: Hafıza ve Öz-Gelişim (Self-Improvement)
 - İşin bittikten sonra mutlaka `skill/seo-memory.md` dosyasını güncelle:
