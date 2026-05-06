@@ -2,81 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://isvecenasilgelinir.com/</loc>
-        <lastmod>2026-05-01</lastmod>
+        <lastmod>2026-05-06</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-startup-ve-yatirimci-vizesi/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.8</priority>
+        <loc>https://isvecenasilgelinir.com/blog/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <priority>0.9</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/hakkimizda/</loc>
         <lastmod>2026-05-01</lastmod>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/hizmetlerimiz/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/hukuki-yardim/</loc>
         <lastmod>2026-05-01</lastmod>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/iletisim/</loc>
         <lastmod>2026-05-01</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvec-vatandaslik-yeni-kurallar-2026/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-bosanan-kadinlar-mal-paylasimi-rehberi/</loc>
+        <lastmod>2026-05-06</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-bosanma-tanima-tenfiz-rehberi/</loc>
+        <lastmod>2026-05-06</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktora-arastirmaci-yeni-kurallar-2026/</loc>
+        <lastmod>2026-05-05</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-acmak-rehberi-2026/</loc>
+        <lastmod>2026-05-04</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvec-ehliyet-sistemi-degisiklikleri-2026/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvec-maas-rehberi-2026/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktor-hemsire-denklik-sureci/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-dil-okullari-saglik-personeli/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-ogrenci-vizesi-ve-burslar/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvece-tasinmak/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktor-olarak-calismak/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-ev-bulmak/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-kurmak/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-calisma-izni/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvec-miras-hukuku-rehberi/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-aile-birlesimi/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-universite-egitimi/</loc>
+        <loc>https://isvecenasilgelinir.com/blog/isvec-oturum-izni-reddi-itiraz-rehberi/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.8</priority>
     </url>
@@ -86,103 +81,133 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvec-ehliyet-sistemi-degisiklikleri-2026/</loc>
-        <lastmod>2026-05-02</lastmod>
+        <loc>https://isvecenasilgelinir.com/blog/isvece-mali-takvim-2026/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvece-tasinmak/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-aile-birlesimi/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-anaokulu-ogretmeni-olmak/</loc>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/blog/isvecte-bosanma-ve-aile-hukuku-rehberi/</loc>
-        <lastmod>2026-05-03</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvec-oturum-izni-reddi-itiraz-rehberi/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-kurulumu-hukuk-rehberi/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvec-miras-hukuku-rehberi/</loc>
-        <lastmod>2026-05-04</lastmod>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvec-maas-rehberi-2026/</loc>
-        <lastmod>2026-05-05</lastmod>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-is-bulma-rehberi-2026/</loc>
-        <lastmod>2026-05-06</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-vergi-sistemi-rehberi-2026/</loc>
-        <lastmod>2026-05-07</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-konut-ve-kiralama-rehberi-2026/</loc>
-        <lastmod>2026-05-08</lastmod>
-        <priority>0.9</priority>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-calisma-izni/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/blog/isvecte-denklik-alma-rehberi-2026/</loc>
-        <lastmod>2026-05-09</lastmod>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-dil-okullari-saglik-personeli/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktor-hemsire-denklik-sureci/</loc>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-anaokulu-ogretmeni-olmak/</loc>
-        <lastmod>2026-05-10</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-hemsire-olmak/</loc>
-        <lastmod>2026-05-11</lastmod>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktor-olarak-calismak/</loc>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/blog/isvecte-doktor-olmak/</loc>
-        <lastmod>2026-05-12</lastmod>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-ev-bulmak/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-hemsire-olmak/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-is-bulma-rehberi-2026/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-konut-ve-kiralama-rehberi-2026/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-moms-kdv-yonetimi/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/blog/isvecte-muhendis-olmak/</loc>
-        <lastmod>2026-05-13</lastmod>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-ogrenci-vizesi-ve-burslar/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-kurmak/</loc>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-turkce-muhasebe-hizmetleri/</loc>
-        <lastmod>2026-05-14</lastmod>
-        <priority>0.9</priority>
-    </url>
-    <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-turkce-konusan-muhasebeci/</loc>
-        <lastmod>2026-05-15</lastmod>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-kurulumu-hukuk-rehberi/</loc>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-turleri-vergilendirme/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-05-01</lastmod>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvece-mali-takvim-2026/</loc>
-        <lastmod>2026-05-20</lastmod>
-        <priority>0.9</priority>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-startup-ve-yatirimci-vizesi/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-moms-kdv-yonetimi/</loc>
-        <lastmod>2026-05-22</lastmod>
-        <priority>0.9</priority>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-turkce-konusan-muhasebeci/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/blog/isvecte-doktora-arastirmaci-yeni-kurallar-2026/</loc>
-        <lastmod>2026-05-05</lastmod>
-        <priority>1.0</priority>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-turkce-muhasebe-hizmetleri/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-universite-egitimi/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/blog/isvecte-vergi-sistemi-rehberi-2026/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.9</priority>
     </url>
 </urlset>
