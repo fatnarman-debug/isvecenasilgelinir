@@ -3,6 +3,7 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
+- **İsveç'te Doktora ve Araştırmacılar İçin Yeni Kurallar (2026)** (URL: `blog/isvecte-doktora-arastirmaci-yeni-kurallar-2026/`, Konu: 18 ay iş arama süresi, 3 yılda PUT hakkı, 11 Haziran 2026 yasa değişikliği - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç'te Vergi Sistemi ve Maaş Rehberi (2026)** (URL: `blog/isvecte-vergi-sistemi-2026/`, Konu: Belediye vergisi (%32.38), Devlet vergisi eşiği (660.400 SEK), Grundavdrag ve Jobbskatteavdrag - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç'te Türkçe Konuşan Muhasebeci & Mali Müşavir** (URL: `blog/isvecte-turkce-konusan-muhasebeci/`, Konu: Skatteverket uyumu, Fortnox/Visma, vergi optimizasyonu, Stockholm/Göteborg/Malmö yerel hedefleme - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Master Guide + FAQ Schema**)
 - **İsveç'te Şirket Açmak 2026** (URL: `blog/isvecte-sirket-acmak-rehberi-2026/`, Konu: AB kurulumu, 25k SEK sermaye, Bolagsverket, Banka süreçleri ve D-Vizesi - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content + Consultancy Bot Integration**)
@@ -21,6 +22,7 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - **İsveç'te Şirket Kurulumu ve Ticaret Hukuku** (URL: `blog/isvecte-sirket-kurulumu-hukuk-rehberi/`, Konu: Aktiebolag (AB) kurulumu, Bolagsverket, hissedar sözleşmeleri - 4 Mayıs 2026 - **Business Lead Magnet**)
 - **İsveç ve Türkiye Arasında Miras Hukuku** (URL: `blog/isvec-miras-hukuku-rehberi/`, Konu: Veraset ilamı, Bouppteckning, miras vergisi (%0), Testamente - 4 Mayıs 2026 - **Niche Authority Content**)
 - **İsveç'te Boşanma ve Aile Hukuku Rehberi** (URL: `blog/isvecte-bosanma-ve-aile-hukuku-rehberi/`, Konu: Velayet (vårdnad), mal paylaşımı (bodelning), adli yardım (rättshjälp) - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
+- **İsveç Vatandaşlığı Almak Zorlaşıyor (2026 Yeni Kurallar)** (URL: `blog/isvec-vatandaslik-yeni-kurallar-2026/`, Konu: 8 yıl ikamet, dil sınavı, kendi geçimini sağlama şartı, 6 Haziran 2026 yasa değişikliği - 6 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Alert**)
 - **İsveç Türkçe Konuşan Avukat & Hukuki Yardım (UPGRADED)** (URL: `hukuki-yardim/`, Konu: Rättshjälp, Rättsskydd ve 2026 güncel mahkeme süreçleri eklendi - 3 Mayıs 2026)
 *(Ajan buraya yazdığı HTML dosyalarının adını, URL'sini ve konusunu listelemelidir)*
 
@@ -30,6 +32,8 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç'te Ev Alırken Hukuki Danışmanlık ve "Dolda Fel" Riski
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
+- *6 Mayıs 2026 SEO Hamlesi 12:* **Watchdog System** başarıyla çalıştırıldı. Migrationsverket'in aynı gün yaptığı "Vatandaşlık Yasası" duyurusu, haberden sadece saatler sonra 10x içerik olarak yayına alındı. "Just-in-Time Content" stratejisi ile Google ve AI aramalarında (GEO) mutlak güncellik otoritesi hedeflendi.
+- *5 Mayıs 2026 SEO Hamlesi 11:* **Akademik Göç & Doktora** odağında 10x içerik oluşturuldu. Mezuniyet sonrası 18 aylık iş arama süresi gibi kritik ve yeni bir yasal değişiklik (Haziran 2026) işlenerek güncellik avantajı kullanıldı. Blog ve Ana sayfa ilk sıraya taşındı.
 - *5 Mayıs 2026 SEO Hamlesi 10:* **AIO & GEO (AI Optimization)** süreci başlatıldı. Sitenin tüm yapay zeka botlarına (GPTBot, Perplexity vb.) kapıları açıldı (robots.txt). Ana sayfaya Advanced Knowledge Graph (Organization & FAQ Schema) eklenerek markanın yapay zeka araçları tarafından bir "otorite entity" olarak algılanması hedeflendi. LLM-Optimization metadata bloğu eklendi.
 - *5 Mayıs 2026 SEO Hamlesi 9:* "İsveç'te Vergi Sistemi 2026" rehberi oluşturuldu. Brytpunkt (660.400 SEK) gibi teknik veriler ve net maaş tablosu eklenerek rakiplerden (örn: Skatteverket'in karmaşık sitesi) daha okunabilir bir 10x içerik sunuldu.
 - *5 Mayıs 2026 SEO Hamlesi 8:* "İsveç'te Türkçe Konuşan Muhasebeci" kelimesi için 10x Master Guide stratejisi uygulandı. İki ayrı makale birleştirildi (Cannibalization önlendi), FAQ Schema eklendi ve Stockholm/Göteborg/Malmö gibi şehir bazlı alt başlıklar eklenerek yerel SEO güçlendirildi.
