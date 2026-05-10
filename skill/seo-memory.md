@@ -24,6 +24,8 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - **İsveç'te Boşanma ve Aile Hukuku Rehberi** (URL: `blog/isvecte-bosanma-ve-aile-hukuku-rehberi/`, Konu: Velayet (vårdnad), mal paylaşımı (bodelning), adli yardım (rättshjälp) - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç'te Boşanan Kadınlar Mal Paylaşımı Rehberi (2026)** (URL: `blog/isvecte-bosanan-kadinlar-mal-paylasimi-rehberi/`, Konu: Türkiye'deki gayrimenkullerin paylaşımı, mal kaçırmaya karşı ihtiyati tedbir, zamanaşımı - 06 Mayıs 2026 - **High-Intent Legal Lead Magnet**)
 - **İsveç'te Boşanma ve Tanıma Tenfiz Rehberi (2026)** (URL: `blog/isvecte-bosanma-tanima-tenfiz-rehberi/`, Konu: Konsolosluk tescili vs. mahkeme davası, Apostil, yeminli tercüme süreçleri - 06 Mayıs 2026 - **Legal Gap Mastery**)
+- **İsveç'te Elektrik Desteği Ödemeleri 2026** (URL: `blog/isvecte-elektrik-destegi-odemeleri-2026/`, Konu: Försäkringskassan Midsommar ödemeleri, Swedbank SUS kaydı - 10 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Driven**)
+- **İsveç'te Boşanma Süreci ve Türkçe Konuşan Avukat Rehberi (2026)** (URL: `blog/isvecte-bosanma-turkce-avukat-rehberi-2026/`, Konu: Velayet, mal paylaşımı, Türk avukat desteği - 10 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç Vatandaşlığı Almak Zorlaşıyor (2026 Yeni Kurallar)** (URL: `blog/isvec-vatandaslik-yeni-kurallar-2026/`, Konu: 8 yıl ikamet, dil sınavı, kendi geçimini sağlama şartı, 6 Haziran 2026 yasa değişikliği - 6 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Alert**)
 - **İsveç Türkçe Konuşan Avukat & Hukuki Yardım (UPGRADED)** (URL: `hukuki-yardim/`, Konu: Rättshjälp, Rättsskydd ve 2026 güncel mahkeme süreçleri eklendi - 3 Mayıs 2026)
 *(Ajan buraya yazdığı HTML dosyalarının adını, URL'sini ve konusunu listelemelidir)*
@@ -34,8 +36,10 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç'te Ev Alırken Hukuki Danışmanlık ve "Dolda Fel" Riski
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
-- *6 Mayıs 2026 SEO Hamlesi 13:* **Legal Gap Mastery** uygulandı. İsveç'teki Türk toplumunun en büyük "gizli" ihtiyacı olan "Tanıma ve Tenfiz" konusu 10x bir rehberle kapatıldı. Özellikle çocuk velayeti ve nafaka gibi idari tescille çözülemeyen kritik farklar vurgulanarak yüksek değerli lead dönüşümü hedeflendi.
-- *6 Mayıs 2026 SEO Hamlesi 12:* **Watchdog System** başarıyla çalıştırıldı. Migrationsverket'in aynı gün yaptığı "Vatandaşlık Yasası" duyurusu, haberden sadece saatler sonra 10x içerik olarak yayına alındı. "Just-in-Time Content" stratejisi ile Google ve AI aramalarında (GEO) mutlak güncellik otoritesi hedeflendi.
+- *6 Mayıs 2026 SEO Hamlesi 13:* **Legal Gap Mastery** uygulandı. İsveç'teki Türk toplumunun en büyük "gizli" ihtiyacı olan "Tanıma ve Tenfiz" konusu 10x bir rehberle kapatıldı. Özellikle çocuk velayeti ve nafaka gibi idari- **Watchdog Geliştirme:** `agents/sentinel.py` içerisindeki `scan()` fonksiyonu gerçek web scraping (BeautifulSoup) moduna geçirildi.
+- **Yeni İçerik:** Försäkringskassan'ın elektrik desteği haberi Watchdog üzerinden yakalanıp 10x makaleye dönüştürüldü.
+- **Watchdog Çalıştırma:** Gerçek verilerle kurumların taranması (Terminal ağ kısıtlaması not edildi).
+ğı "Vatandaşlık Yasası" duyurusu, haberden sadece saatler sonra 10x içerik olarak yayına alındı. "Just-in-Time Content" stratejisi ile Google ve AI aramalarında (GEO) mutlak güncellik otoritesi hedeflendi.
 - *5 Mayıs 2026 SEO Hamlesi 11:* **Akademik Göç & Doktora** odağında 10x içerik oluşturuldu. Mezuniyet sonrası 18 aylık iş arama süresi gibi kritik ve yeni bir yasal değişiklik (Haziran 2026) işlenerek güncellik avantajı kullanıldı. Blog ve Ana sayfa ilk sıraya taşındı.
 - *5 Mayıs 2026 SEO Hamlesi 10:* **AIO & GEO (AI Optimization)** süreci başlatıldı. Sitenin tüm yapay zeka botlarına (GPTBot, Perplexity vb.) kapıları açıldı (robots.txt). Ana sayfaya Advanced Knowledge Graph (Organization & FAQ Schema) eklenerek markanın yapay zeka araçları tarafından bir "otorite entity" olarak algılanması hedeflendi. LLM-Optimization metadata bloğu eklendi.
 - *5 Mayıs 2026 SEO Hamlesi 9:* "İsveç'te Vergi Sistemi 2026" rehberi oluşturuldu. Brytpunkt (660.400 SEK) gibi teknik veriler ve net maaş tablosu eklenerek rakiplerden (örn: Skatteverket'in karmaşık sitesi) daha okunabilir bir 10x içerik sunuldu.
