@@ -9,8 +9,8 @@
     <url><loc>https://isvecenasilgelinir.com/iletisim/</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
     <url><loc>https://isvecenasilgelinir.com/quiz/</loc><lastmod>2026-05-08</lastmod><priority>0.6</priority></url>
 
-    <!-- Blog Posts (Regulatory & Breaking News) -->
-    <url><loc>https://isvecenasilgelinir.com/blog/isvec-vatandaslik-yeni-kurallar-haziran-2026/</loc><lastmod>2026-05-08</lastmod><priority>1.0</priority></url>
+    <url><loc>https://isvecenasilgelinir.com/blog/isvec-vatandaslik-yeni-kurallar-2026/</loc><lastmod>2026-05-12</lastmod><priority>1.0</priority></url>
+    <url><loc>https://isvecenasilgelinir.com/blog/isvecte-calisma-izni-rehberi-2026/</loc><lastmod>2026-05-12</lastmod><priority>1.0</priority></url>
     <url><loc>https://isvecenasilgelinir.com/blog/isvecte-moms-kdv-yeni-denetim-donemi-2026/</loc><lastmod>2026-05-08</lastmod><priority>0.9</priority></url>
     <url><loc>https://isvecenasilgelinir.com/blog/isvecte-dijital-yillik-rapor-arsredovisning-zorunlulugu/</loc><lastmod>2026-05-08</lastmod><priority>0.9</priority></url>
     <url><loc>https://isvecenasilgelinir.com/blog/isvecte-saglik-calisanlarina-dolandiricilik-uyarisi/</loc><lastmod>2026-05-08</lastmod><priority>0.9</priority></url>
@@ -26,23 +26,9 @@
     <url><loc>https://isvecenasilgelinir.com/blog/isvecte-anaokulu-ogretmeni-olmak/</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
 
     <!-- Legal & Business -->
-    <url>
-  <url>
-    <loc>https://isvecenasilgelinir.com/blog/isvecte-calisma-izni-rehberi-2026/</loc>
-    <lastmod>2026-05-12</lastmod>
-    <priority>1.0</priority>
-  </url>
-    <url><loc>https://isvecenasilgelinir.com/blog/isvecte-bosanma-turkce-avukat-rehberi-2026/</loc><lastmod>2026-05-10</lastmod><priority>0.80</priority></url>
-  <url>
-    <loc>https://isvecenasilgelinir.com/blog/isvecte-elektrik-destegi-odemeleri-2026/</loc>
-    <lastmod>2026-05-10</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://isvecenasilgelinir.com/blog/isvecte-evlilik-islemleri-dijital-rehber-2026/</loc>
-    <lastmod>2026-05-11</lastmod>
-    <priority>0.85</priority>
-  </url>
+      <url><loc>https://isvecenasilgelinir.com/blog/isvecte-bosanma-turkce-avukat-rehberi-2026/</loc><lastmod>2026-05-10</lastmod><priority>0.80</priority></url>
+    <url><loc>https://isvecenasilgelinir.com/blog/isvecte-elektrik-destegi-odemeleri-2026/</loc><lastmod>2026-05-10</lastmod><priority>0.80</priority></url>
+    <url><loc>https://isvecenasilgelinir.com/blog/isvecte-evlilik-islemleri-dijital-rehber-2026/</loc><lastmod>2026-05-11</lastmod><priority>0.85</priority></url>
     <url><loc>https://isvecenasilgelinir.com/blog/isvecte-bosanma-tanima-tenfiz-rehberi/</loc><lastmod>2026-05-08</lastmod><priority>0.9</priority></url>
     <url><loc>https://isvecenasilgelinir.com/blog/isvecte-bosanan-kadinlar-mal-paylasimi-rehberi/</loc><lastmod>2026-05-08</lastmod><priority>0.8</priority></url>
     <url><loc>https://isvecenasilgelinir.com/blog/isvecte-sirket-acmak-rehberi-2026/</loc><lastmod>2026-05-08</lastmod><priority>0.9</priority></url>
