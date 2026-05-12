@@ -95,12 +95,18 @@ class ContentEngine:
             card_html = f"""
                     <article class="news-card">
                         <div class="news-img-wrapper">
+                            <span class="card-badge info">{category.split(' & ')[0]}</span>
                             <img src="{prefix}{image_path}" alt="{title}" class="news-img">
                         </div>
                         <div class="news-content">
                             <span class="news-category">{category}</span>
                             <h3><a href="{prefix}blog/{slug}/">{title}</a></h3>
-                            <p class="news-date">{date}</p>
+                            <p>{title} hakkında detaylı rehber ve güncel bilgiler.</p>
+                            <a href="{prefix}blog/{slug}/" class="btn-read-more">Hemen Oku &rarr;</a>
+                            <div class="news-meta-footer">
+                                <span class="news-date">{date}</span>
+                                <a href="{prefix}iletisim/" class="card-contact-link">Uzman Yardımı</a>
+                            </div>
                         </div>
                     </article>"""
             

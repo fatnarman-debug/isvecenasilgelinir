@@ -683,6 +683,7 @@
 .news-img-wrapper {
     height: 180px; /* Reduced from 200px */
     overflow: hidden;
+    position: relative;
 }
 
 .news-img {
@@ -706,11 +707,46 @@
 .news-category {
     display: inline-block;
     color: var(--primary-dark);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 800;
     text-transform: uppercase;
-    margin-bottom: var(--sp-1);
+    margin-bottom: 6px;
     letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+/* Floating Badges for News Cards */
+.card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+}
+
+.card-badge.info {
+    background: rgba(0, 75, 135, 0.9); /* Swedish Blue */
+    color: #fff;
+}
+
+.card-badge.urgent {
+    background: rgba(225, 29, 72, 0.9); /* Urgent Red */
+    color: #fff;
+}
+
+.card-badge.success {
+    background: rgba(16, 185, 129, 0.9);
+    color: #fff;
 }
 
 .news-content h3 {
