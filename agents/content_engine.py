@@ -29,8 +29,6 @@ class ContentEngine:
         self._update_listings(slug, title, image_path, category, date)
         
     def _generate_html(self, title, content, image_path, category, date):
-        # This is a simplified version of the site's layout
-        # In practice, it should match the premium design rules in tasarim.md
         template = f"""<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -54,27 +52,66 @@ class ContentEngine:
             </nav>
         </div>
     </header>
-    <main class="container" style="margin-top: 40px; max-width: 800px;">
+    <main class="container" style="margin-top: 40px; max-width: 900px;">
         <article class="post-detail">
-            <span class="news-category">{category}</span>
-            <h1>{title}</h1>
-            <p class="post-meta">{date}</p>
-            <img src="../../{image_path}" alt="{title}" style="width: 100%; border-radius: 12px; margin: 20px 0;">
+            <header class="post-header" style="text-align: center; margin-bottom: 40px;">
+                <span class="card-badge info" style="position: static; display: inline-block;">{category.split(' & ')[0]}</span>
+                <h1 style="margin-top: 20px;">{title}</h1>
+                <p class="post-meta">{date}</p>
+            </header>
+            <img src="../../{image_path}" alt="{title}" style="width: 100%; border-radius: 16px; margin-bottom: 40px;">
             <div class="post-content">
                 {content}
             </div>
-            <div class="cta-box" style="background: #f8fafc; padding: 30px; border-radius: 12px; margin-top: 40px; border: 1px solid #e2e8f0;">
-                <h3>Hukuki Yardıma mı İhtiyacınız Var?</h3>
-                <p>İsveç'te Türkçe konuşan uzman avukatlarımızla oturum ve çalışma izni süreçlerinizi güvenle yönetin.</p>
-                <a href="../../iletisim/" class="btn btn-primary">Bize Ulaşın</a>
+            <div class="cta-box">
+                <h2>Sürecinizi Uzmanlara Emanet Edin</h2>
+                <p>İsveç göç yasaları karmaşıktır. Hata payınızı sıfıra indirmek ve en hızlı sonucu almak için Türkçe konuşan avukat ekibimizle iletişime geçin.</p>
+                <div class="btn-group">
+                    <a href="../../iletisim/" class="btn btn-primary" style="background: var(--secondary); color: var(--primary-dark); font-weight: 800;">Ücretsiz Ön Değerlendirme</a>
+                    <a href="https://wa.me/4600000000" class="btn btn-whatsapp" style="padding: 12px 24px; border-radius: 8px; font-weight: 600;">WhatsApp'tan Yazın</a>
+                </div>
             </div>
         </article>
     </main>
-    <footer class="site-footer" style="margin-top: 80px;">
-        <div class="container" style="text-align: center;">
-            <p>&copy; 2026 İsveç'e Nasıl Gelinir?</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="../../assets/images/logo.png" alt="İsveç'e Nasıl Gelinir Logo" class="footer-logo">
+                    <p>İsveç hayalinizi gerçeğe dönüştürmek için ihtiyacınız olan tüm rehberlik, danışmanlık ve güncel bilgiler tek bir platformda.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="../../">Ana Sayfa</a></li>
+                        <li><a href="../">Blog & Rehberler</a></li>
+                        <li><a href="../../iletisim/">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Hizmetler</h3>
+                    <ul>
+                        <li><a href="../../#">Oturum İzni</a></li>
+                        <li><a href="../../#">İş Bulma</a></li>
+                        <li><a href="../../#">Şirket Kurulumu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>İletişim</h3>
+                    <p>info@isvecenasilgelinir.com</p>
+                    <p>Stockholm, İsveç</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 İsveç'e Nasıl Gelinir? Tüm hakları saklıdır.</p>
+            </div>
         </div>
     </footer>
+    <nav class="bottom-nav">
+        <a href="../../" class="nav-item">Ana Sayfa</a>
+        <a href="../" class="nav-item active">Rehberler</a>
+        <a href="../../iletisim/" class="nav-item">İletişim</a>
+    </nav>
 </body>
 </html>"""
         return template

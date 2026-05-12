@@ -1426,3 +1426,47 @@
 .blog-mobile-contact-btn {
     display: none;
 }
+
+/* CTA Boxes and Cards - Premium Contrast */
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-dark) 0%, #001d3d 100%);
+    color: var(--white) !important;
+    padding: var(--sp-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    box-shadow: var(--shadow-premium);
+    margin: var(--sp-6) 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-box h2, .cta-box h3, .cta-box h4 {
+    color: var(--white) !important;
+    margin-bottom: var(--sp-3);
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--sp-5);
+}
+
+.cta-box .btn-group {
+    display: flex;
+    gap: var(--sp-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-box .btn-whatsapp {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.cta-box .btn-whatsapp:hover {
+    background: var(--white);
+    color: var(--primary-dark);
+}
