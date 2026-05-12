@@ -121,8 +121,6 @@ class ContentEngine:
 
     def _update_listings(self, slug, title, image_path, category, date):
         # Update blog/index.html and root index.html
-        # Logic to find news-grid and prepend the new article
-        # This is a simplified regex-based approach
         for file_to_update in ["index.html", "blog/index.html"]:
             path = os.path.join(self.base_dir, file_to_update)
             if not os.path.exists(path): continue
@@ -130,25 +128,29 @@ class ContentEngine:
             with open(path, "r", encoding="utf-8") as f:
                 content = f.read()
             
-            # Create the card HTML
+            # 1. Strip existing featured-post class and associated inline styles
+            content = content.replace('news-card featured-post', 'news-card')
+            content = content.replace('style="height: 400px; object-fit: cover;"', '')
+            
+            # 2. Create the NEW card HTML as featured-post
             prefix = "../" if "blog/" in file_to_update else ""
             card_html = f"""
-                    <article class="news-card">
-                        <div class="news-img-wrapper">
-                            <span class="card-badge info">{category.split(' & ')[0]}</span>
-                            <img src="{prefix}{image_path}" alt="{title}" class="news-img">
+                <article class="news-card featured-post">
+                    <div class="news-img-wrapper">
+                        <span class="card-badge info" style="position: absolute; top: 20px; left: 20px; z-index: 10;">Yeni Rehber</span>
+                        <img src="{prefix}{image_path}" alt="{title}" class="news-img" style="height: 400px; object-fit: cover;">
+                    </div>
+                    <div class="news-content">
+                        <span class="news-category">{category}</span>
+                        <h3><a href="{prefix}blog/{slug}/">{title}</a></h3>
+                        <p>{title} hakkında kapsamlı ve en güncel bilgileri içeren uzman rehberimiz yayınlandı.</p>
+                        <a href="{prefix}blog/{slug}/" class="btn-read-more">Hemen Oku &rarr;</a>
+                        <div class="news-meta-footer">
+                            <span class="news-date">{date}</span>
+                            <a href="{prefix}iletisim/" class="card-contact-link">Uzman Yardımı</a>
                         </div>
-                        <div class="news-content">
-                            <span class="news-category">{category}</span>
-                            <h3><a href="{prefix}blog/{slug}/">{title}</a></h3>
-                            <p>{title} hakkında detaylı rehber ve güncel bilgiler.</p>
-                            <a href="{prefix}blog/{slug}/" class="btn-read-more">Hemen Oku &rarr;</a>
-                            <div class="news-meta-footer">
-                                <span class="news-date">{date}</span>
-                                <a href="{prefix}iletisim/" class="card-contact-link">Uzman Yardımı</a>
-                            </div>
-                        </div>
-                    </article>"""
+                    </div>
+                </article>"""
             
             # Inject after <div class="news-grid">
             new_content = re.sub(r'(<div class="news-grid">)', r'\1' + card_html, content, count=1)
