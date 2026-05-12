@@ -67,8 +67,8 @@ class ContentEngine:
                 <h2>Sürecinizi Uzmanlara Emanet Edin</h2>
                 <p>İsveç göç yasaları karmaşıktır. Hata payınızı sıfıra indirmek ve en hızlı sonucu almak için Türkçe konuşan avukat ekibimizle iletişime geçin.</p>
                 <div class="btn-group">
-                    <a href="../../iletisim/" class="btn btn-primary" style="background: var(--secondary); color: var(--primary-dark); font-weight: 800;">Ücretsiz Ön Değerlendirme</a>
-                    <a href="https://wa.me/4600000000" class="btn btn-whatsapp" style="padding: 12px 24px; border-radius: 8px; font-weight: 600;">WhatsApp'tan Yazın</a>
+                    <a href="../../iletisim/" class="btn btn-primary">Ücretsiz Ön Değerlendirme</a>
+                    <a href="https://wa.me/4600000000" class="btn btn-whatsapp">WhatsApp'tan Yazın</a>
                 </div>
             </div>
         </article>
@@ -85,21 +85,24 @@ class ContentEngine:
                     <ul>
                         <li><a href="../../">Ana Sayfa</a></li>
                         <li><a href="../">Blog & Rehberler</a></li>
+                        <li><a href="../../quiz/">İsveç Hazırlık Testi</a></li>
+                        <li><a href="../../hakkimizda/">Hakkımızda</a></li>
                         <li><a href="../../iletisim/">İletişim</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Hizmetler</h3>
+                    <h3>Hizmetlerimiz</h3>
                     <ul>
                         <li><a href="../../#">Oturum İzni</a></li>
-                        <li><a href="../../#">İş Bulma</a></li>
+                        <li><a href="../../#">İş Bulma Danışmanlığı</a></li>
+                        <li><a href="../../#">Eğitim ve Üniversite</a></li>
                         <li><a href="../../#">Şirket Kurulumu</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>İletişim</h3>
-                    <p>info@isvecenasilgelinir.com</p>
-                    <p>Stockholm, İsveç</p>
+                    <p><strong>Email:</strong> info@isvecenasilgelinir.com</p>
+                    <p><strong>Adres:</strong> Stockholm, İsveç</p>
                 </div>
             </div>
             <div class="footer-bottom">
