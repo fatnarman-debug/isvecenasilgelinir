@@ -1522,3 +1522,8 @@
         gap: 25px;
     }
 }
+
+/* Bottom Navigation Bar - Hide on Desktop, only show on Mobile */
+.bottom-nav {
+    display: none;
+}
