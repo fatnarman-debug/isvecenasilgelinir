@@ -10,9 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html') && !window.location.pathname.includes('blog') && !window.location.pathname.includes('quiz') && !window.location.pathname.includes('hukuki-yardim');
     const isContactPage = window.location.pathname.includes('iletisim');
     
-    if (isHomePage && !isContactPage) {
-        initLeadPopup();
-    }
+    // Lead popup disabled per user request
+    // if (isHomePage && !isContactPage) {
+    //     initLeadPopup();
+    // }
 
     // Initialize AJAX for any marketing form found on the page
     initAjaxForms();
