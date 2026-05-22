@@ -126,6 +126,16 @@ def get_priority(url):
 
 # Date map for known posts (don't backdate new ones)
 DATE_MAP = {
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-nedir-2026/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-ne-zaman-agustos-2026/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-basvurusu-ve-kayit/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-konulari-mufredat/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-soru-sayisi-sure-format/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-kimler-muaf-istisnalar/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavina-nasil-hazirlanilir-kaynaklar/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-hakkinda-sikca-sorulanlar/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-pilot-uygulama-utprovningsprov/": "2026-05-22",
+    f"{BASE_URL}/blog/isvec-vatandaslik-sinavi-dil-ve-isvecce-seviyesi/": "2026-05-22",
     f"{BASE_URL}/": "2026-05-06",
     f"{BASE_URL}/blog/": "2026-05-06",
     f"{BASE_URL}/blog/isvec-vatandaslik-yeni-kurallar-2026/": "2026-05-06",
