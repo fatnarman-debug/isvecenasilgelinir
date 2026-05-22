@@ -3,6 +3,8 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
+- **İsveç'te Sommarjobb Vergi Muafiyeti (2026)** (URL: `blog/isvecte-sommarjobb-vergi-muafiyeti-2026/`, Konu: Skatteverket sommarjobb vergi muafiyeti sınırı (24.238 SEK), Intyg för utbetalning av lön utan skatteavdrag formu - 21 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Alert**)
+- **İsveç'te Sommarjobb Bulma Rehberi (2026)** (URL: `blog/isvecte-sommarjobb-bulma-rehberi-2026/`, Konu: Arbetsförmedlingen yaz işi bulma tavsiyeleri, CV hazırlama, Platsbanken, Sommarjobba i kommunen - 20 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Alert**)
 - **İsveç'te Doktora ve Araştırmacılar İçin Yeni Kurallar (2026)** (URL: `blog/isvecte-doktora-arastirmaci-yeni-kurallar-2026/`, Konu: 18 ay iş arama süresi, 3 yılda PUT hakkı, 11 Haziran 2026 yasa değişikliği - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç'te Vergi Sistemi ve Maaş Rehberi (2026)** (URL: `blog/isvecte-vergi-sistemi-2026/`, Konu: Belediye vergisi (%32.38), Devlet vergisi eşiği (660.400 SEK), Grundavdrag ve Jobbskatteavdrag - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç'te Türkçe Konuşan Muhasebeci & Mali Müşavir** (URL: `blog/isvecte-turkce-konusan-muhasebeci/`, Konu: Skatteverket uyumu, Fortnox/Visma, vergi optimizasyonu, Stockholm/Göteborg/Malmö yerel hedefleme - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Master Guide + FAQ Schema**)
@@ -36,6 +38,7 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç'te Ev Alırken Hukuki Danışmanlık ve "Dolda Fel" Riski
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
+- *22 Mayıs 2026 SEO Hamlesi 14:* **Just-in-Time Sommarjobb Guides** yayınlandı. Skatteverket'in 24.238 SEK vergi muafiyet sınırı haberi ve Arbetsförmedlingen'in yaz işi bulma rehberi, otomatik yayıncı (`auto_publisher.py`) ve watchdog entegrasyonu ile hızlıca 10x içerik olarak yayına alındı. Tasarım kurallarına (`tasarim.md`) tam uyum sağlandı.
 - *6 Mayıs 2026 SEO Hamlesi 13:* **Legal Gap Mastery** uygulandı. İsveç'teki Türk toplumunun en büyük "gizli" ihtiyacı olan "Tanıma ve Tenfiz" konusu 10x bir rehberle kapatıldı. Özellikle çocuk velayeti ve nafaka gibi idari- **Watchdog Geliştirme:** `agents/sentinel.py` içerisindeki `scan()` fonksiyonu gerçek web scraping (BeautifulSoup) moduna geçirildi.
 - **Yeni İçerik:** Försäkringskassan'ın elektrik desteği haberi Watchdog üzerinden yakalanıp 10x makaleye dönüştürüldü.
 - **Watchdog Çalıştırma:** Gerçek verilerle kurumların taranması (Terminal ağ kısıtlaması not edildi).

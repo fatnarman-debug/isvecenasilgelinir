@@ -4,41 +4,53 @@
   "institutions": [
     {
       "name": "Migrationsverket",
-      "url": "https://www.migrationsverket.se/Om-Migrationsverket/Nyhetsarkiv.html",
+      "url": "https://www.migrationsverket.se/Om-Migrationsverket/Pressrum.html",
       "priority": "Critical",
       "focus": ["Work Permits", "Residence", "Sambo", "Citizenship"],
       "selectors": {
-        "news_item": "h3",
-        "date": "span.date"
+        "news_item": "a[href*=\"/nyhetsarkiv/nyhetsarkiv/\"]",
+        "date": "span"
       }
     },
     {
       "name": "Skatteverket",
-      "url": "https://www.skatteverket.se/omoss/press/pressmeddelanden.html",
+      "url": "https://www.skatteverket.se/omoss/pressochmedia/pressmeddelanden/2026.4.1522bf3f19aea8075ba9b8.html",
       "priority": "High",
       "focus": ["Taxes", "Personnummer", "Company Formation", "Moms"],
       "selectors": {
-        "news_item": "a.sv-press-link",
-        "date": "span.sv-press-date"
+        "news_item": "a.normal[href*=\"/pressmeddelanden/2026/\"]",
+        "date": "span"
       }
     },
     {
       "name": "Arbetsförmedlingen",
       "url": "https://arbetsformedlingen.se/om-oss/press/pressmeddelanden",
       "priority": "Medium",
-      "focus": ["Job Market", "A-kassa", "Startup Grants"]
+      "focus": ["Job Market", "A-kassa", "Startup Grants"],
+      "selectors": {
+        "news_item": "a.link-style-press-message",
+        "date": "span"
+      }
     },
     {
       "name": "Försäkringskassan",
-      "url": "https://www.forsakringskassan.se/om-forsakringskassan/press/pressmeddelanden",
+      "url": "https://www.forsakringskassan.se/press",
       "priority": "High",
-      "focus": ["Parental Leave", "Sick Leave", "Child Allowance"]
+      "focus": ["Parental Leave", "Sick Leave", "Child Allowance"],
+      "selectors": {
+        "news_item": "a.nyheter__link",
+        "date": "span"
+      }
     },
     {
       "name": "Pensionsmyndigheten",
       "url": "https://www.pensionsmyndigheten.se/nyheter-och-press/pressrum",
       "priority": "Medium",
-      "focus": ["Pension Schemes", "Retirement Age"]
+      "focus": ["Pension Schemes", "Retirement Age"],
+      "selectors": {
+        "news_item": "a.pm_article-listview__link-anchor:not([href*=\"presskontakt\"]):not([href*=\"kortapensionsfakta\"]):not([href*=\"talespersoner\"]):not([href*=\"ledningsgrupp\"]):not([href*=\"bildmaterial\"]):not([href*=\"informatorer\"])",
+        "date": "span"
+      }
     }
   ],
   "output_directory": "blog/auto-drafts/",

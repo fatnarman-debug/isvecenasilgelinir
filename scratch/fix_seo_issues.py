@@ -133,6 +133,8 @@ DATE_MAP = {
     f"{BASE_URL}/blog/isvecte-bosanma-tanima-tenfiz-rehberi/": "2026-05-06",
     f"{BASE_URL}/blog/isvecte-bosanan-kadinlar-mal-paylasimi-rehberi/": "2026-05-06",
     f"{BASE_URL}/blog/isvecte-sirket-acmak-rehberi-2026/": "2026-05-04",
+    f"{BASE_URL}/blog/isvecte-sommarjobb-vergi-muafiyeti-2026/": "2026-05-21",
+    f"{BASE_URL}/blog/isvecte-sommarjobb-bulma-rehberi-2026/": "2026-05-20",
 }
 
 # Collect all valid URLs
