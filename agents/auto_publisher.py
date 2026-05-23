@@ -318,7 +318,7 @@ Gereksinimler:
 
         card_html = f"""                    <article class="news-card featured-post">
                         <div class="news-img-wrapper">
-                            <img src="{img_path}" alt="{title}" class="news-img" style="height: 400px; object-fit: cover;">
+                            <img src="{img_path}" alt="{title}" class="news-img">
                         </div>
                         <div class="news-content">
                             <span class="news-category">{category}</span>
@@ -334,6 +334,27 @@ Gereksinimler:
 
         # 3. Inject new card inside <div class="news-grid">
         content = re.sub(r'(<div class="news-grid">)', r'\1\n' + card_html, content, count=1)
+
+        # 4. Limit cards to exactly 5 on homepage (1 featured + 4 normal)
+        if not is_blog_index:
+            grid_start_tag = '<div class="news-grid">'
+            grid_start_idx = content.find(grid_start_tag)
+            if grid_start_idx != -1:
+                wrapper_tag = '<div class="view-all-wrapper"'
+                wrapper_idx = content.find(wrapper_tag, grid_start_idx)
+                if wrapper_idx != -1:
+                    grid_content_end = content.rfind('</div>', grid_start_idx, wrapper_idx)
+                    if grid_content_end != -1:
+                        grid_section = content[grid_start_idx + len(grid_start_tag):grid_content_end]
+                        articles = re.findall(r'(<article[^>]*>.*?</article>)', grid_section, re.DOTALL)
+                        if len(articles) > 5:
+                            kept_articles = articles[:5]
+                            new_grid_content = "\n" + "\n".join(kept_articles) + "\n                    "
+                            content = (
+                                content[:grid_start_idx + len(grid_start_tag)] +
+                                new_grid_content +
+                                content[grid_content_end:]
+                            )
 
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
