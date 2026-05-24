@@ -369,11 +369,11 @@ Gereksinimler:
         with open(script_path, 'r', encoding='utf-8') as f:
             content = f.read()
             
-        match = re.search(r'(DATE_MAP\s*=\s*\{[^}]+)', content)
+        match = re.search(r'(DATE_MAP\s*=\s*\{)', content)
         if match:
             target = match.group(1)
-            new_target = target + f'    f"{{BASE_URL}}/blog/{slug}/": "{iso_date}",\n'
-            content = content.replace(target, new_target)
+            new_target = target + f'\n    f"{{BASE_URL}}/blog/{slug}/": "{iso_date}",'
+            content = content.replace(target, new_target, 1)
             
             with open(script_path, 'w', encoding='utf-8') as f:
                 f.write(content)
