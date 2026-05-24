@@ -3,6 +3,8 @@
 Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelecekteki hedef fikirleri saklar. Ajan her çalışmasında bu dosyayı okur ve görevini bitirdiğinde günceller.
 
 ## Yazılan ve Tamamlanan Konular
+- **İsveç'te Türkçe Avukat ve Hukuki Yardım Rehberi** (URL: `blog/isvecte-turkce-avukat-ve-hukuki-yardim-rehberi/`, Konu: Rättshjälp, Rättsskydd, boşanma, tanıma-tenfiz, göç davaları ve İsveç Türkçe avukat arayışları - 24 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content + Internal Linking Silo**)
+- **İsveç Çalışma İzni 2026: Maaş Sınırından Muaf Meslekler Listesi** (URL: `blog/isvecte-calisma-izni-maas-siniri-muaf-meslekler-2026/`, Konu: Migrationsverket yeni çalışma izni kuralları, muafiyet listesi, start-up istisnaları, yasaklı meslekler - 24 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Driven + 10x Content**)
 - **İsveç'te Sommarjobb Vergi Muafiyeti (2026)** (URL: `blog/isvecte-sommarjobb-vergi-muafiyeti-2026/`, Konu: Skatteverket sommarjobb vergi muafiyeti sınırı (24.238 SEK), Intyg för utbetalning av lön utan skatteavdrag formu - 21 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Alert**)
 - **İsveç'te Sommarjobb Bulma Rehberi (2026)** (URL: `blog/isvecte-sommarjobb-bulma-rehberi-2026/`, Konu: Arbetsförmedlingen yaz işi bulma tavsiyeleri, CV hazırlama, Platsbanken, Sommarjobba i kommunen - 20 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Alert**)
 - **İsveç'te Doktora ve Araştırmacılar İçin Yeni Kurallar (2026)** (URL: `blog/isvecte-doktora-arastirmaci-yeni-kurallar-2026/`, Konu: 18 ay iş arama süresi, 3 yılda PUT hakkı, 11 Haziran 2026 yasa değişikliği - 5 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
@@ -24,13 +26,15 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - **İsveç'te Şirket Kurulumu ve Ticaret Hukuku** (URL: `blog/isvecte-sirket-kurulumu-hukuk-rehberi/`, Konu: Aktiebolag (AB) kurulumu, Bolagsverket, hissedar sözleşmeleri - 4 Mayıs 2026 - **Business Lead Magnet**)
 - **İsveç ve Türkiye Arasında Miras Hukuku** (URL: `blog/isvec-miras-hukuku-rehberi/`, Konu: Veraset ilamı, Bouppteckning, miras vergisi (%0), Testamente - 4 Mayıs 2026 - **Niche Authority Content**)
 - **İsveç'te Boşanma ve Aile Hukuku Rehberi** (URL: `blog/isvecte-bosanma-ve-aile-hukuku-rehberi/`, Konu: Velayet (vårdnad), mal paylaşımı (bodelning), adli yardım (rättshjälp) - 3 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
-- **İsveç'te Boşanan Kadınlar Mal Paylaşımı Rehberi (2026)** (URL: `blog/isvecte-bosanan-kadinlar-mal-paylasimi-rehberi/`, Konu: Türkiye'deki gayrimenkullerin paylaşımı, mal kaçırmaya karşı ihtiyati tedbir, zamanaşımı - 06 Mayıs 2026 - **High-Intent Legal Lead Magnet**)
+- **İsveç'te Boşanan Kadınlar Mal Paylaşımı Rehberi (2026)** (URL: `blog/isvecte-bosanan-kadinlar-mal-paylasimi-rehberi/`, Konu: Türkiye'deki gayrimenkullerin paylaşımı, mal kaçırmaya karşı ihtiyati tedbir, zamanaşımı - 06 Mei 2026 - **High-Intent Legal Lead Magnet**)
 - **İsveç'te Boşanma ve Tanıma Tenfiz Rehberi (2026)** (URL: `blog/isvecte-bosanma-tanima-tenfiz-rehberi/`, Konu: Konsolosluk tescili vs. mahkeme davası, Apostil, yeminli tercüme süreçleri - 06 Mayıs 2026 - **Legal Gap Mastery**)
 - **İsveç'te Elektrik Desteği Ödemeleri 2026** (URL: `blog/isvecte-elektrik-destegi-odemeleri-2026/`, Konu: Försäkringskassan Midsommar ödemeleri, Swedbank SUS kaydı - 10 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Driven**)
 - **İsveç'te Boşanma Süreci ve Türkçe Konuşan Avukat Rehberi (2026)** (URL: `blog/isvecte-bosanma-turkce-avukat-rehberi-2026/`, Konu: Velayet, mal paylaşımı, Türk avukat desteği - 10 Mayıs 2026 - **SEO #1 Hedeflendi - 10x Content**)
 - **İsveç Vatandaşlığı Almak Zorlaşıyor (2026 Yeni Kurallar)** (URL: `blog/isvec-vatandaslik-yeni-kurallar-2026/`, Konu: 8 yıl ikamet, dil sınavı, kendi geçimini sağlama şartı, 6 Haziran 2026 yasa değişikliği - 6 Mayıs 2026 - **SEO #1 Hedeflendi - Watchdog Alert**)
 - **İsveç Türkçe Konuşan Avukat & Hukuki Yardım (UPGRADED)** (URL: `hukuki-yardim/`, Konu: Rättshjälp, Rättsskydd ve 2026 güncel mahkeme süreçleri eklendi - 3 Mayıs 2026)
-*(Ajan buraya yazdığı HTML dosyalarının adını, URL'sini ve konusunu listelemelidir)*
+- **İsveç Çalışma İzni 2026: Maaş Sınırından Muaf Meslekler Listesi** (URL: `blog/isvecte-calisma-izni-maas-siniri-muaf-meslekler-2026/`, Konu: Muafiyet listesi, start-up istisnaları, yasaklanan meslekler - 24 Mayıs 2026)
+- **İsveç Türkçe Avukat ve Hukuki Yardım Rehberi** (URL: `blog/isvecte-turkce-avukat-ve-hukuki-yardim-rehberi/`, Konu: Rättshjälp, Rättsskydd, boşanma, tanıma-tenfiz, göç davaları - 24 Mayıs 2026)
+- *(Ajan buraya yazdığı HTML dosyalarının adını, URL'sini ve konusunu listelemelidir)*
 
 ## Hedeflenecek Konu Fikirleri (Backlog)
 - İsveç'te Vergi Sistemi ve Kişisel Gelir Vergisi (2026)
@@ -38,8 +42,10 @@ Bu dosya, ajan tarafından daha önce işlenen konuları, öğrenimleri ve gelec
 - İsveç'te Ev Alırken Hukuki Danışmanlık ve "Dolda Fel" Riski
 
 ## Ajan Notları & Öğrenimler (Self-Improvement)
+- *24 Mayıs 2026 SEO Hamlesi 15:* **Topical Authority & Internal Linking Silo** uygulandı. "İsveç'te Türkçe Avukat ve Hukuki Yardım Rehberi" yayınlandı. Başlık ve meta açıklamaları 60/155 sınırlarına göre tam optimize edildi, FAQPage şemasıyla zenginleştirildi. Aile ve göç hukuku ile ilgili 4 farklı makale arasında çift yönlü iç link ağı (silo) örülerek sitenin yasal konulardaki otoritesi pekiştirildi. Ayrıca "Maaş Sınırından Muaf Meslekler Listesi" makalesi yayınlandı ve sitemap güncellendi.
 - *22 Mayıs 2026 SEO Hamlesi 14:* **Just-in-Time Sommarjobb Guides** yayınlandı. Skatteverket'in 24.238 SEK vergi muafiyet sınırı haberi ve Arbetsförmedlingen'in yaz işi bulma rehberi, otomatik yayıncı (`auto_publisher.py`) ve watchdog entegrasyonu ile hızlıca 10x içerik olarak yayına alındı. Tasarım kurallarına (`tasarim.md`) tam uyum sağlandı.
-- *6 Mayıs 2026 SEO Hamlesi 13:* **Legal Gap Mastery** uygulandı. İsveç'teki Türk toplumunun en büyük "gizli" ihtiyacı olan "Tanıma ve Tenfiz" konusu 10x bir rehberle kapatıldı. Özellikle çocuk velayeti ve nafaka gibi idari- **Watchdog Geliştirme:** `agents/sentinel.py` içerisindeki `scan()` fonksiyonu gerçek web scraping (BeautifulSoup) moduna geçirildi.
+- *6 Mayıs 2026 SEO Hamlesi 13:* **Legal Gap Mastery** uygulandı. İsveç'teki Türk toplumunun en büyük "gizli" ihtiyacı olan "Tanıma ve Tenfiz" konusu 10x bir rehberle kapatıldı. Özellikle çocuk velayeti ve nafaka gibi idari durumlar işlendi.
+- **Watchdog Geliştirme:** `agents/sentinel.py` içerisindeki `scan()` fonksiyonu gerçek web scraping (BeautifulSoup) moduna geçirildi.
 - **Yeni İçerik:** Försäkringskassan'ın elektrik desteği haberi Watchdog üzerinden yakalanıp 10x makaleye dönüştürüldü.
 - **Watchdog Çalıştırma:** Gerçek verilerle kurumların taranması (Terminal ağ kısıtlaması not edildi).
 ğı "Vatandaşlık Yasası" duyurusu, haberden sadece saatler sonra 10x içerik olarak yayına alındı. "Just-in-Time Content" stratejisi ile Google ve AI aramalarında (GEO) mutlak güncellik otoritesi hedeflendi.
