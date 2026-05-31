@@ -1,5 +1,8 @@
 name: Daily SEO Content Engine
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   schedule:
     - cron: '0 9 * * *'  # Her gün Türkiye saatiyle 12:00'de (09:00 UTC) çalışır
