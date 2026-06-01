@@ -51,6 +51,16 @@
         "news_item": "a.pm_article-listview__link-anchor:not([href*=\"presskontakt\"]):not([href*=\"kortapensionsfakta\"]):not([href*=\"talespersoner\"]):not([href*=\"ledningsgrupp\"]):not([href*=\"bildmaterial\"]):not([href*=\"informatorer\"])",
         "date": "span"
       }
+    },
+    {
+      "name": "SVT Nyheter Inrikes",
+      "url": "https://www.svt.se/nyheter/inrikes/",
+      "priority": "High",
+      "focus": ["Immigration", "Deportations", "Visa", "Citizenship"],
+      "selectors": {
+        "news_item": "a[href^=\"/nyheter/inrikes/\"]:not([href=\"/nyheter/inrikes/\"]):not([href=\"/nyheter/inrikes\"]):not([href*=\"?\"])",
+        "date": "time"
+      }
     }
   ],
   "output_directory": "blog/auto-drafts/",
