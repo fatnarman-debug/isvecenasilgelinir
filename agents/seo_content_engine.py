@@ -209,7 +209,10 @@ class SEOContentEngine:
             print("[DRY-RUN] Found candidates, but skipping LLM execution as GEMINI_API_KEY is not set.")
             return
 
-        for candidate in candidates:
+        for i, candidate in enumerate(candidates):
+            if i > 0:
+                print("Sleeping for 15 seconds to avoid API rate limits...")
+                await asyncio.sleep(15)
             await self.process_candidate(candidate)
 
     async def process_candidate(self, candidate):
@@ -322,6 +325,7 @@ class SEOContentEngine:
                         print(f"Skipping: Writer identified this article as not recent enough (older than 1 week).")
                         return
                         
+                    await asyncio.sleep(5)
                     print("Draft generated successfully. Sending to Editor for review...")
                     
                     editor_prompt = f"""
@@ -352,6 +356,7 @@ class SEOContentEngine:
                     else:
                         print(f"Editorial Review rejected. Feedback: {review.get('feedback')}")
                         feedback_msg = f"Editör Reddi Bildirimi: {review.get('feedback')}"
+                        await asyncio.sleep(5)
                 
                 # If we broke out of loop or completed loops, publish if we have a draft
                 if draft and (loop_count == max_loops or review.get("approved", True)):

@@ -9,7 +9,7 @@ import os
 import re
 from datetime import date
 
-BASE_DIR = "/Users/fatnar/Documents/isvecenasilgelinir"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 BASE_URL = "https://isvecenasilgelinir.com"
 TODAY = date.today().strftime("%Y-%m-%d")
 
