@@ -111,6 +111,17 @@ p {
     padding: var(--sp-8) 0;
     min-height: calc(100vh - 160px);
 }
+
+/* Added for tasarim.md compliance */
+.page-header-margin {
+    margin-top: 40px;
+}
+
+.text-block-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--sp-4);
+}
 /* Mobile Utilities */
 @media (max-width: 768px) {
     .container {
