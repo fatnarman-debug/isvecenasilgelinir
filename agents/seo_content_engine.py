@@ -314,8 +314,18 @@ class SEOContentEngine:
                     {feedback_msg}
                     """
                     
-                    writer_resp = await writer.chat(writer_prompt)
-                    draft = await writer_resp.structured_output()
+                    try:
+                        writer_resp = await writer.chat(writer_prompt)
+                        draft = await writer_resp.structured_output()
+                    except Exception as e:
+                        if "429" in str(e) or "Quota" in str(e) or "quota" in str(e):
+                            print(f"API Rate limit hit during Writer step. Sleeping for 65 seconds... Error: {e}")
+                            await asyncio.sleep(65)
+                            loop_count -= 1
+                            continue
+                        else:
+                            print(f"Error in Writer: {e}")
+                            break
                     
                     if not draft:
                         print("Failed to get structured draft from Writer.")
@@ -343,8 +353,18 @@ class SEOContentEngine:
                     CTA Metin: {draft['cta_text']}
                     """
                     
-                    editor_resp = await editor.chat(editor_prompt)
-                    review = await editor_resp.structured_output()
+                    try:
+                        editor_resp = await editor.chat(editor_prompt)
+                        review = await editor_resp.structured_output()
+                    except Exception as e:
+                        if "429" in str(e) or "Quota" in str(e) or "quota" in str(e):
+                            print(f"API Rate limit hit during Editor step. Sleeping for 65 seconds... Error: {e}")
+                            await asyncio.sleep(65)
+                            loop_count -= 1
+                            continue
+                        else:
+                            print(f"Error in Editor: {e}")
+                            break
                     
                     if not review:
                         print("Failed to get structured review from Editor. Approving by default.")
