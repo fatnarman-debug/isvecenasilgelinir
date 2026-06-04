@@ -290,6 +290,7 @@ class SEOContentEngine:
         )
 
         draft = None
+        review = None
         loop_count = 0
         max_loops = 3
         feedback_msg = "Lütfen İsveççe duyurudan yeni bir Türkçe blog yazısı taslağı oluştur."
@@ -379,7 +380,7 @@ class SEOContentEngine:
                         await asyncio.sleep(5)
                 
                 # If we broke out of loop or completed loops, publish if we have a draft
-                if draft and (loop_count == max_loops or review.get("approved", True)):
+                if draft and (loop_count == max_loops or review is None or review.get("approved", True)):
                     await self.publish_post(draft)
                 else:
                     print("Could not get an approved draft after maximum iteration loops.")
@@ -408,7 +409,7 @@ class SEOContentEngine:
         print(f"Generating cover image with Imagen 3.0 for prompt: '{cover_prompt}'...")
         try:
             image_result = self.genai_client.models.generate_images(
-                model='imagen-3.0-generate-002',
+                model='imagen-3.0-generate-001',
                 prompt=cover_prompt,
                 config=dict(
                     number_of_images=1,
