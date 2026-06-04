@@ -11,6 +11,8 @@ on:
 jobs:
   run-engine:
     runs-on: macos-latest # Ajan kütüphanesinin macOS uyumluluğu için macos runner seçilmiştir
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout repository

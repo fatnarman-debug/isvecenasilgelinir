@@ -255,7 +255,7 @@ class SEOContentEngine:
         """
 
         writer_config = LocalAgentConfig(
-            model="gemini-3.5-flash",
+            model="gemini-2.5-flash",
             system_instructions=CustomSystemInstructions(text=writer_instructions),
             tools=[search_competitors, fetch_url],
             response_schema=BlogPostDraft
@@ -284,7 +284,7 @@ class SEOContentEngine:
         """
 
         editor_config = LocalAgentConfig(
-            model="gemini-3.5-flash",
+            model="gemini-2.5-flash",
             system_instructions=CustomSystemInstructions(text=editor_instructions),
             response_schema=EditorialReview
         )
