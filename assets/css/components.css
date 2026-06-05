@@ -1529,3 +1529,46 @@
 .bottom-nav {
     display: none;
 }
+
+/* Sticky WhatsApp Button */
+.sticky-whatsapp {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.sticky-whatsapp svg {
+    width: 32px;
+    height: 32px;
+}
+
+.sticky-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .sticky-whatsapp {
+        bottom: 80px; /* Above the bottom nav */
+        right: 16px;
+        width: 50px;
+        height: 50px;
+    }
+    .sticky-whatsapp svg {
+        width: 26px;
+        height: 26px;
+    }
+}
