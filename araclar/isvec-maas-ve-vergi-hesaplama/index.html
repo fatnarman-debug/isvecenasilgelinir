@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İsveç Net Maaş ve Vergi Hesaplama 2026 | İsveç'e Nasıl Gelinir?</title>
+    <meta name="description" content="İsveç'te brüt maaşınızdan ne kadar vergi kesileceğini ve elinize ne kadar net maaş geçeceğini yaşadığınız Kommun (Belediye) seçerek anında hesaplayın.">
+    <link rel="canonical" href="https://isvecenasilgelinir.com/araclar/isvec-maas-ve-vergi-hesaplama/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://isvecenasilgelinir.com/araclar/isvec-maas-ve-vergi-hesaplama/">
+    <meta property="og:title" content="İsveç Net Maaş ve Vergi Hesaplama Aracı 2026">
+    <meta property="og:description" content="Hangi belediyede (Kommun) ne kadar vergi ödeyeceksiniz? Brüt maaşınızı girin, İsveç net maaşınızı hemen öğrenin.">
+    <meta property="og:image" content="https://isvecenasilgelinir.com/assets/images/logo.png">
+
+    <link rel="stylesheet" href="../../assets/css/index.css?v=1.1">
+    <link rel="stylesheet" href="../../assets/css/components.css?v=1.1">
+    <link rel="stylesheet" href="../../assets/css/mobile.css" media="screen and (max-width: 768px)">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .calculator-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--bg-main) 0%, #f0f4f8 100%);
+            min-height: calc(100vh - 300px);
+            display: flex;
+            align-items: center;
+        }
+        .calculator-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+        .calc-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .calc-header h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        .calc-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        .calc-form-group {
+            margin-bottom: 25px;
+        }
+        .calc-form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .calc-form-group select, 
+        .calc-form-group input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            border: 2px solid var(--border-soft);
+            border-radius: 12px;
+            background: #fff;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        .calc-form-group select:focus, 
+        .calc-form-group input:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(250, 169, 22, 0.15);
+        }
+        .calc-results {
+            margin-top: 40px;
+            background: var(--bg-main);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid var(--border-soft);
+            display: none;
+            animation: slideUp 0.5s ease forwards;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .result-row:last-child {
+            border-bottom: none;
+        }
+        .result-label {
+            font-weight: 600;
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        .result-value {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+        .result-net {
+            background: rgba(37, 211, 102, 0.1);
+            border: 2px solid #25D366;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .result-net .result-label {
+            color: #1a9949;
+            font-size: 1.2rem;
+        }
+        .result-net .result-value {
+            color: #25D366;
+            font-size: 1.8rem;
+        }
+        .calc-cta {
+            margin-top: 40px;
+            text-align: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 30px;
+            border-radius: 16px;
+        }
+        .calc-cta h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        .calc-cta p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebe59;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .calculator-container { padding: 30px 20px; }
+            .calc-header h1 { font-size: 1.8rem; }
+            .result-net { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .result-net .result-value { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../../" class="logo">
+                <img src="../../assets/images/logo.png" alt="İsveç'e Nasıl Gelinir?" class="logo-img">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../">Ana Sayfa</a></li>
+                    <li><a href="../../blog/">Blog</a></li>
+                    <li><a href="../../hizmetlerimiz/">Hizmetlerimiz</a></li>
+                    <li><a href="../../hakkimizda/">Hakkımızda</a></li>
+                    <li><a href="../../iletisim/">İletişim</a></li>
+                    <li class="mobile-only"><a href="../../hukuki-yardim/">Hukuki Yardım</a></li>
+                </ul>
+            </nav>
+            <a href="../../hukuki-yardim/" class="header-legal-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+                Hukuki Yardım
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="calculator-section page-header-margin">
+            <div class="container">
+                <div class="calculator-container">
+                    <div class="calc-header">
+                        <h1>İsveç Maaş ve Vergi Hesaplama 🇸🇪</h1>
+                        <p>Brüt maaşınızı ve yaşayacağınız şehri seçin, elinize geçecek net maaşı anında görün. (2026 Tahmini Verileri)</p>
+                    </div>
+
+                    <div class="calc-form">
+                        <div class="calc-form-group">
+                            <label for="kommunSelect">Yaşadığınız / Yaşayacağınız Şehir (Kommun)</label>
+                            <select id="kommunSelect">
+                                <option value="" disabled selected>Lütfen bir şehir seçin</option>
+                                <option value="29.8">Stockholm (%29.82)</option>
+                                <option value="32.6">Göteborg (%32.60)</option>
+                                <option value="32.4">Malmö (%32.42)</option>
+                                <option value="33.0">Uppsala (%33.00)</option>
+                                <option value="29.2">Solna (%29.20 - Düşük Vergi)</option>
+                                <option value="32.3">Lund (%32.33)</option>
+                                <option value="31.5">Linköping (%31.55)</option>
+                                <option value="31.5">Helsingborg (%31.54)</option>
+                                <option value="34.2">Umeå (%34.20)</option>
+                                <option value="33.3">Norrköping (%33.33)</option>
+                            </select>
+                        </div>
+                        <div class="calc-form-group">
+                            <label for="salaryInput">Aylık Brüt Maaş (SEK)</label>
+                            <input type="number" id="salaryInput" placeholder="Örn: 35000" min="0">
+                        </div>
+                    </div>
+
+                    <div class="calc-results" id="calcResults">
+                        <div class="result-row">
+                            <span class="result-label">Brüt Maaş</span>
+                            <span class="result-value" id="resBrut">0 SEK</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Kommun Vergisi (<span id="resTaxRate">-%0</span>)</span>
+                            <span class="result-value" style="color: #e74c3c;" id="resKommunTax">0 SEK</span>
+                        </div>
+                        <div class="result-row" id="stateTaxRow" style="display: none;">
+                            <span class="result-label">Devlet Vergisi (Statlig skatt - 51k+ üstü)</span>
+                            <span class="result-value" style="color: #e74c3c;" id="resStateTax">0 SEK</span>
+                        </div>
+                        <div class="result-net">
+                            <span class="result-label">Elinize Geçecek Net Maaş</span>
+                            <span class="result-value" id="resNet">0 SEK</span>
+                        </div>
+                    </div>
+
+                    <div class="calc-cta" id="calcCta" style="display: none;">
+                        <h3>Bu Maaşla İsveç'e Gelebilir Misiniz?</h3>
+                        <p>Aldığınız iş teklifi 2026 göçmenlik (Migrationsverket) asgari maaş sınırlarına uygun mu? Sözleşmenizde risk var mı? Uzmanlarımıza danışın.</p>
+                        <a href="https://wa.me/46700000000" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Sözleşmemi İnceleyin
+                        </a>
+                        <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">*Bu araç tahmini vergi (Jobbskatteavdrag hariç baz oranlar üzerinden) hesaplar. Kesin bordro hesabı için muhasebecimizle görüşün.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="../../assets/images/logo.png" alt="İsveç'e Nasıl Gelinir Logo" class="footer-logo">
+                    <p>İsveç hayalinizi gerçeğe dönüştürmek için ihtiyacınız olan tüm rehberlik, danışmanlık ve güncel bilgiler tek bir platformda.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Hızlı Linkler</h3>
+                    <ul>
+                        <li><a href="../../">Ana Sayfa</a></li>
+                        <li><a href="../../blog/">Blog & Rehberler</a></li>
+                        <li><a href="../../araclar/isvec-maas-ve-vergi-hesaplama/">Maaş Hesaplayıcı</a></li>
+                        <li><a href="../../hakkimizda/">Hakkımızda</a></li>
+                        <li><a href="../../iletisim/">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Hizmetlerimiz</h3>
+                    <ul>
+                        <li><a href="../../hukuki-yardim/">Oturum İzni</a></li>
+                        <li><a href="../../hukuki-yardim/">İş Bulma Danışmanlığı</a></li>
+                        <li><a href="../../hukuki-yardim/">Şirket Kurulumu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>İletişim</h3>
+                    <p><strong>Email:</strong> info@isvecenasilgelinir.com</p>
+                    <p><strong>Adres:</strong> Stockholm, İsveç</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 İsveç'e Nasıl Gelinir? Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const kommunSelect = document.getElementById("kommunSelect");
+            const salaryInput = document.getElementById("salaryInput");
+            const calcResults = document.getElementById("calcResults");
+            const calcCta = document.getElementById("calcCta");
+            
+            const resBrut = document.getElementById("resBrut");
+            const resTaxRate = document.getElementById("resTaxRate");
+            const resKommunTax = document.getElementById("resKommunTax");
+            const resStateTax = document.getElementById("resStateTax");
+            const stateTaxRow = document.getElementById("stateTaxRow");
+            const resNet = document.getElementById("resNet");
+
+            function formatCurrency(num) {
+                return new Intl.NumberFormat('sv-SE', { maximumFractionDigits: 0 }).format(num) + " SEK";
+            }
+
+            function calculateTax() {
+                const taxRate = parseFloat(kommunSelect.value);
+                const brut = parseFloat(salaryInput.value);
+
+                if (!isNaN(taxRate) && !isNaN(brut) && brut > 0) {
+                    // Show results
+                    calcResults.style.display = "block";
+                    calcCta.style.display = "block";
+
+                    const taxDecimal = taxRate / 100;
+                    let kommunTax = brut * taxDecimal;
+                    let stateTax = 0;
+
+                    // Rough 2026 State tax threshold (Statlig inkomstskatt) is around 51,200 SEK/month
+                    // Anything above this is taxed an extra 20%
+                    if (brut > 51200) {
+                        const excess = brut - 51200;
+                        stateTax = excess * 0.20;
+                        stateTaxRow.style.display = "flex";
+                    } else {
+                        stateTaxRow.style.display = "none";
+                    }
+
+                    // In real Swedish tax there is a Jobbskatteavdrag (earned income credit)
+                    // We apply a simplified standard deduction here to make it more realistic
+                    // Usually it reduces the tax burden by roughly 1500-2500 SEK for average salaries.
+                    let deduction = 0;
+                    if(brut > 10000 && brut <= 40000) {
+                        deduction = brut * 0.06;
+                    } else if (brut > 40000) {
+                        deduction = 2400; 
+                    }
+
+                    let totalTax = (kommunTax + stateTax) - deduction;
+                    if(totalTax < 0) totalTax = 0;
+
+                    const net = brut - totalTax;
+
+                    resBrut.textContent = formatCurrency(brut);
+                    resTaxRate.textContent = "%" + taxRate.toFixed(2);
+                    resKommunTax.textContent = "- " + formatCurrency(kommunTax - deduction); // Simplified display
+                    resStateTax.textContent = "- " + formatCurrency(stateTax);
+                    resNet.textContent = formatCurrency(net);
+
+                } else {
+                    calcResults.style.display = "none";
+                    calcCta.style.display = "none";
+                }
+            }
+
+            kommunSelect.addEventListener("change", calculateTax);
+            salaryInput.addEventListener("input", calculateTax);
+        });
+    </script>
+</body>
+</html>
