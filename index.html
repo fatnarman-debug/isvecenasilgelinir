@@ -99,56 +99,63 @@
     <style>
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 50px;
+            grid-template-columns: 1.3fr 0.9fr;
+            gap: 30px;
             align-items: center;
+            position: relative;
+            z-index: 20;
         }
         @media (max-width: 992px) {
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
         }
         .lead-form-card {
-            background: white;
-            padding: 35px 30px;
-            border-radius: 16px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            color: var(--text-main);
+            background-color: #ffffff !important;
+            padding: 25px 25px;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            color: #0f172a !important;
             text-align: left;
+            position: relative;
+            z-index: 30;
         }
         .lead-form-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #0f172a;
+            font-size: 1.35rem;
+            margin-bottom: 5px;
+            color: #0f172a !important;
         }
         .lead-form-card p.form-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            line-height: 1.5;
+            font-size: 0.85rem;
+            color: #475569 !important;
+            margin-bottom: 15px;
+            line-height: 1.4;
         }
-        .lead-form-group { margin-bottom: 15px; }
-        .lead-form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+        .lead-form-group { margin-bottom: 12px; }
+        .lead-form-group label { display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.85rem; color: #1e293b !important; }
         .lead-form-group input, .lead-form-group select {
             width: 100%;
-            padding: 12px 15px;
+            padding: 10px 12px;
             border: 1px solid #cbd5e1;
             border-radius: 8px;
             font-family: inherit;
-            font-size: 1rem;
+            font-size: 0.95rem;
+            background-color: #ffffff !important;
+            color: #0f172a !important;
         }
         .lead-form-group input:focus, .lead-form-group select:focus {
             outline: none;
-            border-color: var(--primary);
+            border-color: #2563eb;
             box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
         }
         .form-success {
             display: none;
             background: #dcfce7;
             color: #166534;
-            padding: 15px;
+            padding: 12px;
             border-radius: 8px;
             font-weight: 600;
-            margin-top: 15px;
+            margin-top: 10px;
             text-align: center;
+            font-size: 0.9rem;
         }
         .sticky-whatsapp:hover { transform: scale(1.05); }
         @media (min-width: 768px) {
@@ -187,15 +194,15 @@
         <section class="hero-section page-header-margin">
             <div class="container hero-grid">
                 <div class="hero-content text-block-container" style="text-align: left;">
-                    <h1>İsveç Hayalinizi Şansa Bırakmayın: Türkçe Konuşan Uzmanlarla Güvenle Yerleşin</h1>
-                    <p style="margin-bottom: 30px;">Çalışma izninden şirket kurulumuna kadar tüm göçmenlik ve bürokrasi süreçlerinizde alanında uzman avukat ve mali müşavirlerimiz yanınızda.</p>
+                    <h1 style="font-size: 2.4rem; line-height: 1.2; margin-bottom: 15px;">İsveç Hayalinizi Şansa Bırakmayın: Türkçe Konuşan Uzmanlarla Güvenle Yerleşin</h1>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem;">Çalışma izninden şirket kurulumuna kadar tüm göçmenlik ve bürokrasi süreçlerinizde alanında uzman avukat ve mali müşavirlerimiz yanınızda.</p>
                     <div class="hero-buttons" style="justify-content: flex-start;">
-                        <a href="turkce-konusan-avukat/" class="btn btn-primary">Ücretsiz Ön Görüşme Ayarla</a>
-                        <a href="#hizmetlerimiz" class="btn btn-outline">Hizmetlerimizi İncele</a>
+                        <a href="turkce-konusan-avukat/" class="btn btn-primary" style="padding: 12px 20px; font-size: 0.95rem;">Ücretsiz Ön Görüşme Ayarla</a>
+                        <a href="#hizmetlerimiz" class="btn btn-outline" style="padding: 12px 20px; font-size: 0.95rem;">Hizmetlerimizi İncele</a>
                     </div>
                 </div>
 
-                <div class="lead-form-card" style="margin-top: 20px;">
+                <div class="lead-form-card">
                     <h3>Sizi Arayalım 📞</h3>
                     <p class="form-desc">İsveç'e geliş süreciniz veya hukuki bir konu hakkında uzmanlarımızdan ücretsiz bilgi almak için form doldurun.</p>
                     <form id="heroLeadForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').style.display='block'; this.style.display='none';">
