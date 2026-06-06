@@ -21,35 +21,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
+        /* Kontrast garantili renk tanımlamaları */
         .calculator-section {
             padding: 80px 0;
-            background: linear-gradient(135deg, var(--bg-main) 0%, #f0f4f8 100%);
+            background: linear-gradient(135deg, var(--bg-main, #f0f4f8) 0%, #e2e8f0 100%);
             min-height: calc(100vh - 300px);
-            display: flex;
-            align-items: center;
         }
         .calculator-container {
             max-width: 800px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: #ffffff;
             border-radius: 24px;
             padding: 50px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            color: #1e293b; /* Kesin okunabilirlik için koyu renk */
         }
         .calc-header {
             text-align: center;
             margin-bottom: 40px;
         }
         .calc-header h1 {
-            color: var(--primary);
+            color: #0f172a;
             font-size: 2.2rem;
             margin-bottom: 15px;
         }
         .calc-header p {
-            color: var(--text-light);
+            color: #475569;
             font-size: 1.1rem;
         }
         .calc-form-group {
@@ -59,32 +56,33 @@
             display: block;
             font-weight: 600;
             margin-bottom: 10px;
-            color: var(--text-main);
+            color: #334155;
         }
         .calc-form-group select, 
         .calc-form-group input {
             width: 100%;
             padding: 15px 20px;
             font-size: 1.1rem;
-            border: 2px solid var(--border-soft);
+            border: 2px solid #cbd5e1;
             border-radius: 12px;
-            background: #fff;
-            color: var(--text-main);
+            background: #f8fafc;
+            color: #0f172a;
             transition: all 0.3s ease;
             font-family: 'Inter', sans-serif;
         }
         .calc-form-group select:focus, 
         .calc-form-group input:focus {
-            border-color: var(--secondary);
+            border-color: #3b82f6;
             outline: none;
-            box-shadow: 0 0 0 4px rgba(250, 169, 22, 0.15);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+            background: #ffffff;
         }
         .calc-results {
             margin-top: 40px;
-            background: var(--bg-main);
+            background: #f8fafc;
             border-radius: 16px;
             padding: 30px;
-            border: 1px solid var(--border-soft);
+            border: 1px solid #e2e8f0;
             display: none;
             animation: slideUp 0.5s ease forwards;
         }
@@ -97,24 +95,40 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
-            border-bottom: 1px solid var(--border-soft);
+            border-bottom: 1px solid #e2e8f0;
         }
         .result-row:last-child {
             border-bottom: none;
         }
         .result-label {
             font-weight: 600;
-            color: var(--text-light);
+            color: #475569;
             font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .result-label .info-badge {
+            font-size: 0.8rem;
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 12px;
+            color: #64748b;
         }
         .result-value {
             font-weight: 700;
             font-size: 1.2rem;
-            color: var(--text-main);
+            color: #0f172a;
+        }
+        .value-negative {
+            color: #ef4444; /* Kırmızı vergi kesintisi */
+        }
+        .value-positive {
+            color: #22c55e; /* Yeşil vergi iadesi */
         }
         .result-net {
-            background: rgba(37, 211, 102, 0.1);
-            border: 2px solid #25D366;
+            background: #f0fdf4;
+            border: 2px solid #22c55e;
             border-radius: 12px;
             padding: 20px;
             margin-top: 20px;
@@ -123,17 +137,47 @@
             align-items: center;
         }
         .result-net .result-label {
-            color: #1a9949;
+            color: #166534;
             font-size: 1.2rem;
         }
         .result-net .result-value {
-            color: #25D366;
+            color: #15803d;
             font-size: 1.8rem;
         }
+        
+        /* SEO Info Section */
+        .seo-info-section {
+            max-width: 800px;
+            margin: 60px auto 0;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            color: #334155;
+        }
+        .seo-info-section h2 {
+            color: #0f172a;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .seo-info-section h3 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            margin: 25px 0 10px;
+        }
+        .seo-info-section p, .seo-info-section li {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        .seo-info-section ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
         .calc-cta {
             margin-top: 40px;
             text-align: center;
-            background: var(--primary);
+            background: #1e293b;
             color: #ffffff;
             padding: 30px;
             border-radius: 16px;
@@ -146,7 +190,7 @@
         .calc-cta p {
             margin-bottom: 20px;
             opacity: 0.9;
-            color: #ffffff;
+            color: #f8fafc;
         }
         .btn-whatsapp {
             background-color: #25D366;
@@ -163,6 +207,7 @@
         .btn-whatsapp:hover {
             background-color: #1ebe59;
             transform: translateY(-2px);
+            color: white;
         }
         
         @media (max-width: 768px) {
@@ -170,6 +215,7 @@
             .calc-header h1 { font-size: 1.8rem; }
             .result-net { flex-direction: column; align-items: flex-start; gap: 10px; }
             .result-net .result-value { font-size: 1.5rem; }
+            .seo-info-section { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -186,12 +232,12 @@
                     <li><a href="../../hizmetlerimiz/">Hizmetlerimiz</a></li>
                     <li><a href="../../hakkimizda/">Hakkımızda</a></li>
                     <li><a href="../../iletisim/">İletişim</a></li>
-                    <li class="mobile-only"><a href="../../hukuki-yardim/">Hukuki Yardım</a></li>
+                    <li class="mobile-only"><a href="../../turkce-konusan-avukat/">Türkçe Avukat</a></li>
                 </ul>
             </nav>
-            <a href="../../hukuki-yardim/" class="header-legal-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
-                Hukuki Yardım
+            <a href="../../turkce-konusan-avukat/" class="header-legal-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+                Türkçe Avukat
             </a>
         </div>
     </header>
@@ -202,60 +248,102 @@
                 <div class="calculator-container">
                     <div class="calc-header">
                         <h1>İsveç Maaş ve Vergi Hesaplama 🇸🇪</h1>
-                        <p>Brüt maaşınızı ve yaşayacağınız şehri seçin, elinize geçecek net maaşı anında görün. (2026 Tahmini Verileri)</p>
+                        <p>Brüt maaşınızı ve yaşayacağınız şehri seçin, maaşınızdan ne kadar vergi kesileceğini şeffaf bir dökümle anında görün.</p>
                     </div>
 
                     <div class="calc-form">
                         <div class="calc-form-group">
                             <label for="kommunSelect">Yaşadığınız / Yaşayacağınız Şehir (Kommun)</label>
                             <select id="kommunSelect">
-                                <option value="" disabled selected>Lütfen bir şehir seçin</option>
-                                <option value="29.8">Stockholm (%29.82)</option>
-                                <option value="32.6">Göteborg (%32.60)</option>
-                                <option value="32.4">Malmö (%32.42)</option>
-                                <option value="33.0">Uppsala (%33.00)</option>
-                                <option value="29.2">Solna (%29.20 - Düşük Vergi)</option>
-                                <option value="32.3">Lund (%32.33)</option>
-                                <option value="31.5">Linköping (%31.55)</option>
-                                <option value="31.5">Helsingborg (%31.54)</option>
-                                <option value="34.2">Umeå (%34.20)</option>
-                                <option value="33.3">Norrköping (%33.33)</option>
+                                <option value="" disabled selected>Lütfen bir belediye (Kommun) seçin</option>
+                                <option value="29.82">Stockholm (%29.82)</option>
+                                <option value="32.60">Göteborg (%32.60)</option>
+                                <option value="32.42">Malmö (%32.42)</option>
+                                <option value="33.00">Uppsala (%33.00)</option>
+                                <option value="31.55">Linköping (%31.55)</option>
+                                <option value="33.20">Örebro (%33.20)</option>
+                                <option value="31.04">Västerås (%31.04)</option>
+                                <option value="31.54">Helsingborg (%31.54)</option>
+                                <option value="33.25">Jönköping (%33.25)</option>
+                                <option value="33.33">Norrköping (%33.33)</option>
+                                <option value="34.20">Umeå (%34.20)</option>
+                                <option value="32.33">Lund (%32.33)</option>
+                                <option value="32.60">Borås (%32.60)</option>
+                                <option value="31.90">Huddinge (%31.90)</option>
+                                <option value="33.20">Eskilstuna (%33.20)</option>
+                                <option value="33.70">Gävle (%33.70)</option>
+                                <option value="32.18">Halmstad (%32.18)</option>
+                                <option value="33.72">Sundsvall (%33.72)</option>
+                                <option value="32.23">Södertälje (%32.23)</option>
+                                <option value="33.40">Karlstad (%33.40)</option>
+                                <option value="31.85">Växjö (%31.85)</option>
+                                <option value="31.98">Botkyrka (%31.98)</option>
+                                <option value="32.08">Haninge (%32.08)</option>
+                                <option value="31.86">Kristianstad (%31.86)</option>
+                                <option value="32.68">Kungsbacka (%32.68)</option>
+                                <option value="30.16">Nacka (%30.16)</option>
+                                <option value="29.20">Solna (%29.20) - En Düşük</option>
+                                <option value="33.84">Luleå (%33.84)</option>
+                                <option value="33.95">Skellefteå (%33.95)</option>
+                                <option value="33.14">Trollhättan (%33.14)</option>
                             </select>
                         </div>
                         <div class="calc-form-group">
                             <label for="salaryInput">Aylık Brüt Maaş (SEK)</label>
-                            <input type="number" id="salaryInput" placeholder="Örn: 35000" min="0">
+                            <input type="number" id="salaryInput" placeholder="Örn: 42000" min="0">
                         </div>
                     </div>
 
                     <div class="calc-results" id="calcResults">
                         <div class="result-row">
-                            <span class="result-label">Brüt Maaş</span>
+                            <span class="result-label">Brüt Maaş <span class="info-badge">Başlangıç</span></span>
                             <span class="result-value" id="resBrut">0 SEK</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-label">Kommun Vergisi (<span id="resTaxRate">-%0</span>)</span>
-                            <span class="result-value" style="color: #e74c3c;" id="resKommunTax">0 SEK</span>
+                            <span class="result-label">Kommun Vergisi (Belediye) <span class="info-badge" id="resTaxRate">%0</span></span>
+                            <span class="result-value value-negative" id="resKommunTax">0 SEK</span>
                         </div>
                         <div class="result-row" id="stateTaxRow" style="display: none;">
-                            <span class="result-label">Devlet Vergisi (Statlig skatt - 51k+ üstü)</span>
-                            <span class="result-value" style="color: #e74c3c;" id="resStateTax">0 SEK</span>
+                            <span class="result-label">Devlet Vergisi (Statlig skatt) <span class="info-badge">51.200 üstü %20</span></span>
+                            <span class="result-value value-negative" id="resStateTax">0 SEK</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Çalışma İndirimi (Jobbskatteavdrag) <span class="info-badge">Devlet İadesi</span></span>
+                            <span class="result-value value-positive" id="resDeduction">+ 0 SEK</span>
                         </div>
                         <div class="result-net">
-                            <span class="result-label">Elinize Geçecek Net Maaş</span>
+                            <span class="result-label">Hesabınıza Yatan Net Maaş</span>
                             <span class="result-value" id="resNet">0 SEK</span>
                         </div>
                     </div>
 
                     <div class="calc-cta" id="calcCta" style="display: none;">
-                        <h3>Bu Maaşla İsveç'e Gelebilir Misiniz?</h3>
-                        <p>Aldığınız iş teklifi 2026 göçmenlik (Migrationsverket) asgari maaş sınırlarına uygun mu? Sözleşmenizde risk var mı? Uzmanlarımıza danışın.</p>
-                        <a href="https://wa.me/46700000000" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <h3>Bu Maaşla İsveç Çalışma İzni Alabilir Misiniz?</h3>
+                        <p>Aldığınız iş teklifi İsveç Göçmenlik Dairesi'nin (Migrationsverket) 2026 yılı güncel asgari maaş sınırlarına ve sendika kurallarına uygun mu? Uzman avukatlarımıza sözleşmenizi inceletin.</p>
+                        <a href="https://wa.me/46700000000?text=Merhaba,%20%C4%B0sve%C3%A7'ten%20bir%20i%C5%9F%20teklifi%20ald%C4%B1m.%20Maa%C5%9F%20ve%20s%C3%B6zle%C5%9Fme%20%C5%9Fartlar%C4%B1n%C4%B1n%20%C3%A7al%C4%B1%C5%9Fma%C3%A7%20izni%20i%C3%A7in%20yeterli%20olup%20olmad%C4%B1%C4%B1n%C4%B1%20sormak%20istiyorum." class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                             <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
                             Sözleşmemi İnceleyin
                         </a>
-                        <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">*Bu araç tahmini vergi (Jobbskatteavdrag hariç baz oranlar üzerinden) hesaplar. Kesin bordro hesabı için muhasebecimizle görüşün.</p>
+                        <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">*Bu araç tahmini ve eğitim amaçlı bir hesaplama sunar. Net maaşınız yaş, kilise üyeliği ve sendika durumuna göre küçük değişiklikler gösterebilir.</p>
                     </div>
+                </div>
+
+                <!-- SEO Odaklı Bilgi Alanı -->
+                <div class="seo-info-section">
+                    <h2>İsveç Vergi Sistemi Nasıl Çalışır? (2026 Güncel Kılavuz)</h2>
+                    <p>İsveç, yüksek vergi oranlarıyla bilinmesine rağmen, vergi sistemi oldukça şeffaf ve çalışanları koruyan indirimlere sahiptir. İsveç'te bir işverenden teklif aldığınızda, sözleşmenizde yazan maaş <strong>Brüt (Bruttolön)</strong> maaştır. Elinize geçen net maaşı belirleyen 3 ana faktör vardır:</p>
+                    
+                    <h3>1. Belediye Vergisi (Kommunalskatt)</h3>
+                    <p>İsveç'te ödediğiniz verginin en büyük kısmı direkt olarak yaşadığınız belediyeye ve bölgeye (Region) gider. Bu oran şehirden şehre değişiklik gösterir. Örneğin Stockholm'de ikamet eden biri %29.8 civarı vergi öderken, Umeå'da bu oran %34.2'lere çıkabilir. Bu yüzden aynı brüt maaşı alan iki kişi, farklı şehirlerde yaşadıkları için farklı net maaşlar alabilirler.</p>
+
+                    <h3>2. Devlet Vergisi (Statlig Inkomstskatt)</h3>
+                    <p>İsveç'te "zenginlik vergisi" olarak da düşünülebilecek olan Devlet Vergisi, sadece yüksek kazançlı bireylerden alınır. 2026 yılı itibarıyla, eğer yıllık kazancınız belirli bir eşiği (aylık tahmini 51.200 SEK brüt) aşıyorsa, sadece bu limiti aşan kısım üzerinden ekstra %20 devlet vergisi ödersiniz.</p>
+
+                    <h3>3. Çalışma İndirimi (Jobbskatteavdrag)</h3>
+                    <p>Bu, göçmenlerin ve yeni gelenlerin sık sık gözden kaçırdığı en önemli detaydır! İsveç devleti, çalışmayı teşvik etmek amacıyla maaşınızdan kesilen verginin bir kısmını <strong>Jobbskatteavdrag (Çalışma İndirimi)</strong> adı altında size geri verir. Yani hesaplayıcımızda gördüğünüz gibi, belediye vergisi üzerinden %30 vergi ödüyor gibi görünseniz de, bu indirim sayesinde efektif olarak ödediğiniz vergi oranı genelde %22-25 bandına düşer.</p>
+
+                    <h3 style="margin-top: 30px; font-size: 1.1rem; color: #475569; border-top: 1px solid #e2e8f0; padding-top: 20px;">* Kilise Vergisi (Kyrkoavgift) Hakkında Bilgi</h3>
+                    <p style="font-size: 0.95rem; color: #64748b;">İsveç Kilisesi üyelerinden %1-1.5 oranında ek vergi kesilir. İsveç'e çalışmaya gelen göçmenler (eğer özel olarak kayıt olmazlarsa) otomatik olarak bu kiliseye üye olmadıkları için, hesaplayıcımızda bu vergi kalemi %0 olarak kabul edilmiştir.</p>
                 </div>
             </div>
         </section>
@@ -281,9 +369,9 @@
                 <div class="footer-col">
                     <h3>Hizmetlerimiz</h3>
                     <ul>
-                        <li><a href="../../hukuki-yardim/">Oturum İzni</a></li>
-                        <li><a href="../../hukuki-yardim/">İş Bulma Danışmanlığı</a></li>
-                        <li><a href="../../hukuki-yardim/">Şirket Kurulumu</a></li>
+                        <li><a href="../../turkce-konusan-avukat/">Türkçe Avukat (Oturum)</a></li>
+                        <li><a href="../../turkce-konusan-avukat/">İş Bulma Danışmanlığı</a></li>
+                        <li><a href="../../turkce-konusan-avukat/">Şirket Kurulumu</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -310,6 +398,7 @@
             const resKommunTax = document.getElementById("resKommunTax");
             const resStateTax = document.getElementById("resStateTax");
             const stateTaxRow = document.getElementById("stateTaxRow");
+            const resDeduction = document.getElementById("resDeduction");
             const resNet = document.getElementById("resNet");
 
             function formatCurrency(num) {
@@ -321,16 +410,16 @@
                 const brut = parseFloat(salaryInput.value);
 
                 if (!isNaN(taxRate) && !isNaN(brut) && brut > 0) {
-                    // Show results
                     calcResults.style.display = "block";
                     calcCta.style.display = "block";
 
                     const taxDecimal = taxRate / 100;
+                    
+                    // 1. Kommun Vergisi (Brüt üzerinden direkt kesinti varsayımıyla basit gösterim)
                     let kommunTax = brut * taxDecimal;
+                    
+                    // 2. Devlet Vergisi (51200 SEK üstü)
                     let stateTax = 0;
-
-                    // Rough 2026 State tax threshold (Statlig inkomstskatt) is around 51,200 SEK/month
-                    // Anything above this is taxed an extra 20%
                     if (brut > 51200) {
                         const excess = brut - 51200;
                         stateTax = excess * 0.20;
@@ -339,25 +428,27 @@
                         stateTaxRow.style.display = "none";
                     }
 
-                    // In real Swedish tax there is a Jobbskatteavdrag (earned income credit)
-                    // We apply a simplified standard deduction here to make it more realistic
-                    // Usually it reduces the tax burden by roughly 1500-2500 SEK for average salaries.
+                    // 3. Çalışma İndirimi (Jobbskatteavdrag) - Dinamik Tahmini Formül
+                    // İsveç'te temel indirim (Grundavdrag) ve Jobbskatteavdrag karmaşıktır.
+                    // Yaklaşık olarak: Brüt 40k'ya kadar artar, sonra sabitlenir.
                     let deduction = 0;
-                    if(brut > 10000 && brut <= 40000) {
-                        deduction = brut * 0.06;
-                    } else if (brut > 40000) {
-                        deduction = 2400; 
+                    if(brut > 10000) {
+                        // Ortalama 40,000 SEK maaşta ~3200 SEK indirim alınır.
+                        deduction = Math.min(Math.max((brut - 10000) * 0.1, 0), 3400); 
                     }
 
+                    // Total Tax Computation
                     let totalTax = (kommunTax + stateTax) - deduction;
                     if(totalTax < 0) totalTax = 0;
 
                     const net = brut - totalTax;
 
+                    // UI Güncelleme
                     resBrut.textContent = formatCurrency(brut);
                     resTaxRate.textContent = "%" + taxRate.toFixed(2);
-                    resKommunTax.textContent = "- " + formatCurrency(kommunTax - deduction); // Simplified display
+                    resKommunTax.textContent = "- " + formatCurrency(kommunTax); 
                     resStateTax.textContent = "- " + formatCurrency(stateTax);
+                    resDeduction.textContent = "+ " + formatCurrency(deduction);
                     resNet.textContent = formatCurrency(net);
 
                 } else {
