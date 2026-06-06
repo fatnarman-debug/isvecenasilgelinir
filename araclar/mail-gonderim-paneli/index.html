@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Gönderim Kontrol Paneli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --warning: #f59e0b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { font-size: 2rem; color: var(--primary); margin-bottom: 10px; }
+        .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .progress-container { margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border); }
+        .progress-text { display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 10px; }
+        .progress-bar-bg { width: 100%; height: 12px; background: var(--border); border-radius: 6px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background: var(--primary); width: 0%; transition: width 0.3s ease; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 1rem; }
+        .form-group textarea { resize: vertical; min-height: 200px; }
+        .target-box { background: #f1f5f9; padding: 15px; border-radius: 8px; margin-bottom: 25px; font-weight: 600; text-align: center; font-size: 1.1rem; }
+        .btn { display: block; width: 100%; padding: 16px; background: var(--primary); color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        .btn:hover { background: var(--primary-hover); }
+        .btn:disabled { background: #94a3b8; cursor: not-allowed; }
+        .btn-reset { display: block; width: 100%; padding: 12px; background: transparent; color: var(--text-light); border: 1px solid var(--border); border-radius: 8px; font-size: 0.9rem; margin-top: 15px; cursor: pointer; }
+        .btn-reset:hover { background: #f1f5f9; }
+        .alert { padding: 15px; background: #fef3c7; border-left: 4px solid var(--warning); color: #b45309; margin-bottom: 25px; border-radius: 4px; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Yarı Otomatik Mail Gönderim Paneli</h1>
+            <p>Gmail API kısıtlamalarına takılmadan (Anti-Spam) güvenle mail gönderin.</p>
+        </div>
+
+        <div class="card">
+            <div class="alert">
+                <strong>Dikkat:</strong> Yeni sekmede açılan Gmail penceresinde sadece <strong>Gönder</strong> butonuna basıp pencereyi kapatın. Sistemin spama düşmemesi için buton her gönderimden sonra 30 saniye kilitlenir.
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-text">
+                    <span>Gönderim Durumu</span>
+                    <span id="progressCount">0 / 0</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="target-box">
+                Sıradaki Alıcı: <span id="currentTarget" style="color: var(--primary);">Yükleniyor...</span>
+            </div>
+
+            <div class="form-group">
+                <label for="mailSubject">Mail Konusu</label>
+                <input type="text" id="mailSubject" value="İsveç'te Vergi ve Hukuk İşlemleriniz İçin Türkçe Destek / Juridisk rådgivning">
+            </div>
+
+            <div class="form-group">
+                <label for="mailBody">Mail İçeriği</label>
+                <textarea id="mailBody">Merhaba,
+
+İsveç'te yaşayan Türkler için şirket kurulumu, muhasebe yönetimi ve oturum/çalışma izni gibi süreçlerin dil bariyeriyle ne kadar karmaşıklaşabileceğini biliyoruz.
+
+"İsveç'e Nasıl Gelinir" ekibi olarak, anadilinizde hizmet veren uzman avukat ve mali müşavir ağımızla yanınızdayız:
+• Çalışma ve oturum izni başvuruları
+• Şirket kurulumu, vergi ve muhasebe yönetimi
+• İş ve kira sözleşmesi incelemeleri
+
+Detaylı bilgi almak veya ücretsiz ön görüşme ayarlamak için bu e-postaya yanıt verebilir veya sitemizi ziyaret edebilirsiniz: https://isvecenasilgelinir.com
+
+---
+
+Hej,
+Vi erbjuder professionell juridisk rådgivning och bokföringstjänster för företag och privatpersoner i Sverige. Vårt team kommunicerar flytande på både svenska och turkiska, vilket gör komplexa byråkratiska processer enklare för dig.
+
+Tveka inte att svara på detta mejl för en kostnadsfri konsultation.
+
+Saygılarımızla / Med vänliga hälsningar,
+İsveç'e Nasıl Gelinir Ekibi</textarea>
+            </div>
+
+            <button id="sendBtn" class="btn">Sıradakine Gönder (Gmail'i Aç)</button>
+            <button id="resetBtn" class="btn-reset">Listeyi Sıfırla (Baştan Başla)</button>
+        </div>
+    </div>
+
+    <script>
+        // Hedef Mail Listesi
+        const emails = [
+            "furhoff77@gmail.com", "ilkerdagdeviren@yahoo.com", "baroktay@hotmail.com", "cihan.ertas@live.se", 
+            "senay.sen@hotmail.com", "nasreenshareef72@gmail.com", "pulatserpil@hotmail.com", "sevvalgs44@icloud.com", 
+            "serensumer91@gmail.com", "hontug@hotmail.com", "cigdem.parlayan@hotmail.se", "ronjagum@outlook.com", 
+            "aysegulozcan888912@gmail.com", "filiz_tok@hotmail.com", "karason_87@hotmail.com", "mustafaaltinok6302@hotmail.com", 
+            "jamesdean222@hotmail.com", "ayselkaratass@hotmail.com", "randgha@yahoo.com", "zero-bmw@hotmail.com", 
+            "19470235s.c@gmail.com", "custovic_almir@hotmail.com", "comboyluk@gmail.com", "nazalarmshne@gmail.com", 
+            "meryemkurt79@hotmail.com", "wahidyaren2012@gmail.com", "ozlemkocsm@gmail.com", "zonechu@gmail.com", 
+            "serin7588@gmail.com", "ye20021@hotmail.com", "semralkurnaz@icloud.com", "yagmureva4@gmail.com", 
+            "senemcandemir2017@gmail.com", "nejathamed73@gmail.com", "ulash141@gmail.com", "akalin86@live.se", 
+            "zeynepgumul97@hotmail.com", "sira700@gmail.com", "pappa.falt@gmail.com", "bayraklie085@gmail.com", 
+            "rozgarshakir86@gmail.com", "mukhtarzadeturqay@gmail.com", "Loringunes_@outlook.com", "serpilpolat1985@hotmail.com", 
+            "songulkurtulus@hotmail.se", "dilekbsky@hotmail.com", "tyuler@hotmail.com", "antkas37@hotmail.com"
+        ];
+
+        let currentIndex = parseInt(localStorage.getItem('mailProgressIndex')) || 0;
+        
+        const progressCount = document.getElementById('progressCount');
+        const progressBar = document.getElementById('progressBar');
+        const currentTarget = document.getElementById('currentTarget');
+        const sendBtn = document.getElementById('sendBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const mailSubject = document.getElementById('mailSubject');
+        const mailBody = document.getElementById('mailBody');
+
+        function updateUI() {
+            // Update progress
+            progressCount.innerText = `${currentIndex} / ${emails.length}`;
+            const percentage = (currentIndex / emails.length) * 100;
+            progressBar.style.width = `${percentage}%`;
+
+            // Update Target
+            if (currentIndex < emails.length) {
+                currentTarget.innerText = emails[currentIndex];
+                if(sendBtn.innerText === "Sıradakine Gönder (Gmail'i Aç)") {
+                    sendBtn.disabled = false;
+                }
+            } else {
+                currentTarget.innerText = "Tüm mailler gönderildi!";
+                currentTarget.style.color = "#22c55e";
+                sendBtn.disabled = true;
+                sendBtn.innerText = "Görev Tamamlandı 🎉";
+            }
+        }
+
+        function lockButton(seconds) {
+            let timeLeft = seconds;
+            sendBtn.disabled = true;
+            
+            const timer = setInterval(() => {
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    sendBtn.innerText = "Sıradakine Gönder (Gmail'i Aç)";
+                    if (currentIndex < emails.length) sendBtn.disabled = false;
+                } else {
+                    sendBtn.innerText = `Lütfen Bekleyin (${timeLeft} saniye)...`;
+                    timeLeft--;
+                }
+            }, 1000);
+        }
+
+        sendBtn.addEventListener('click', () => {
+            if (currentIndex >= emails.length) return;
+
+            const targetEmail = emails[currentIndex];
+            const subject = encodeURIComponent(mailSubject.value);
+            const body = encodeURIComponent(mailBody.value);
+            
+            // Construct Gmail URL
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${subject}&body=${body}`;
+            
+            // Open in new tab
+            window.open(gmailUrl, '_blank');
+
+            // Update state
+            currentIndex++;
+            localStorage.setItem('mailProgressIndex', currentIndex);
+            
+            updateUI();
+            lockButton(30); // 30 saniye kilit (spam engelleme)
+        });
+
+        resetBtn.addEventListener('click', () => {
+            if(confirm("Tüm listeyi başa sarmak istediğinize emin misiniz? (Şimdiye kadar gönderilen maillere tekrar gönderim yapabilirsiniz)")) {
+                currentIndex = 0;
+                localStorage.setItem('mailProgressIndex', 0);
+                sendBtn.innerText = "Sıradakine Gönder (Gmail'i Aç)";
+                updateUI();
+            }
+        });
+
+        // Init
+        updateUI();
+    </script>
+</body>
+</html>
