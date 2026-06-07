@@ -104,7 +104,12 @@ Saygılarımızla / Med vänliga hälsningar,
             </div>
 
             <button id="sendBtn" class="btn">Sıradakine Gönder (Gmail'i Aç)</button>
-            <button id="resetBtn" class="btn-reset">Listeyi Sıfırla (Baştan Başla)</button>
+            
+            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                <input type="number" id="jumpIndex" placeholder="Sıra No" style="padding: 12px; border: 1px solid var(--border); border-radius: 8px; width: 100px; font-family: 'Inter', sans-serif;">
+                <button id="jumpBtn" class="btn-reset" style="margin-top: 0; flex: 1; background-color: #f1f5f9; border-color: #cbd5e1; color: #334155;">Bu Sıraya Atla</button>
+                <button id="resetBtn" class="btn-reset" style="margin-top: 0; flex: 1;">Listeyi Sıfırla</button>
+            </div>
         </div>
     </div>
 
@@ -142,6 +147,8 @@ Saygılarımızla / Med vänliga hälsningar,
         const currentTarget = document.getElementById('currentTarget');
         const sendBtn = document.getElementById('sendBtn');
         const resetBtn = document.getElementById('resetBtn');
+        const jumpBtn = document.getElementById('jumpBtn');
+        const jumpIndexInput = document.getElementById('jumpIndex');
         const mailSubject = document.getElementById('mailSubject');
         const mailBody = document.getElementById('mailBody');
 
@@ -208,6 +215,20 @@ Saygılarımızla / Med vänliga hälsningar,
                 localStorage.setItem('mailProgressIndex', 0);
                 sendBtn.innerText = "Sıradakine Gönder (Gmail'i Aç)";
                 updateUI();
+            }
+        });
+
+        jumpBtn.addEventListener('click', () => {
+            let targetIndex = parseInt(jumpIndexInput.value);
+            if (!isNaN(targetIndex) && targetIndex >= 1 && targetIndex <= emails.length) {
+                currentIndex = targetIndex - 1; // Kullanıcılar 1'den başlar, dizi 0'dan başlar
+                localStorage.setItem('mailProgressIndex', currentIndex);
+                sendBtn.disabled = false;
+                sendBtn.innerText = "Sıradakine Gönder (Gmail'i Aç)";
+                updateUI();
+                jumpIndexInput.value = ''; // Kutuyu temizle
+            } else {
+                alert(`Lütfen 1 ile ${emails.length} arasında geçerli bir sıra numarası giriniz.`);
             }
         });
 
