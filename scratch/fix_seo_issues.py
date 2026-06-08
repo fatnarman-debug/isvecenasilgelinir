@@ -126,6 +126,12 @@ def get_priority(url):
 
 # Date map for known posts (don't backdate new ones)
 DATE_MAP = {
+    f"{BASE_URL}/blog/sd-faktura-skandali-jimmie-festeri-vergi-kacirma-iddialari/": "2026-06-08",
+    f"{BASE_URL}/blog/isvec-yurtdisi-saglik-eu-kortet-forsakringskassan-uyanigi/": "2026-06-08",
+    f"{BASE_URL}/blog/isvecte-pazar-sokak-ticaretine-skatteverketten-siki-kontrol/": "2026-06-08",
+    f"{BASE_URL}/blog/isvec-vergi-iadesi-2026-haziran-odeme-detaylari/": "2026-06-08",
+    f"{BASE_URL}/blog/isvec-guvenlik-tehditlerinin-haklari-kisitlandi-2026/": "2026-06-08",
+    f"{BASE_URL}/blog/isvec-genc-yetiskin-oturma-izni-duzenlemesi-2026/": "2026-06-08",
     f"{BASE_URL}/blog/isvec-eu-saglik-sigortasi-karti-unutmayin/": "2026-06-06",
     f"{BASE_URL}/blog/isvecte-dijital-hindersprovning-yaz-dugunleri/": "2026-06-06",
     f"{BASE_URL}/blog/isvec-pazar-esnafi-vergi-kontrolleri-2026/": "2026-06-06",
