@@ -526,7 +526,7 @@ class SEOContentEngine:
                     msg = str(e)
                     if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
                         wait = 20 * (attempt + 1)
-                        print(f"[WARNING] {model} rate limited. Retrying in {wait}s...")
+                        print(f"[WARNING] {model} rate limited ({msg}). Retrying in {wait}s...")
                         time.sleep(wait)
                         continue
                     print(f"[WARNING] {model} failed: {e}")
