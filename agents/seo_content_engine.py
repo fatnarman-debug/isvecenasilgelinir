@@ -9,6 +9,7 @@ import urllib.parse
 from datetime import datetime, timedelta
 import requests
 from bs4 import BeautifulSoup
+from cover_image import generate_cover
 import pydantic
 
 # Load environment variables from .env file if present
@@ -418,7 +419,6 @@ class SEOContentEngine:
         cta_title = draft["cta_title"]
         cta_text = draft["cta_text"]
         cta_button_text = draft["cta_button_text"]
-        cover_prompt = draft["cover_image_prompt"]
         
         today = datetime.now()
         iso_date = today.strftime("%Y-%m-%d")
@@ -428,9 +428,14 @@ class SEOContentEngine:
         image_relative_path = f"assets/images/{slug}.png"
         image_absolute_path = os.path.join(self.base_dir, image_relative_path)
         
-        print(f"Generating cover image for prompt: '{cover_prompt}'...")
-        if not self.generate_cover_image(cover_prompt, image_absolute_path):
-            print("[WARNING] All image models failed. Writing fallback placeholder.")
+        # Kapak gorseli yerel olarak uretilir: API kotasina, aga ve ucrete
+        # bagimli degildir, her yazida ayni marka dilini korur.
+        print(f"Rendering branded cover image for: '{title}'...")
+        try:
+            generate_cover(title, category, image_absolute_path)
+            print(f"[SUCCESS] Cover image saved to: {image_absolute_path}")
+        except Exception as e:
+            print(f"[WARNING] Cover rendering failed: {e}. Writing fallback placeholder.")
             self.write_fallback_image(image_absolute_path)
 
         # 2. Prepare schema and HTML
@@ -513,59 +518,6 @@ class SEOContentEngine:
         if "429" not in msg and "RESOURCE_EXHAUSTED" not in msg:
             return False
         return "PerDay" in msg or "GenerateRequestsPerDay" in msg
-
-    def generate_cover_image(self, prompt, out_path):
-        """Kapak gorseli uretir. Gemini Developer API anahtari ile calisan
-        generate_content tabanli gorsel modellerini sirayla dener.
-        Not: models.generate_images() (Imagen) yalnizca Vertex AI modunda
-        desteklenir, Developer API anahtari ile calismaz."""
-        os.makedirs(os.path.dirname(out_path), exist_ok=True)
-        full_prompt = (
-            f"{prompt}. Wide 16:9 landscape composition, no text, no watermark, "
-            "high resolution editorial cover image."
-        )
-        models = ["gemini-2.5-flash-image"]
-
-        for model in models:
-            for attempt in range(3):
-                try:
-                    result = self.genai_client.models.generate_content(
-                        model=model,
-                        contents=full_prompt,
-                    )
-                    image_bytes = None
-                    for candidate in (result.candidates or []):
-                        parts = getattr(candidate.content, "parts", None) or []
-                        for part in parts:
-                            inline = getattr(part, "inline_data", None)
-                            if inline and inline.data:
-                                image_bytes = inline.data
-                                break
-                        if image_bytes:
-                            break
-
-                    if image_bytes:
-                        with open(out_path, "wb") as img_f:
-                            img_f.write(image_bytes)
-                        print(f"[SUCCESS] Cover image saved via {model}: {out_path}")
-                        return True
-
-                    print(f"[WARNING] {model} returned no image data.")
-                    break
-                except Exception as e:
-                    msg = str(e)
-                    if self.is_daily_quota_error(e):
-                        print(f"[WARNING] {model} daily free-tier quota exhausted ({msg}). Not retrying.")
-                        self.quota_exhausted = True
-                        return False
-                    if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
-                        wait = 20 * (attempt + 1)
-                        print(f"[WARNING] {model} rate limited ({msg}). Retrying in {wait}s...")
-                        time.sleep(wait)
-                        continue
-                    print(f"[WARNING] {model} failed: {e}")
-                    break
-        return False
 
     def write_fallback_image(self, path):
         # Create a tiny 1x1 pixel PNG or write empty bytes so it exists

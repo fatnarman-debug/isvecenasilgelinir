@@ -28,7 +28,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 pydantic python-dotenv google-genai
+        pip install requests beautifulsoup4 pydantic python-dotenv google-genai pillow
         pip install protobuf==7.35.0
         pip install google-antigravity
 
