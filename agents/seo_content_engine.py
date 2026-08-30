@@ -3,6 +3,7 @@ import os
 import sys
 import json
 import re
+import time
 import asyncio
 import urllib.parse
 from datetime import datetime, timedelta
@@ -406,28 +407,9 @@ class SEOContentEngine:
         image_relative_path = f"assets/images/{slug}.png"
         image_absolute_path = os.path.join(self.base_dir, image_relative_path)
         
-        print(f"Generating cover image with Imagen 3.0 for prompt: '{cover_prompt}'...")
-        try:
-            image_result = self.genai_client.models.generate_images(
-                model='imagen-3.0-generate-001',
-                prompt=cover_prompt,
-                config=dict(
-                    number_of_images=1,
-                    output_mime_type="image/png",
-                    aspect_ratio="16:9"
-                )
-            )
-            if image_result.generated_images:
-                image_bytes = image_result.generated_images[0].image.image_bytes
-                os.makedirs(os.path.dirname(image_absolute_path), exist_ok=True)
-                with open(image_absolute_path, 'wb') as img_f:
-                    img_f.write(image_bytes)
-                print(f"[SUCCESS] Cover image saved to: {image_absolute_path}")
-            else:
-                print("[WARNING] Imagen did not return any image. Using a fallback color placeholder.")
-                self.write_fallback_image(image_absolute_path)
-        except Exception as e:
-            print(f"[WARNING] Error generating image via SDK: {e}. Writing fallback placeholder.")
+        print(f"Generating cover image for prompt: '{cover_prompt}'...")
+        if not self.generate_cover_image(cover_prompt, image_absolute_path):
+            print("[WARNING] All image models failed. Writing fallback placeholder.")
             self.write_fallback_image(image_absolute_path)
 
         # 2. Prepare schema and HTML
@@ -501,6 +483,55 @@ class SEOContentEngine:
         print("Rebuilding sitemap and canonical tags...")
         import subprocess
         subprocess.run(["python3", "scratch/fix_seo_issues.py"], cwd=self.base_dir)
+
+    def generate_cover_image(self, prompt, out_path):
+        """Kapak gorseli uretir. Gemini Developer API anahtari ile calisan
+        generate_content tabanli gorsel modellerini sirayla dener.
+        Not: models.generate_images() (Imagen) yalnizca Vertex AI modunda
+        desteklenir, Developer API anahtari ile calismaz."""
+        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+        full_prompt = (
+            f"{prompt}. Wide 16:9 landscape composition, no text, no watermark, "
+            "high resolution editorial cover image."
+        )
+        models = ["gemini-3-pro-image-preview", "gemini-2.5-flash-image"]
+
+        for model in models:
+            for attempt in range(3):
+                try:
+                    result = self.genai_client.models.generate_content(
+                        model=model,
+                        contents=full_prompt,
+                    )
+                    image_bytes = None
+                    for candidate in (result.candidates or []):
+                        parts = getattr(candidate.content, "parts", None) or []
+                        for part in parts:
+                            inline = getattr(part, "inline_data", None)
+                            if inline and inline.data:
+                                image_bytes = inline.data
+                                break
+                        if image_bytes:
+                            break
+
+                    if image_bytes:
+                        with open(out_path, "wb") as img_f:
+                            img_f.write(image_bytes)
+                        print(f"[SUCCESS] Cover image saved via {model}: {out_path}")
+                        return True
+
+                    print(f"[WARNING] {model} returned no image data.")
+                    break
+                except Exception as e:
+                    msg = str(e)
+                    if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
+                        wait = 20 * (attempt + 1)
+                        print(f"[WARNING] {model} rate limited. Retrying in {wait}s...")
+                        time.sleep(wait)
+                        continue
+                    print(f"[WARNING] {model} failed: {e}")
+                    break
+        return False
 
     def write_fallback_image(self, path):
         # Create a tiny 1x1 pixel PNG or write empty bytes so it exists
