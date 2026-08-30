@@ -108,6 +108,9 @@ class SEOContentEngine:
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         }
         
+        # Gunluk free-tier kotasi bitince run'i temiz sonlandirmak icin bayrak
+        self.quota_exhausted = False
+
         self.api_key = os.environ.get("GEMINI_API_KEY")
         if not self.api_key:
             print("\n[WARNING] GEMINI_API_KEY environment variable is not set.")
@@ -210,11 +213,19 @@ class SEOContentEngine:
             print("[DRY-RUN] Found candidates, but skipping LLM execution as GEMINI_API_KEY is not set.")
             return
 
+        # Free tier gunde model basina 20 istek verir. Bu yuzden run basina
+        # yalnizca TEK yazi yayinlanir: ilk basarili adaydan sonra durulur.
         for i, candidate in enumerate(candidates):
+            if self.quota_exhausted:
+                print("Daily free-tier quota exhausted. Stopping run cleanly; will resume tomorrow.")
+                break
             if i > 0:
                 print("Sleeping for 15 seconds to avoid API rate limits...")
                 await asyncio.sleep(15)
-            await self.process_candidate(candidate)
+            published = await self.process_candidate(candidate)
+            if published:
+                print("One post published this run. Stopping to stay within free-tier quota.")
+                break
 
     async def process_candidate(self, candidate):
         print(f"\n==========================================")
@@ -224,7 +235,7 @@ class SEOContentEngine:
         full_text = self.fetch_article_text(candidate['link'])
         if not full_text:
             print("Could not fetch page body. Skipping.")
-            return
+            return False
 
         today = datetime.now()
         today_str = today.strftime("%Y-%m-%d")
@@ -293,7 +304,7 @@ class SEOContentEngine:
         draft = None
         review = None
         loop_count = 0
-        max_loops = 3
+        max_loops = 1
         feedback_msg = "Lütfen İsveççe duyurudan yeni bir Türkçe blog yazısı taslağı oluştur."
 
         async with Agent(writer_config) as writer:
@@ -320,6 +331,10 @@ class SEOContentEngine:
                         writer_resp = await writer.chat(writer_prompt)
                         draft = await writer_resp.structured_output()
                     except Exception as e:
+                        if self.is_daily_quota_error(e):
+                            print(f"Daily free-tier quota exhausted during Writer step. Stopping. Error: {e}")
+                            self.quota_exhausted = True
+                            return False
                         if "429" in str(e) or "Quota" in str(e) or "quota" in str(e):
                             print(f"API Rate limit hit during Writer step. Sleeping for 65 seconds... Error: {e}")
                             await asyncio.sleep(65)
@@ -327,15 +342,15 @@ class SEOContentEngine:
                             continue
                         else:
                             print(f"Error in Writer: {e}")
-                            break
+                            return False
                     
                     if not draft:
                         print("Failed to get structured draft from Writer.")
-                        return
+                        return False
                         
                     if not draft.get("is_recent"):
                         print(f"Skipping: Writer identified this article as not recent enough (older than 1 week).")
-                        return
+                        return False
                         
                     await asyncio.sleep(5)
                     print("Draft generated successfully. Sending to Editor for review...")
@@ -359,6 +374,11 @@ class SEOContentEngine:
                         editor_resp = await editor.chat(editor_prompt)
                         review = await editor_resp.structured_output()
                     except Exception as e:
+                        if self.is_daily_quota_error(e):
+                            print(f"Daily free-tier quota exhausted during Editor step. Publishing draft as-is.")
+                            self.quota_exhausted = True
+                            await self.publish_post(draft)
+                            return True
                         if "429" in str(e) or "Quota" in str(e) or "quota" in str(e):
                             print(f"API Rate limit hit during Editor step. Sleeping for 65 seconds... Error: {e}")
                             await asyncio.sleep(65)
@@ -383,8 +403,9 @@ class SEOContentEngine:
                 # If we broke out of loop or completed loops, publish if we have a draft
                 if draft and (loop_count == max_loops or review is None or review.get("approved", True)):
                     await self.publish_post(draft)
-                else:
-                    print("Could not get an approved draft after maximum iteration loops.")
+                    return True
+                print("Could not get an approved draft after maximum iteration loops.")
+                return False
 
     async def publish_post(self, draft):
         slug = draft["slug"]
@@ -484,6 +505,15 @@ class SEOContentEngine:
         import subprocess
         subprocess.run(["python3", "scratch/fix_seo_issues.py"], cwd=self.base_dir)
 
+    @staticmethod
+    def is_daily_quota_error(err):
+        """429'un gunluk (PerDay) kota bitmesinden mi kaynaklandigini soyler.
+        Gunluk kota bitmisse beklemek anlamsizdir; run temiz sonlandirilmali."""
+        msg = str(err)
+        if "429" not in msg and "RESOURCE_EXHAUSTED" not in msg:
+            return False
+        return "PerDay" in msg or "GenerateRequestsPerDay" in msg
+
     def generate_cover_image(self, prompt, out_path):
         """Kapak gorseli uretir. Gemini Developer API anahtari ile calisan
         generate_content tabanli gorsel modellerini sirayla dener.
@@ -494,7 +524,7 @@ class SEOContentEngine:
             f"{prompt}. Wide 16:9 landscape composition, no text, no watermark, "
             "high resolution editorial cover image."
         )
-        models = ["gemini-3-pro-image-preview", "gemini-2.5-flash-image"]
+        models = ["gemini-2.5-flash-image"]
 
         for model in models:
             for attempt in range(3):
@@ -524,6 +554,10 @@ class SEOContentEngine:
                     break
                 except Exception as e:
                     msg = str(e)
+                    if self.is_daily_quota_error(e):
+                        print(f"[WARNING] {model} daily free-tier quota exhausted ({msg}). Not retrying.")
+                        self.quota_exhausted = True
+                        return False
                     if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
                         wait = 20 * (attempt + 1)
                         print(f"[WARNING] {model} rate limited ({msg}). Retrying in {wait}s...")
