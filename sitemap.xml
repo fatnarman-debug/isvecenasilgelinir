@@ -11,17 +11,32 @@
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://isvecenasilgelinir.com/hakkimizda/</loc>
-        <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://isvecenasilgelinir.com/hizmetlerimiz/</loc>
         <lastmod>2026-05-01</lastmod>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/hukuki-yardim/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/turkce-konusan-avukat/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/araclar/isvec-maas-ve-vergi-hesaplama/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/quiz/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/hakkimizda/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
     </url>
@@ -29,6 +44,11 @@
         <loc>https://isvecenasilgelinir.com/iletisim/</loc>
         <lastmod>2026-05-01</lastmod>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://isvecenasilgelinir.com/isvecte-turk-urunleri/</loc>
+        <lastmod>2026-05-01</lastmod>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://isvecenasilgelinir.com/blog/isvec-guvencesiz-calisanlar-hastalik-parasi-az-kullaniyor/</loc>

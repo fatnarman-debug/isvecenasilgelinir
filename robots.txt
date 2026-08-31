@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Dahili yonetim paneli - aranmasi istenmez
+Disallow: /araclar/mail-gonderim-paneli/
+
 # AI Crawlers - Highly Recommended Access
 User-agent: GPTBot
 Allow: /

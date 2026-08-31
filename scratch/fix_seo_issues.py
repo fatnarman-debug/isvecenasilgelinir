@@ -461,11 +461,23 @@ sitemap_urls.append((f"{BASE_URL}/", "1.0", "2026-05-06"))
 # Blog listing page
 sitemap_urls.append((f"{BASE_URL}/blog/", "0.9", "2026-05-06"))
 
-# Static pages
-for page in ["hakkimizda", "hizmetlerimiz", "hukuki-yardim", "iletisim"]:
+# Static pages, tools and landing pages.
+# araclar/mail-gonderim-paneli bilincli olarak disarida birakilir: herkese
+# acik olsa da dahili bir yonetim panelidir, aranmasi istenmez.
+STATIC_PAGES = [
+    ("hizmetlerimiz", "0.8"),
+    ("hukuki-yardim", "0.8"),
+    ("turkce-konusan-avukat", "0.8"),
+    ("araclar/isvec-maas-ve-vergi-hesaplama", "0.8"),
+    ("quiz", "0.7"),
+    ("hakkimizda", "0.7"),
+    ("iletisim", "0.7"),
+    ("isvecte-turk-urunleri", "0.6"),
+]
+for page, prio in STATIC_PAGES:
     page_path = os.path.join(BASE_DIR, page, "index.html")
     if os.path.exists(page_path):
-        sitemap_urls.append((f"{BASE_URL}/{page}/", "0.7", "2026-05-01"))
+        sitemap_urls.append((f"{BASE_URL}/{page}/", prio, "2026-05-01"))
 
 # Blog posts (exclude auto-drafts and duplicates)
 EXCLUDE_BLOGS = {"auto-drafts", "isvecte-vergi-sistemi-2026"}  # isvecte-vergi-sistemi-2026 is duplicate of rehberi-2026
