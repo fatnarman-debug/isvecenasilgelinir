@@ -125,17 +125,39 @@ class SEOContentEngine:
     def get_turkish_date(self, dt):
         return f"{dt.day} {MONTHS_TR[dt.month]} {dt.year}"
 
-    @staticmethod
-    def normalize_url(url):
-        """Karsilastirma icin URL'yi sadelestirir: sema, www, sorgu, fragman
-        ve sondaki egik cizgi atilir."""
-        u = url.split("#")[0].split("?")[0].strip().rstrip("/").lower()
+    # Haberi tanimlamayan, yalnizca izleme/sayfalama icin eklenen parametreler.
+    # Bunlar disindaki sorgu parametreleri KORUNUR: Arbetsformedlingen gibi
+    # bazi kurumlarda haberler yalnizca ?id= ile ayrisir, sorguyu komple
+    # atmak o kurumun tum haberlerini tek URL'ye cokertir.
+    TRACKING_PARAMS = {
+        "pageindex", "year", "uniqueidentifier", "fbclid", "gclid",
+        "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    }
+
+    @classmethod
+    def normalize_url(cls, url):
+        """Karsilastirma icin URL'yi sadelestirir: sema, www, fragman, sondaki
+        egik cizgi ve izleme parametreleri atilir; ayirt edici sorgu
+        parametreleri korunur."""
+        u = url.split("#")[0].strip()
+        base, _, query = u.partition("?")
+        base = base.rstrip("/").lower()
         for pre in ("https://", "http://"):
-            if u.startswith(pre):
-                u = u[len(pre):]
-        if u.startswith("www."):
-            u = u[4:]
-        return u
+            if base.startswith(pre):
+                base = base[len(pre):]
+        if base.startswith("www."):
+            base = base[4:]
+
+        kept = []
+        for part in query.split("&"):
+            if not part:
+                continue
+            key, _, val = part.partition("=")
+            if key.lower() in cls.TRACKING_PARAMS or not val:
+                continue
+            kept.append(f"{key.lower()}={val}")
+        kept.sort()
+        return base + ("?" + "&".join(kept) if kept else "")
 
     def load_published_sources(self):
         """Yayinlanmis yazilarin referans verdigi dis kaynak URL'lerini toplar.
