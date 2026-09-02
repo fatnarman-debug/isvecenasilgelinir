@@ -125,6 +125,51 @@ class SEOContentEngine:
     def get_turkish_date(self, dt):
         return f"{dt.day} {MONTHS_TR[dt.month]} {dt.year}"
 
+    @staticmethod
+    def normalize_url(url):
+        """Karsilastirma icin URL'yi sadelestirir: sema, www, sorgu, fragman
+        ve sondaki egik cizgi atilir."""
+        u = url.split("#")[0].split("?")[0].strip().rstrip("/").lower()
+        for pre in ("https://", "http://"):
+            if u.startswith(pre):
+                u = u[len(pre):]
+        if u.startswith("www."):
+            u = u[4:]
+        return u
+
+    def load_published_sources(self):
+        """Yayinlanmis yazilarin referans verdigi dis kaynak URL'lerini toplar.
+
+        Mukerrer tespiti basliga degil kaynak baglantisina dayanir: basliklar
+        Turkce'ye cevrildigi icin Isvecce kaynak basligiyla asla eslesmez.
+        """
+        sources = set()
+        blog_dir = os.path.join(self.base_dir, "blog")
+        if not os.path.exists(blog_dir):
+            return sources
+
+        for folder in os.listdir(blog_dir):
+            index_path = os.path.join(blog_dir, folder, "index.html")
+            if not os.path.exists(index_path):
+                continue
+            try:
+                with open(index_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+            except OSError:
+                continue
+            for m in re.finditer(r'href="(https?://[^"]+)"', content):
+                url = m.group(1)
+                if "isvecenasilgelinir.com" in url:
+                    continue
+                sources.add(self.normalize_url(url))
+        return sources
+
+    def is_source_published(self, link, published_sources):
+        """Bu kaynak baglantisi daha once bir yazida kullanildi mi?"""
+        if not link:
+            return False
+        return self.normalize_url(link) in published_sources
+
     def check_already_published(self, title):
         slug = re.sub(r'[^a-z0-9\-]', '', title.lower().replace(' ', '-').replace('ı', 'i').replace('ö', 'o').replace('ü', 'u').replace('ç', 'c').replace('ş', 's').replace('ğ', 'g'))
         slug = re.sub(r'-+', '-', slug).strip('-')
@@ -183,6 +228,10 @@ class SEOContentEngine:
             sentinel = Sentinel(self.config_path)
             scan_results = sentinel.scan()
             
+            # Yayinlanmis kaynak baglantilarini bir kez topla
+            published_sources = self.load_published_sources()
+            print(f"Bilinen kaynak baglantisi: {len(published_sources)}")
+
             for inst_name, result in scan_results.items():
                 if result.get("status") != "Success":
                     print(f"Skipping {inst_name} due to status: {result.get('status')}")
@@ -195,8 +244,12 @@ class SEOContentEngine:
                     if not title or not link:
                         continue
                         
+                    if self.is_source_published(link, published_sources):
+                        print(f"Already published (source link): '{title}'. Skipping.")
+                        continue
+
                     if self.check_already_published(title):
-                        print(f"Already published/exists: '{title}'. Skipping.")
+                        print(f"Already published (title): '{title}'. Skipping.")
                         continue
                         
                     print(f"New candidate found: '{title}' ({inst_name})")
