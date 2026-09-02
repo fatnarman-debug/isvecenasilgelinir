@@ -43,6 +43,11 @@ for entry in os.listdir(blog_dir):
 def add_canonical(filepath, canonical_url):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
+
+    # Yonlendirme saplamalarina dokunma: onlarin canonical'i kendilerini degil
+    # yonlendirdikleri yaziyi gostermek zorundadir.
+    if 'http-equiv="refresh"' in content and 'Yönlendiriliyor' in content:
+        return
     
     # Skip if already has canonical
     if 'rel="canonical"' in content:
@@ -489,7 +494,18 @@ blog_posts = []
 for entry in sorted(os.listdir(blog_dir)):
     entry_path = os.path.join(blog_dir, entry)
     index_path = os.path.join(entry_path, "index.html")
-    if os.path.isdir(entry_path) and entry not in EXCLUDE_BLOGS and os.path.exists(index_path):
+    if not (os.path.isdir(entry_path) and entry not in EXCLUDE_BLOGS
+            and os.path.exists(index_path)):
+        continue
+
+    # Yonlendirme saplamalari sitemap'e girmez: noindex'tirler ve hedefleri
+    # zaten listede yer alir.
+    with open(index_path, 'r', encoding='utf-8') as _f:
+        _head = _f.read(1200)
+    if 'http-equiv="refresh"' in _head and 'Yönlendiriliyor' in _head:
+        continue
+
+    if True:
         url = f"{BASE_URL}/blog/{entry}/"
         last_mod = DATE_MAP.get(url, "2026-05-01")
         priority = get_priority(url)
