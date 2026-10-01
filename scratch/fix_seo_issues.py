@@ -131,6 +131,7 @@ def get_priority(url):
 
 # Date map for known posts (don't backdate new ones)
 DATE_MAP = {
+    f"{BASE_URL}/blog/isvec-yeni-multeci-kabul-yasasi-2026/": "2026-10-01",
     f"{BASE_URL}/blog/isvec-gonullu-geri-donus-destekleri-migrationsverket-2026/": "2026-09-30",
     f"{BASE_URL}/blog/isvec-erkeklerin-dis-hekimi-ziyaretleri-azaliyor/": "2026-09-29",
     f"{BASE_URL}/blog/isvec-hukumet-kurma-krizi-2026-s-v-iliskisi/": "2026-09-28",
