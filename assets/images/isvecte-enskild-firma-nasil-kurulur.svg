@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="İsveç'te enskild firma kurmak — adım adım rehber">
+<defs>
+  <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f7f4ed"/>
+    <stop offset="0.62" stop-color="#f2eee4"/>
+    <stop offset="1" stop-color="#eae5d8"/>
+  </linearGradient>
+  <linearGradient id="paper" x1="0.1" y1="0" x2="0.9" y2="1">
+    <stop offset="0" stop-color="#ffffff"/>
+    <stop offset="1" stop-color="#fbfaf7"/>
+  </linearGradient>
+  <filter id="lift" x="-20%" y="-20%" width="140%" height="150%">
+    <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#13294B" flood-opacity="0.13"/>
+  </filter>
+  <style>
+    .h { font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-weight:800; fill:#13294B; }
+    .s { font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-weight:400; fill:#13294B; }
+    .k { font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-weight:700; letter-spacing:2.4px; fill:#0359F8; }
+    .m { font-family: Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-weight:600; fill:#8a8373; }
+  </style>
+</defs>
+
+<rect width="1200" height="630" fill="url(#ground)"/>
+
+<!-- yumuşak ışık lekesi, hafifçe sola kaçık -->
+<ellipse cx="305" cy="140" rx="430" ry="300" fill="#ffffff" opacity="0.55"/>
+
+<!-- İsveç bayrağı izi: çok soluk, sağ alt köşeden taşan -->
+<g opacity="0.07">
+  <rect x="858" y="432" width="430" height="268" rx="10" fill="#0359F8"/>
+  <rect x="858" y="533" width="430" height="42" fill="#f7f4ed"/>
+  <rect x="978" y="432" width="42" height="268" fill="#f7f4ed"/>
+</g>
+
+<!-- SOL KOLON: tipografi -->
+<text x="92" y="150" class="k" font-size="15">İSVEÇ'TE KENDİ İŞİNİ KURMAK</text>
+
+<text x="92" y="232" class="h" font-size="62">Enskild firma</text>
+<text x="92" y="302" class="h" font-size="62">nasıl kurulur?</text>
+
+<!-- elle çizilmiş gibi, hafif eğimli altı çizgi -->
+<path d="M94 322 C 240 314, 400 320, 556 315" stroke="#0359F8" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.9"/>
+
+<text x="92" y="376" class="s" font-size="23" opacity="0.74">F-skatt, moms sınırı ve ilk faturanız —</text>
+<text x="92" y="408" class="s" font-size="23" opacity="0.74">güncel rakamlarla adım adım.</text>
+
+<g class="m" font-size="15">
+  <text x="92" y="486">SKATTEVERKET</text>
+  <text x="290" y="486">·</text>
+  <text x="312" y="486">BOLAGSVERKET</text>
+  <text x="508" y="486">·</text>
+  <text x="530" y="486">VERKSAMT.SE</text>
+</g>
+
+<text x="92" y="556" class="s" font-size="17" opacity="0.5">isvecenasilgelinir.com</text>
+
+<!-- SAĞ KOLON: fatura kağıdı, bilinçli olarak hafif eğik -->
+<g transform="translate(742,88) rotate(-2.6)" filter="url(#lift)">
+  <rect width="356" height="452" rx="14" fill="url(#paper)"/>
+  <rect x="0" y="0" width="356" height="6" rx="3" fill="#0359F8"/>
+
+  <text x="32" y="58" class="h" font-size="19">FAKTURA</text>
+  <text x="32" y="80" class="m" font-size="12">Nr 2026-001 · 22 okt 2026</text>
+
+  <line x1="32" y1="102" x2="324" y2="102" stroke="#e6e1d6" stroke-width="1.5"/>
+
+  <g class="s" font-size="13" opacity="0.8">
+    <text x="32" y="130">Arbete, renovering</text>
+    <text x="324" y="130" text-anchor="end">12 000 kr</text>
+    <text x="32" y="160">Material</text>
+    <text x="324" y="160" text-anchor="end">3 400 kr</text>
+    <text x="32" y="190">Moms 25 %</text>
+    <text x="324" y="190" text-anchor="end">3 850 kr</text>
+  </g>
+
+  <!-- ROT satırı: vurgulu -->
+  <rect x="24" y="206" width="308" height="34" rx="8" fill="#0359F8" opacity="0.08"/>
+  <text x="32" y="229" class="s" font-size="13" fill="#0359F8" font-weight="700">ROT-avdrag &#8722;30 %</text>
+  <text x="324" y="229" class="s" font-size="13" fill="#0359F8" font-weight="700" text-anchor="end">&#8722;3 600 kr</text>
+
+  <line x1="32" y1="262" x2="324" y2="262" stroke="#e6e1d6" stroke-width="1.5"/>
+
+  <text x="32" y="294" class="h" font-size="16">Att betala</text>
+  <text x="324" y="294" class="h" font-size="22" text-anchor="end">15 650 kr</text>
+
+  <!-- F-skatt kaşesi, elle basılmış gibi eğik -->
+  <g transform="translate(188,336) rotate(-7)">
+    <rect x="0" y="0" width="150" height="40" rx="20" fill="none" stroke="#0359F8" stroke-width="2.5" opacity="0.75"/>
+    <text x="75" y="26" class="s" font-size="13" font-weight="700" fill="#0359F8" text-anchor="middle" opacity="0.9">Godkänd för F-skatt</text>
+  </g>
+
+  <g class="m" font-size="11">
+    <text x="32" y="404">Org.nr (personnummer)</text>
+    <text x="32" y="422">Betalningsvillkor 30 dagar</text>
+  </g>
+</g>
+</svg>
